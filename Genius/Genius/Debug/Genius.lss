@@ -1,0 +1,3892 @@
+
+Genius.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000009a  00800200  00001430  000014c4  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00001430  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000078  0080029a  0080029a  0000155e  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  0000155e  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00001590  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000200  00000000  00000000  000015d0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000026d3  00000000  00000000  000017d0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 0000092f  00000000  00000000  00003ea3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00001575  00000000  00000000  000047d2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000668  00000000  00000000  00005d48  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000624  00000000  00000000  000063b0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00001815  00000000  00000000  000069d4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000190  00000000  00000000  000081e9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	71 c0       	rjmp	.+226    	; 0xe4 <__ctors_end>
+       2:	00 00       	nop
+       4:	e1 c7       	rjmp	.+4034   	; 0xfc8 <__vector_1>
+       6:	00 00       	nop
+       8:	0c 94 10 08 	jmp	0x1020	; 0x1020 <__vector_2>
+       c:	0c 94 3d 08 	jmp	0x107a	; 0x107a <__vector_3>
+      10:	0c 94 6a 08 	jmp	0x10d4	; 0x10d4 <__vector_4>
+      14:	87 c0       	rjmp	.+270    	; 0x124 <__bad_interrupt>
+      16:	00 00       	nop
+      18:	85 c0       	rjmp	.+266    	; 0x124 <__bad_interrupt>
+      1a:	00 00       	nop
+      1c:	83 c0       	rjmp	.+262    	; 0x124 <__bad_interrupt>
+      1e:	00 00       	nop
+      20:	81 c0       	rjmp	.+258    	; 0x124 <__bad_interrupt>
+      22:	00 00       	nop
+      24:	7f c0       	rjmp	.+254    	; 0x124 <__bad_interrupt>
+      26:	00 00       	nop
+      28:	7d c0       	rjmp	.+250    	; 0x124 <__bad_interrupt>
+      2a:	00 00       	nop
+      2c:	7b c0       	rjmp	.+246    	; 0x124 <__bad_interrupt>
+      2e:	00 00       	nop
+      30:	79 c0       	rjmp	.+242    	; 0x124 <__bad_interrupt>
+      32:	00 00       	nop
+      34:	77 c0       	rjmp	.+238    	; 0x124 <__bad_interrupt>
+      36:	00 00       	nop
+      38:	75 c0       	rjmp	.+234    	; 0x124 <__bad_interrupt>
+      3a:	00 00       	nop
+      3c:	73 c0       	rjmp	.+230    	; 0x124 <__bad_interrupt>
+      3e:	00 00       	nop
+      40:	71 c0       	rjmp	.+226    	; 0x124 <__bad_interrupt>
+      42:	00 00       	nop
+      44:	6f c0       	rjmp	.+222    	; 0x124 <__bad_interrupt>
+      46:	00 00       	nop
+      48:	6d c0       	rjmp	.+218    	; 0x124 <__bad_interrupt>
+      4a:	00 00       	nop
+      4c:	6b c0       	rjmp	.+214    	; 0x124 <__bad_interrupt>
+      4e:	00 00       	nop
+      50:	69 c0       	rjmp	.+210    	; 0x124 <__bad_interrupt>
+      52:	00 00       	nop
+      54:	67 c0       	rjmp	.+206    	; 0x124 <__bad_interrupt>
+      56:	00 00       	nop
+      58:	65 c0       	rjmp	.+202    	; 0x124 <__bad_interrupt>
+      5a:	00 00       	nop
+      5c:	0c 94 97 08 	jmp	0x112e	; 0x112e <__vector_23>
+      60:	61 c0       	rjmp	.+194    	; 0x124 <__bad_interrupt>
+      62:	00 00       	nop
+      64:	5f c0       	rjmp	.+190    	; 0x124 <__bad_interrupt>
+      66:	00 00       	nop
+      68:	5d c0       	rjmp	.+186    	; 0x124 <__bad_interrupt>
+      6a:	00 00       	nop
+      6c:	5b c0       	rjmp	.+182    	; 0x124 <__bad_interrupt>
+      6e:	00 00       	nop
+      70:	59 c0       	rjmp	.+178    	; 0x124 <__bad_interrupt>
+      72:	00 00       	nop
+      74:	57 c0       	rjmp	.+174    	; 0x124 <__bad_interrupt>
+      76:	00 00       	nop
+      78:	55 c0       	rjmp	.+170    	; 0x124 <__bad_interrupt>
+      7a:	00 00       	nop
+      7c:	53 c0       	rjmp	.+166    	; 0x124 <__bad_interrupt>
+      7e:	00 00       	nop
+      80:	51 c0       	rjmp	.+162    	; 0x124 <__bad_interrupt>
+      82:	00 00       	nop
+      84:	4f c0       	rjmp	.+158    	; 0x124 <__bad_interrupt>
+      86:	00 00       	nop
+      88:	4d c0       	rjmp	.+154    	; 0x124 <__bad_interrupt>
+      8a:	00 00       	nop
+      8c:	4b c0       	rjmp	.+150    	; 0x124 <__bad_interrupt>
+      8e:	00 00       	nop
+      90:	49 c0       	rjmp	.+146    	; 0x124 <__bad_interrupt>
+      92:	00 00       	nop
+      94:	47 c0       	rjmp	.+142    	; 0x124 <__bad_interrupt>
+      96:	00 00       	nop
+      98:	45 c0       	rjmp	.+138    	; 0x124 <__bad_interrupt>
+      9a:	00 00       	nop
+      9c:	43 c0       	rjmp	.+134    	; 0x124 <__bad_interrupt>
+      9e:	00 00       	nop
+      a0:	41 c0       	rjmp	.+130    	; 0x124 <__bad_interrupt>
+      a2:	00 00       	nop
+      a4:	3f c0       	rjmp	.+126    	; 0x124 <__bad_interrupt>
+      a6:	00 00       	nop
+      a8:	3d c0       	rjmp	.+122    	; 0x124 <__bad_interrupt>
+      aa:	00 00       	nop
+      ac:	3b c0       	rjmp	.+118    	; 0x124 <__bad_interrupt>
+      ae:	00 00       	nop
+      b0:	39 c0       	rjmp	.+114    	; 0x124 <__bad_interrupt>
+      b2:	00 00       	nop
+      b4:	37 c0       	rjmp	.+110    	; 0x124 <__bad_interrupt>
+      b6:	00 00       	nop
+      b8:	35 c0       	rjmp	.+106    	; 0x124 <__bad_interrupt>
+      ba:	00 00       	nop
+      bc:	33 c0       	rjmp	.+102    	; 0x124 <__bad_interrupt>
+      be:	00 00       	nop
+      c0:	31 c0       	rjmp	.+98     	; 0x124 <__bad_interrupt>
+      c2:	00 00       	nop
+      c4:	2f c0       	rjmp	.+94     	; 0x124 <__bad_interrupt>
+      c6:	00 00       	nop
+      c8:	2d c0       	rjmp	.+90     	; 0x124 <__bad_interrupt>
+      ca:	00 00       	nop
+      cc:	2b c0       	rjmp	.+86     	; 0x124 <__bad_interrupt>
+      ce:	00 00       	nop
+      d0:	29 c0       	rjmp	.+82     	; 0x124 <__bad_interrupt>
+      d2:	00 00       	nop
+      d4:	27 c0       	rjmp	.+78     	; 0x124 <__bad_interrupt>
+      d6:	00 00       	nop
+      d8:	25 c0       	rjmp	.+74     	; 0x124 <__bad_interrupt>
+      da:	00 00       	nop
+      dc:	23 c0       	rjmp	.+70     	; 0x124 <__bad_interrupt>
+      de:	00 00       	nop
+      e0:	21 c0       	rjmp	.+66     	; 0x124 <__bad_interrupt>
+	...
+
+000000e4 <__ctors_end>:
+      e4:	11 24       	eor	r1, r1
+      e6:	1f be       	out	0x3f, r1	; 63
+      e8:	cf ef       	ldi	r28, 0xFF	; 255
+      ea:	d1 e2       	ldi	r29, 0x21	; 33
+      ec:	de bf       	out	0x3e, r29	; 62
+      ee:	cd bf       	out	0x3d, r28	; 61
+      f0:	00 e0       	ldi	r16, 0x00	; 0
+      f2:	0c bf       	out	0x3c, r16	; 60
+
+000000f4 <__do_copy_data>:
+      f4:	12 e0       	ldi	r17, 0x02	; 2
+      f6:	a0 e0       	ldi	r26, 0x00	; 0
+      f8:	b2 e0       	ldi	r27, 0x02	; 2
+      fa:	e0 e3       	ldi	r30, 0x30	; 48
+      fc:	f4 e1       	ldi	r31, 0x14	; 20
+      fe:	00 e0       	ldi	r16, 0x00	; 0
+     100:	0b bf       	out	0x3b, r16	; 59
+     102:	02 c0       	rjmp	.+4      	; 0x108 <__do_copy_data+0x14>
+     104:	07 90       	elpm	r0, Z+
+     106:	0d 92       	st	X+, r0
+     108:	aa 39       	cpi	r26, 0x9A	; 154
+     10a:	b1 07       	cpc	r27, r17
+     10c:	d9 f7       	brne	.-10     	; 0x104 <__do_copy_data+0x10>
+
+0000010e <__do_clear_bss>:
+     10e:	23 e0       	ldi	r18, 0x03	; 3
+     110:	aa e9       	ldi	r26, 0x9A	; 154
+     112:	b2 e0       	ldi	r27, 0x02	; 2
+     114:	01 c0       	rjmp	.+2      	; 0x118 <.do_clear_bss_start>
+
+00000116 <.do_clear_bss_loop>:
+     116:	1d 92       	st	X+, r1
+
+00000118 <.do_clear_bss_start>:
+     118:	a2 31       	cpi	r26, 0x12	; 18
+     11a:	b2 07       	cpc	r27, r18
+     11c:	e1 f7       	brne	.-8      	; 0x116 <.do_clear_bss_loop>
+     11e:	25 d5       	rcall	.+2634   	; 0xb6a <main>
+     120:	0c 94 16 0a 	jmp	0x142c	; 0x142c <_exit>
+
+00000124 <__bad_interrupt>:
+     124:	6d cf       	rjmp	.-294    	; 0x0 <__vectors>
+
+00000126 <GameButtonsInit>:
+
+#include <avr/io.h>
+#include "GameButtonsGenius.h"
+
+void GameButtonsInit(){
+	BOTOES_CONTROLE = 0x00;		//Configura as interrupções
+     126:	10 92 69 00 	sts	0x0069, r1
+	BOTOES_SELECT &= ~(0xFF);
+     12a:	8d b3       	in	r24, 0x1d	; 29
+     12c:	1d ba       	out	0x1d, r1	; 29
+	/* Seleciona as portas de interrupção */
+	BOTOES_SELECT = (1<<BOTAO_Y_PIN)|(1<<BOTAO_B_PIN)|(1<<BOTAO_G_PIN)|(1<<BOTAO_R_PIN);
+     12e:	8f e0       	ldi	r24, 0x0F	; 15
+     130:	8d bb       	out	0x1d, r24	; 29
+     132:	08 95       	ret
+
+00000134 <LimpaTela>:
+
+/**
+	@brief Função auxiliar que limpa a tela do display e posiciona o cursor na primeira posição da primeira linha.
+*/
+void LimpaTela(){
+	lcd_write_instruction(lcd_Clear);
+     134:	81 e0       	ldi	r24, 0x01	; 1
+     136:	1c d2       	rcall	.+1080   	; 0x570 <lcd_write_instruction>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     138:	8f e3       	ldi	r24, 0x3F	; 63
+     13a:	9f e1       	ldi	r25, 0x1F	; 31
+     13c:	01 97       	sbiw	r24, 0x01	; 1
+     13e:	f1 f7       	brne	.-4      	; 0x13c <LimpaTela+0x8>
+     140:	00 c0       	rjmp	.+0      	; 0x142 <LimpaTela+0xe>
+     142:	00 00       	nop
+	_delay_us(2000);
+	lcd_write_instruction(lcd_SetCursor|lcd_LineOne);
+     144:	80 e8       	ldi	r24, 0x80	; 128
+     146:	14 d2       	rcall	.+1064   	; 0x570 <lcd_write_instruction>
+     148:	8f e3       	ldi	r24, 0x3F	; 63
+     14a:	91 e0       	ldi	r25, 0x01	; 1
+     14c:	01 97       	sbiw	r24, 0x01	; 1
+     14e:	f1 f7       	brne	.-4      	; 0x14c <LimpaTela+0x18>
+     150:	00 c0       	rjmp	.+0      	; 0x152 <LimpaTela+0x1e>
+     152:	00 00       	nop
+     154:	08 95       	ret
+
+00000156 <ExibeMenuPrincipal>:
+	_delay_us(80);
+}
+
+void ExibeMenuPrincipal(){
+     156:	cf 93       	push	r28
+     158:	df 93       	push	r29
+     15a:	cd b7       	in	r28, 0x3d	; 61
+     15c:	de b7       	in	r29, 0x3e	; 62
+     15e:	6c 97       	sbiw	r28, 0x1c	; 28
+     160:	0f b6       	in	r0, 0x3f	; 63
+     162:	f8 94       	cli
+     164:	de bf       	out	0x3e, r29	; 62
+     166:	0f be       	out	0x3f, r0	; 63
+     168:	cd bf       	out	0x3d, r28	; 61
+	uint8_t menu[] = "      Menu";
+     16a:	8b e0       	ldi	r24, 0x0B	; 11
+     16c:	e4 e0       	ldi	r30, 0x04	; 4
+     16e:	f2 e0       	ldi	r31, 0x02	; 2
+     170:	de 01       	movw	r26, r28
+     172:	11 96       	adiw	r26, 0x01	; 1
+     174:	01 90       	ld	r0, Z+
+     176:	0d 92       	st	X+, r0
+     178:	8a 95       	dec	r24
+     17a:	e1 f7       	brne	.-8      	; 0x174 <ExibeMenuPrincipal+0x1e>
+	uint8_t playRanking[] = "<-Play Ranking->";
+     17c:	81 e1       	ldi	r24, 0x11	; 17
+     17e:	ef e0       	ldi	r30, 0x0F	; 15
+     180:	f2 e0       	ldi	r31, 0x02	; 2
+     182:	de 01       	movw	r26, r28
+     184:	1c 96       	adiw	r26, 0x0c	; 12
+     186:	01 90       	ld	r0, Z+
+     188:	0d 92       	st	X+, r0
+     18a:	8a 95       	dec	r24
+     18c:	e1 f7       	brne	.-8      	; 0x186 <ExibeMenuPrincipal+0x30>
+	LimpaTela();
+     18e:	d2 df       	rcall	.-92     	; 0x134 <LimpaTela>
+	lcd_write_string(menu);
+     190:	ce 01       	movw	r24, r28
+     192:	01 96       	adiw	r24, 0x01	; 1
+     194:	bb d1       	rcall	.+886    	; 0x50c <lcd_write_string>
+	lcd_write_instruction(lcd_SetCursor|lcd_LineTwo);
+     196:	80 ec       	ldi	r24, 0xC0	; 192
+     198:	eb d1       	rcall	.+982    	; 0x570 <lcd_write_instruction>
+     19a:	8f e3       	ldi	r24, 0x3F	; 63
+     19c:	91 e0       	ldi	r25, 0x01	; 1
+     19e:	01 97       	sbiw	r24, 0x01	; 1
+     1a0:	f1 f7       	brne	.-4      	; 0x19e <ExibeMenuPrincipal+0x48>
+     1a2:	00 c0       	rjmp	.+0      	; 0x1a4 <ExibeMenuPrincipal+0x4e>
+     1a4:	00 00       	nop
+	_delay_us(80);
+	lcd_write_string(playRanking);
+     1a6:	ce 01       	movw	r24, r28
+     1a8:	0c 96       	adiw	r24, 0x0c	; 12
+     1aa:	b0 d1       	rcall	.+864    	; 0x50c <lcd_write_string>
+}
+     1ac:	6c 96       	adiw	r28, 0x1c	; 28
+     1ae:	0f b6       	in	r0, 0x3f	; 63
+     1b0:	f8 94       	cli
+     1b2:	de bf       	out	0x3e, r29	; 62
+     1b4:	0f be       	out	0x3f, r0	; 63
+     1b6:	cd bf       	out	0x3d, r28	; 61
+     1b8:	df 91       	pop	r29
+     1ba:	cf 91       	pop	r28
+     1bc:	08 95       	ret
+
+000001be <ExibeJogar>:
+
+
+void ExibeJogar(){
+     1be:	cf 93       	push	r28
+     1c0:	df 93       	push	r29
+     1c2:	cd b7       	in	r28, 0x3d	; 61
+     1c4:	de b7       	in	r29, 0x3e	; 62
+     1c6:	6c 97       	sbiw	r28, 0x1c	; 28
+     1c8:	0f b6       	in	r0, 0x3f	; 63
+     1ca:	f8 94       	cli
+     1cc:	de bf       	out	0x3e, r29	; 62
+     1ce:	0f be       	out	0x3f, r0	; 63
+     1d0:	cd bf       	out	0x3d, r28	; 61
+	uint8_t play[] = "     Play?";
+     1d2:	8b e0       	ldi	r24, 0x0B	; 11
+     1d4:	e0 e2       	ldi	r30, 0x20	; 32
+     1d6:	f2 e0       	ldi	r31, 0x02	; 2
+     1d8:	de 01       	movw	r26, r28
+     1da:	11 96       	adiw	r26, 0x01	; 1
+     1dc:	01 90       	ld	r0, Z+
+     1de:	0d 92       	st	X+, r0
+     1e0:	8a 95       	dec	r24
+     1e2:	e1 f7       	brne	.-8      	; 0x1dc <ExibeJogar+0x1e>
+	uint8_t yesNo[] = "<-Yes       No->";
+     1e4:	81 e1       	ldi	r24, 0x11	; 17
+     1e6:	eb e2       	ldi	r30, 0x2B	; 43
+     1e8:	f2 e0       	ldi	r31, 0x02	; 2
+     1ea:	de 01       	movw	r26, r28
+     1ec:	1c 96       	adiw	r26, 0x0c	; 12
+     1ee:	01 90       	ld	r0, Z+
+     1f0:	0d 92       	st	X+, r0
+     1f2:	8a 95       	dec	r24
+     1f4:	e1 f7       	brne	.-8      	; 0x1ee <ExibeJogar+0x30>
+	LimpaTela();
+     1f6:	9e df       	rcall	.-196    	; 0x134 <LimpaTela>
+	lcd_write_string(play);
+     1f8:	ce 01       	movw	r24, r28
+     1fa:	01 96       	adiw	r24, 0x01	; 1
+     1fc:	87 d1       	rcall	.+782    	; 0x50c <lcd_write_string>
+	lcd_write_instruction(lcd_SetCursor|lcd_LineTwo);
+     1fe:	80 ec       	ldi	r24, 0xC0	; 192
+     200:	b7 d1       	rcall	.+878    	; 0x570 <lcd_write_instruction>
+     202:	8f e3       	ldi	r24, 0x3F	; 63
+     204:	91 e0       	ldi	r25, 0x01	; 1
+     206:	01 97       	sbiw	r24, 0x01	; 1
+     208:	f1 f7       	brne	.-4      	; 0x206 <ExibeJogar+0x48>
+     20a:	00 c0       	rjmp	.+0      	; 0x20c <ExibeJogar+0x4e>
+     20c:	00 00       	nop
+	_delay_us(80);
+	lcd_write_string(yesNo);
+     20e:	ce 01       	movw	r24, r28
+     210:	0c 96       	adiw	r24, 0x0c	; 12
+     212:	7c d1       	rcall	.+760    	; 0x50c <lcd_write_string>
+}
+     214:	6c 96       	adiw	r28, 0x1c	; 28
+     216:	0f b6       	in	r0, 0x3f	; 63
+     218:	f8 94       	cli
+     21a:	de bf       	out	0x3e, r29	; 62
+     21c:	0f be       	out	0x3f, r0	; 63
+     21e:	cd bf       	out	0x3d, r28	; 61
+     220:	df 91       	pop	r29
+     222:	cf 91       	pop	r28
+     224:	08 95       	ret
+
+00000226 <ExibeGameOver>:
+/**
+ * @param pontuacao Pontuação final do jogador a ser exibida na tela.
+*/
+void ExibeGameOver(uint8_t pontuacao){
+     226:	ff 92       	push	r15
+     228:	0f 93       	push	r16
+     22a:	1f 93       	push	r17
+     22c:	cf 93       	push	r28
+     22e:	df 93       	push	r29
+     230:	cd b7       	in	r28, 0x3d	; 61
+     232:	de b7       	in	r29, 0x3e	; 62
+     234:	68 97       	sbiw	r28, 0x18	; 24
+     236:	0f b6       	in	r0, 0x3f	; 63
+     238:	f8 94       	cli
+     23a:	de bf       	out	0x3e, r29	; 62
+     23c:	0f be       	out	0x3f, r0	; 63
+     23e:	cd bf       	out	0x3d, r28	; 61
+     240:	28 2f       	mov	r18, r24
+	uint8_t gameOver[] = "   Game Over";
+     242:	8d e0       	ldi	r24, 0x0D	; 13
+     244:	ec e3       	ldi	r30, 0x3C	; 60
+     246:	f2 e0       	ldi	r31, 0x02	; 2
+     248:	de 01       	movw	r26, r28
+     24a:	11 96       	adiw	r26, 0x01	; 1
+     24c:	01 90       	ld	r0, Z+
+     24e:	0d 92       	st	X+, r0
+     250:	8a 95       	dec	r24
+     252:	e1 f7       	brne	.-8      	; 0x24c <ExibeGameOver+0x26>
+	uint8_t strScore[] = "  Score - ";
+     254:	8b e0       	ldi	r24, 0x0B	; 11
+     256:	e9 e4       	ldi	r30, 0x49	; 73
+     258:	f2 e0       	ldi	r31, 0x02	; 2
+     25a:	de 01       	movw	r26, r28
+     25c:	1e 96       	adiw	r26, 0x0e	; 14
+     25e:	01 90       	ld	r0, Z+
+     260:	0d 92       	st	X+, r0
+     262:	8a 95       	dec	r24
+     264:	e1 f7       	brne	.-8      	; 0x25e <ExibeGameOver+0x38>
+	uint8_t dig1Score = (pontuacao/100);							//Separa o algarismo de centena da pontuação.
+     266:	09 e2       	ldi	r16, 0x29	; 41
+     268:	20 9f       	mul	r18, r16
+     26a:	01 2d       	mov	r16, r1
+     26c:	11 24       	eor	r1, r1
+     26e:	02 95       	swap	r16
+     270:	0f 70       	andi	r16, 0x0F	; 15
+	uint8_t dig2Score = ((pontuacao-(dig1Score*100))/10);			//Separa o algarismo de dezena da pontuação.
+     272:	3c e9       	ldi	r19, 0x9C	; 156
+     274:	30 03       	mulsu	r19, r16
+     276:	c0 01       	movw	r24, r0
+     278:	11 24       	eor	r1, r1
+     27a:	82 0f       	add	r24, r18
+     27c:	91 1d       	adc	r25, r1
+     27e:	6a e0       	ldi	r22, 0x0A	; 10
+     280:	70 e0       	ldi	r23, 0x00	; 0
+     282:	fb d7       	rcall	.+4086   	; 0x127a <__divmodhi4>
+     284:	f6 2e       	mov	r15, r22
+     286:	10 e3       	ldi	r17, 0x30	; 48
+     288:	12 0f       	add	r17, r18
+     28a:	03 9f       	mul	r16, r19
+     28c:	10 0d       	add	r17, r0
+     28e:	11 24       	eor	r1, r1
+	uint8_t dig3Score = (pontuacao-(dig1Score*100)-(dig2Score*10));	//Separa o algarismo de unidade da pontuação.
+     290:	86 2f       	mov	r24, r22
+     292:	88 0f       	add	r24, r24
+     294:	98 2f       	mov	r25, r24
+     296:	99 0f       	add	r25, r25
+     298:	99 0f       	add	r25, r25
+     29a:	98 0f       	add	r25, r24
+	dig1Score+=48;													//O offset de um número em relação ao valor do seu
+	dig2Score+=48;													//caractere em ASCII é 48.
+	dig3Score+=48;
+     29c:	19 1b       	sub	r17, r25
+	LimpaTela();
+     29e:	4a df       	rcall	.-364    	; 0x134 <LimpaTela>
+	lcd_write_string(gameOver);
+     2a0:	ce 01       	movw	r24, r28
+     2a2:	01 96       	adiw	r24, 0x01	; 1
+     2a4:	33 d1       	rcall	.+614    	; 0x50c <lcd_write_string>
+	lcd_write_instruction(lcd_SetCursor|lcd_LineTwo);
+     2a6:	80 ec       	ldi	r24, 0xC0	; 192
+     2a8:	63 d1       	rcall	.+710    	; 0x570 <lcd_write_instruction>
+     2aa:	8f e3       	ldi	r24, 0x3F	; 63
+     2ac:	91 e0       	ldi	r25, 0x01	; 1
+     2ae:	01 97       	sbiw	r24, 0x01	; 1
+     2b0:	f1 f7       	brne	.-4      	; 0x2ae <ExibeGameOver+0x88>
+     2b2:	00 c0       	rjmp	.+0      	; 0x2b4 <ExibeGameOver+0x8e>
+     2b4:	00 00       	nop
+	_delay_us(80);
+	lcd_write_string(strScore);
+     2b6:	ce 01       	movw	r24, r28
+     2b8:	0e 96       	adiw	r24, 0x0e	; 14
+     2ba:	28 d1       	rcall	.+592    	; 0x50c <lcd_write_string>
+	lcd_write_character(dig1Score);
+     2bc:	80 e3       	ldi	r24, 0x30	; 48
+     2be:	80 0f       	add	r24, r16
+     2c0:	14 d1       	rcall	.+552    	; 0x4ea <lcd_write_character>
+	lcd_write_character(dig2Score);
+     2c2:	80 e3       	ldi	r24, 0x30	; 48
+     2c4:	8f 0d       	add	r24, r15
+     2c6:	11 d1       	rcall	.+546    	; 0x4ea <lcd_write_character>
+	lcd_write_character(dig3Score);
+     2c8:	81 2f       	mov	r24, r17
+     2ca:	0f d1       	rcall	.+542    	; 0x4ea <lcd_write_character>
+}
+     2cc:	68 96       	adiw	r28, 0x18	; 24
+     2ce:	0f b6       	in	r0, 0x3f	; 63
+     2d0:	f8 94       	cli
+     2d2:	de bf       	out	0x3e, r29	; 62
+     2d4:	0f be       	out	0x3f, r0	; 63
+     2d6:	cd bf       	out	0x3d, r28	; 61
+     2d8:	df 91       	pop	r29
+     2da:	cf 91       	pop	r28
+     2dc:	1f 91       	pop	r17
+     2de:	0f 91       	pop	r16
+     2e0:	ff 90       	pop	r15
+     2e2:	08 95       	ret
+
+000002e4 <ExibeGenius>:
+
+void ExibeGenius(){
+     2e4:	cf 93       	push	r28
+     2e6:	df 93       	push	r29
+     2e8:	cd b7       	in	r28, 0x3d	; 61
+     2ea:	de b7       	in	r29, 0x3e	; 62
+     2ec:	a0 97       	sbiw	r28, 0x20	; 32
+     2ee:	0f b6       	in	r0, 0x3f	; 63
+     2f0:	f8 94       	cli
+     2f2:	de bf       	out	0x3e, r29	; 62
+     2f4:	0f be       	out	0x3f, r0	; 63
+     2f6:	cd bf       	out	0x3d, r28	; 61
+	uint8_t genius[] = "     Genius";
+     2f8:	8c e0       	ldi	r24, 0x0C	; 12
+     2fa:	e4 e5       	ldi	r30, 0x54	; 84
+     2fc:	f2 e0       	ldi	r31, 0x02	; 2
+     2fe:	de 01       	movw	r26, r28
+     300:	11 96       	adiw	r26, 0x01	; 1
+     302:	01 90       	ld	r0, Z+
+     304:	0d 92       	st	X+, r0
+     306:	8a 95       	dec	r24
+     308:	e1 f7       	brne	.-8      	; 0x302 <ExibeGenius+0x1e>
+	uint8_t tres[] = " 3"; //1
+     30a:	80 e2       	ldi	r24, 0x20	; 32
+     30c:	93 e3       	ldi	r25, 0x33	; 51
+     30e:	a0 e0       	ldi	r26, 0x00	; 0
+     310:	8d 87       	std	Y+13, r24	; 0x0d
+     312:	9e 87       	std	Y+14, r25	; 0x0e
+     314:	af 87       	std	Y+15, r26	; 0x0f
+	uint8_t dois[] = "   2";//3
+     316:	85 e0       	ldi	r24, 0x05	; 5
+     318:	e0 e6       	ldi	r30, 0x60	; 96
+     31a:	f2 e0       	ldi	r31, 0x02	; 2
+     31c:	de 01       	movw	r26, r28
+     31e:	50 96       	adiw	r26, 0x10	; 16
+     320:	01 90       	ld	r0, Z+
+     322:	0d 92       	st	X+, r0
+     324:	8a 95       	dec	r24
+     326:	e1 f7       	brne	.-8      	; 0x320 <ExibeGenius+0x3c>
+	uint8_t um[] = "   1";//3
+     328:	85 e0       	ldi	r24, 0x05	; 5
+     32a:	e5 e6       	ldi	r30, 0x65	; 101
+     32c:	f2 e0       	ldi	r31, 0x02	; 2
+     32e:	de 01       	movw	r26, r28
+     330:	55 96       	adiw	r26, 0x15	; 21
+     332:	01 90       	ld	r0, Z+
+     334:	0d 92       	st	X+, r0
+     336:	8a 95       	dec	r24
+     338:	e1 f7       	brne	.-8      	; 0x332 <ExibeGenius+0x4e>
+	uint8_t go[] = "   GO!";//2
+     33a:	87 e0       	ldi	r24, 0x07	; 7
+     33c:	ea e6       	ldi	r30, 0x6A	; 106
+     33e:	f2 e0       	ldi	r31, 0x02	; 2
+     340:	de 01       	movw	r26, r28
+     342:	5a 96       	adiw	r26, 0x1a	; 26
+     344:	01 90       	ld	r0, Z+
+     346:	0d 92       	st	X+, r0
+     348:	8a 95       	dec	r24
+     34a:	e1 f7       	brne	.-8      	; 0x344 <ExibeGenius+0x60>
+	LimpaTela();
+     34c:	f3 de       	rcall	.-538    	; 0x134 <LimpaTela>
+	lcd_write_string(genius);
+     34e:	ce 01       	movw	r24, r28
+     350:	01 96       	adiw	r24, 0x01	; 1
+     352:	dc d0       	rcall	.+440    	; 0x50c <lcd_write_string>
+	lcd_write_instruction(lcd_SetCursor|lcd_LineTwo);	//Os delays entre escritas servem 
+     354:	80 ec       	ldi	r24, 0xC0	; 192
+     356:	0c d1       	rcall	.+536    	; 0x570 <lcd_write_instruction>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     358:	2f ef       	ldi	r18, 0xFF	; 255
+     35a:	8f e0       	ldi	r24, 0x0F	; 15
+     35c:	97 e2       	ldi	r25, 0x27	; 39
+     35e:	21 50       	subi	r18, 0x01	; 1
+     360:	80 40       	sbci	r24, 0x00	; 0
+     362:	90 40       	sbci	r25, 0x00	; 0
+     364:	e1 f7       	brne	.-8      	; 0x35e <ExibeGenius+0x7a>
+     366:	00 c0       	rjmp	.+0      	; 0x368 <ExibeGenius+0x84>
+     368:	00 00       	nop
+	_delay_ms(800);										//para o jogador ter a sensação
+	lcd_write_string(tres);								//de uma contagem regressiva.
+     36a:	ce 01       	movw	r24, r28
+     36c:	0d 96       	adiw	r24, 0x0d	; 13
+     36e:	ce d0       	rcall	.+412    	; 0x50c <lcd_write_string>
+     370:	2f ef       	ldi	r18, 0xFF	; 255
+     372:	8f e0       	ldi	r24, 0x0F	; 15
+     374:	97 e2       	ldi	r25, 0x27	; 39
+     376:	21 50       	subi	r18, 0x01	; 1
+     378:	80 40       	sbci	r24, 0x00	; 0
+     37a:	90 40       	sbci	r25, 0x00	; 0
+     37c:	e1 f7       	brne	.-8      	; 0x376 <ExibeGenius+0x92>
+     37e:	00 c0       	rjmp	.+0      	; 0x380 <ExibeGenius+0x9c>
+     380:	00 00       	nop
+	_delay_ms(800);
+	lcd_write_string(dois);
+     382:	ce 01       	movw	r24, r28
+     384:	40 96       	adiw	r24, 0x10	; 16
+     386:	c2 d0       	rcall	.+388    	; 0x50c <lcd_write_string>
+     388:	2f ef       	ldi	r18, 0xFF	; 255
+     38a:	8f e0       	ldi	r24, 0x0F	; 15
+     38c:	97 e2       	ldi	r25, 0x27	; 39
+     38e:	21 50       	subi	r18, 0x01	; 1
+     390:	80 40       	sbci	r24, 0x00	; 0
+     392:	90 40       	sbci	r25, 0x00	; 0
+     394:	e1 f7       	brne	.-8      	; 0x38e <ExibeGenius+0xaa>
+     396:	00 c0       	rjmp	.+0      	; 0x398 <ExibeGenius+0xb4>
+     398:	00 00       	nop
+	_delay_ms(800);
+	lcd_write_string(um);
+     39a:	ce 01       	movw	r24, r28
+     39c:	45 96       	adiw	r24, 0x15	; 21
+     39e:	b6 d0       	rcall	.+364    	; 0x50c <lcd_write_string>
+     3a0:	2f ef       	ldi	r18, 0xFF	; 255
+     3a2:	8f e0       	ldi	r24, 0x0F	; 15
+     3a4:	97 e2       	ldi	r25, 0x27	; 39
+     3a6:	21 50       	subi	r18, 0x01	; 1
+     3a8:	80 40       	sbci	r24, 0x00	; 0
+     3aa:	90 40       	sbci	r25, 0x00	; 0
+     3ac:	e1 f7       	brne	.-8      	; 0x3a6 <ExibeGenius+0xc2>
+     3ae:	00 c0       	rjmp	.+0      	; 0x3b0 <ExibeGenius+0xcc>
+     3b0:	00 00       	nop
+	_delay_ms(800);
+	lcd_write_string(go);
+     3b2:	ce 01       	movw	r24, r28
+     3b4:	4a 96       	adiw	r24, 0x1a	; 26
+     3b6:	aa d0       	rcall	.+340    	; 0x50c <lcd_write_string>
+}
+     3b8:	a0 96       	adiw	r28, 0x20	; 32
+     3ba:	0f b6       	in	r0, 0x3f	; 63
+     3bc:	f8 94       	cli
+     3be:	de bf       	out	0x3e, r29	; 62
+     3c0:	0f be       	out	0x3f, r0	; 63
+     3c2:	cd bf       	out	0x3d, r28	; 61
+     3c4:	df 91       	pop	r29
+     3c6:	cf 91       	pop	r28
+     3c8:	08 95       	ret
+
+000003ca <ExibeTelaName>:
+
+void ExibeTelaName(){
+     3ca:	cf 93       	push	r28
+     3cc:	df 93       	push	r29
+     3ce:	cd b7       	in	r28, 0x3d	; 61
+     3d0:	de b7       	in	r29, 0x3e	; 62
+     3d2:	69 97       	sbiw	r28, 0x19	; 25
+     3d4:	0f b6       	in	r0, 0x3f	; 63
+     3d6:	f8 94       	cli
+     3d8:	de bf       	out	0x3e, r29	; 62
+     3da:	0f be       	out	0x3f, r0	; 63
+     3dc:	cd bf       	out	0x3d, r28	; 61
+	uint8_t nameMenu[] = "      Name";
+     3de:	8b e0       	ldi	r24, 0x0B	; 11
+     3e0:	e1 e7       	ldi	r30, 0x71	; 113
+     3e2:	f2 e0       	ldi	r31, 0x02	; 2
+     3e4:	de 01       	movw	r26, r28
+     3e6:	11 96       	adiw	r26, 0x01	; 1
+     3e8:	01 90       	ld	r0, Z+
+     3ea:	0d 92       	st	X+, r0
+     3ec:	8a 95       	dec	r24
+     3ee:	e1 f7       	brne	.-8      	; 0x3e8 <ExibeTelaName+0x1e>
+	uint8_t endName[] = "        [end]";
+     3f0:	8e e0       	ldi	r24, 0x0E	; 14
+     3f2:	ec e7       	ldi	r30, 0x7C	; 124
+     3f4:	f2 e0       	ldi	r31, 0x02	; 2
+     3f6:	de 01       	movw	r26, r28
+     3f8:	1c 96       	adiw	r26, 0x0c	; 12
+     3fa:	01 90       	ld	r0, Z+
+     3fc:	0d 92       	st	X+, r0
+     3fe:	8a 95       	dec	r24
+     400:	e1 f7       	brne	.-8      	; 0x3fa <ExibeTelaName+0x30>
+	LimpaTela();
+     402:	98 de       	rcall	.-720    	; 0x134 <LimpaTela>
+	lcd_write_string(nameMenu);
+     404:	ce 01       	movw	r24, r28
+     406:	01 96       	adiw	r24, 0x01	; 1
+     408:	81 d0       	rcall	.+258    	; 0x50c <lcd_write_string>
+	lcd_write_instruction(lcd_SetCursor|lcd_LineTwo);
+     40a:	80 ec       	ldi	r24, 0xC0	; 192
+     40c:	b1 d0       	rcall	.+354    	; 0x570 <lcd_write_instruction>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     40e:	8f e3       	ldi	r24, 0x3F	; 63
+     410:	91 e0       	ldi	r25, 0x01	; 1
+     412:	01 97       	sbiw	r24, 0x01	; 1
+     414:	f1 f7       	brne	.-4      	; 0x412 <ExibeTelaName+0x48>
+     416:	00 c0       	rjmp	.+0      	; 0x418 <ExibeTelaName+0x4e>
+     418:	00 00       	nop
+	_delay_us(80);
+	lcd_write_string(endName);
+     41a:	ce 01       	movw	r24, r28
+     41c:	0c 96       	adiw	r24, 0x0c	; 12
+     41e:	76 d0       	rcall	.+236    	; 0x50c <lcd_write_string>
+	lcd_write_instruction(lcd_SetCursor|lcd_LineTwo+2);
+     420:	82 ec       	ldi	r24, 0xC2	; 194
+     422:	a6 d0       	rcall	.+332    	; 0x570 <lcd_write_instruction>
+     424:	8f e3       	ldi	r24, 0x3F	; 63
+     426:	91 e0       	ldi	r25, 0x01	; 1
+     428:	01 97       	sbiw	r24, 0x01	; 1
+     42a:	f1 f7       	brne	.-4      	; 0x428 <ExibeTelaName+0x5e>
+     42c:	00 c0       	rjmp	.+0      	; 0x42e <ExibeTelaName+0x64>
+     42e:	00 00       	nop
+	_delay_us(80);
+}
+     430:	69 96       	adiw	r28, 0x19	; 25
+     432:	0f b6       	in	r0, 0x3f	; 63
+     434:	f8 94       	cli
+     436:	de bf       	out	0x3e, r29	; 62
+     438:	0f be       	out	0x3f, r0	; 63
+     43a:	cd bf       	out	0x3d, r28	; 61
+     43c:	df 91       	pop	r29
+     43e:	cf 91       	pop	r28
+     440:	08 95       	ret
+
+00000442 <ExibeTelaRanking>:
+
+void ExibeTelaRanking(){
+     442:	cf 93       	push	r28
+     444:	df 93       	push	r29
+     446:	cd b7       	in	r28, 0x3d	; 61
+     448:	de b7       	in	r29, 0x3e	; 62
+     44a:	60 97       	sbiw	r28, 0x10	; 16
+     44c:	0f b6       	in	r0, 0x3f	; 63
+     44e:	f8 94       	cli
+     450:	de bf       	out	0x3e, r29	; 62
+     452:	0f be       	out	0x3f, r0	; 63
+     454:	cd bf       	out	0x3d, r28	; 61
+	uint8_t rankNameScore[] = "Rank Name Score";
+     456:	80 e1       	ldi	r24, 0x10	; 16
+     458:	ea e8       	ldi	r30, 0x8A	; 138
+     45a:	f2 e0       	ldi	r31, 0x02	; 2
+     45c:	de 01       	movw	r26, r28
+     45e:	11 96       	adiw	r26, 0x01	; 1
+     460:	01 90       	ld	r0, Z+
+     462:	0d 92       	st	X+, r0
+     464:	8a 95       	dec	r24
+     466:	e1 f7       	brne	.-8      	; 0x460 <ExibeTelaRanking+0x1e>
+	LimpaTela();
+     468:	65 de       	rcall	.-822    	; 0x134 <LimpaTela>
+	lcd_write_string(rankNameScore);
+     46a:	ce 01       	movw	r24, r28
+     46c:	01 96       	adiw	r24, 0x01	; 1
+     46e:	4e d0       	rcall	.+156    	; 0x50c <lcd_write_string>
+     470:	60 96       	adiw	r28, 0x10	; 16
+     472:	0f b6       	in	r0, 0x3f	; 63
+     474:	f8 94       	cli
+     476:	de bf       	out	0x3e, r29	; 62
+     478:	0f be       	out	0x3f, r0	; 63
+     47a:	cd bf       	out	0x3d, r28	; 61
+     47c:	df 91       	pop	r29
+     47e:	cf 91       	pop	r28
+     480:	08 95       	ret
+
+00000482 <lcd_write>:
+/**
+ * @param theByte Dado a ser escrito nas portas do LCD. Somente serão utilizados os 4 bits mais significativos.
+ */
+void lcd_write(uint8_t theByte)
+{
+	lcd_D7_port &= ~(1<<lcd_D7_bit);                        //Assume o dado é '0'.
+     482:	e2 e0       	ldi	r30, 0x02	; 2
+     484:	f1 e0       	ldi	r31, 0x01	; 1
+     486:	90 81       	ld	r25, Z
+     488:	9f 7e       	andi	r25, 0xEF	; 239
+     48a:	90 83       	st	Z, r25
+	if (theByte & 1<<7) lcd_D7_port |= (1<<lcd_D7_bit);     //Em caso negativo, seta o bit para '1'.
+     48c:	88 23       	and	r24, r24
+     48e:	1c f4       	brge	.+6      	; 0x496 <lcd_write+0x14>
+     490:	90 81       	ld	r25, Z
+     492:	90 61       	ori	r25, 0x10	; 16
+     494:	90 83       	st	Z, r25
+
+	lcd_D6_port &= ~(1<<lcd_D6_bit);                        //Processo repetido para os outros bits.
+     496:	e2 e0       	ldi	r30, 0x02	; 2
+     498:	f1 e0       	ldi	r31, 0x01	; 1
+     49a:	90 81       	ld	r25, Z
+     49c:	97 7f       	andi	r25, 0xF7	; 247
+     49e:	90 83       	st	Z, r25
+	if (theByte & 1<<6) lcd_D6_port |= (1<<lcd_D6_bit);
+     4a0:	86 ff       	sbrs	r24, 6
+     4a2:	03 c0       	rjmp	.+6      	; 0x4aa <lcd_write+0x28>
+     4a4:	90 81       	ld	r25, Z
+     4a6:	98 60       	ori	r25, 0x08	; 8
+     4a8:	90 83       	st	Z, r25
+
+	lcd_D5_port &= ~(1<<lcd_D5_bit);
+     4aa:	73 98       	cbi	0x0e, 3	; 14
+	if (theByte & 1<<5) lcd_D5_port |= (1<<lcd_D5_bit);
+     4ac:	85 fd       	sbrc	r24, 5
+     4ae:	73 9a       	sbi	0x0e, 3	; 14
+
+	lcd_D4_port &= ~(1<<lcd_D4_bit);
+     4b0:	a5 98       	cbi	0x14, 5	; 20
+	if (theByte & 1<<4) lcd_D4_port |= (1<<lcd_D4_bit);
+     4b2:	84 fd       	sbrc	r24, 4
+     4b4:	a5 9a       	sbi	0x14, 5	; 20
+
+	/* Este processo dá um pulso em Enable e escreve os 4 bits no LCD. */
+	lcd_E_port &= ~(1<<lcd_E_bit);
+     4b6:	e2 e0       	ldi	r30, 0x02	; 2
+     4b8:	f1 e0       	ldi	r31, 0x01	; 1
+     4ba:	80 81       	ld	r24, Z
+     4bc:	8f 7b       	andi	r24, 0xBF	; 191
+     4be:	80 83       	st	Z, r24
+     4c0:	85 e0       	ldi	r24, 0x05	; 5
+     4c2:	8a 95       	dec	r24
+     4c4:	f1 f7       	brne	.-4      	; 0x4c2 <lcd_write+0x40>
+     4c6:	00 00       	nop
+	_delay_us(1);
+	lcd_E_port |= (1<<lcd_E_bit);
+     4c8:	80 81       	ld	r24, Z
+     4ca:	80 64       	ori	r24, 0x40	; 64
+     4cc:	80 83       	st	Z, r24
+     4ce:	95 e0       	ldi	r25, 0x05	; 5
+     4d0:	9a 95       	dec	r25
+     4d2:	f1 f7       	brne	.-4      	; 0x4d0 <lcd_write+0x4e>
+     4d4:	00 00       	nop
+	_delay_us(1);
+	lcd_E_port &= ~(1<<lcd_E_bit);
+     4d6:	80 81       	ld	r24, Z
+     4d8:	8f 7b       	andi	r24, 0xBF	; 191
+     4da:	80 83       	st	Z, r24
+     4dc:	8f e8       	ldi	r24, 0x8F	; 143
+     4de:	91 e0       	ldi	r25, 0x01	; 1
+     4e0:	01 97       	sbiw	r24, 0x01	; 1
+     4e2:	f1 f7       	brne	.-4      	; 0x4e0 <lcd_write+0x5e>
+     4e4:	00 c0       	rjmp	.+0      	; 0x4e6 <lcd_write+0x64>
+     4e6:	00 00       	nop
+     4e8:	08 95       	ret
+
+000004ea <lcd_write_character>:
+}
+/**
+ * @param theData Caractere a ser escrito no display.
+ */
+void lcd_write_character(uint8_t theData)
+{
+     4ea:	cf 93       	push	r28
+     4ec:	c8 2f       	mov	r28, r24
+	lcd_RS_port |= (1<<lcd_RS_bit);					//Seleciona o Data Register.
+     4ee:	e2 e0       	ldi	r30, 0x02	; 2
+     4f0:	f1 e0       	ldi	r31, 0x01	; 1
+     4f2:	90 81       	ld	r25, Z
+     4f4:	90 62       	ori	r25, 0x20	; 32
+     4f6:	90 83       	st	Z, r25
+	lcd_E_port &= ~(1<<lcd_E_bit);					//Coloca Enable em nível baixo.
+     4f8:	90 81       	ld	r25, Z
+     4fa:	9f 7b       	andi	r25, 0xBF	; 191
+     4fc:	90 83       	st	Z, r25
+	lcd_write(theData);								//Escreve a parte alta (4 bits) do caractere.
+     4fe:	c1 df       	rcall	.-126    	; 0x482 <lcd_write>
+	lcd_write(theData << 4);						//Escreve a parte baixa (4 bits) do caractere.
+     500:	8c 2f       	mov	r24, r28
+     502:	82 95       	swap	r24
+     504:	80 7f       	andi	r24, 0xF0	; 240
+     506:	bd df       	rcall	.-134    	; 0x482 <lcd_write>
+}
+     508:	cf 91       	pop	r28
+     50a:	08 95       	ret
+
+0000050c <lcd_write_string>:
+}
+/**
+ * @param theString[] Array de caracteres a serem escritos no display.
+ */
+void lcd_write_string(uint8_t theString[])
+{
+     50c:	0f 93       	push	r16
+     50e:	1f 93       	push	r17
+     510:	cf 93       	push	r28
+     512:	df 93       	push	r29
+     514:	1f 92       	push	r1
+     516:	1f 92       	push	r1
+     518:	cd b7       	in	r28, 0x3d	; 61
+     51a:	de b7       	in	r29, 0x3e	; 62
+     51c:	8c 01       	movw	r16, r24
+	volatile int i = 0;
+     51e:	1a 82       	std	Y+2, r1	; 0x02
+     520:	19 82       	std	Y+1, r1	; 0x01
+	while (theString[i] != 0)	//Loop que escreve a string caractere por caractere até que chegue ao fim desta.
+     522:	e9 81       	ldd	r30, Y+1	; 0x01
+     524:	fa 81       	ldd	r31, Y+2	; 0x02
+     526:	e8 0f       	add	r30, r24
+     528:	f9 1f       	adc	r31, r25
+     52a:	80 81       	ld	r24, Z
+     52c:	88 23       	and	r24, r24
+     52e:	c9 f0       	breq	.+50     	; 0x562 <lcd_write_string+0x56>
+	{
+		lcd_write_character(theString[i]);
+     530:	e9 81       	ldd	r30, Y+1	; 0x01
+     532:	fa 81       	ldd	r31, Y+2	; 0x02
+     534:	e0 0f       	add	r30, r16
+     536:	f1 1f       	adc	r31, r17
+     538:	80 81       	ld	r24, Z
+     53a:	d7 df       	rcall	.-82     	; 0x4ea <lcd_write_character>
+		i++;
+     53c:	29 81       	ldd	r18, Y+1	; 0x01
+     53e:	3a 81       	ldd	r19, Y+2	; 0x02
+     540:	2f 5f       	subi	r18, 0xFF	; 255
+     542:	3f 4f       	sbci	r19, 0xFF	; 255
+     544:	3a 83       	std	Y+2, r19	; 0x02
+     546:	29 83       	std	Y+1, r18	; 0x01
+     548:	8f e3       	ldi	r24, 0x3F	; 63
+     54a:	91 e0       	ldi	r25, 0x01	; 1
+     54c:	01 97       	sbiw	r24, 0x01	; 1
+     54e:	f1 f7       	brne	.-4      	; 0x54c <lcd_write_string+0x40>
+     550:	00 c0       	rjmp	.+0      	; 0x552 <lcd_write_string+0x46>
+     552:	00 00       	nop
+ * @param theString[] Array de caracteres a serem escritos no display.
+ */
+void lcd_write_string(uint8_t theString[])
+{
+	volatile int i = 0;
+	while (theString[i] != 0)	//Loop que escreve a string caractere por caractere até que chegue ao fim desta.
+     554:	e9 81       	ldd	r30, Y+1	; 0x01
+     556:	fa 81       	ldd	r31, Y+2	; 0x02
+     558:	e0 0f       	add	r30, r16
+     55a:	f1 1f       	adc	r31, r17
+     55c:	80 81       	ld	r24, Z
+     55e:	81 11       	cpse	r24, r1
+     560:	e7 cf       	rjmp	.-50     	; 0x530 <lcd_write_string+0x24>
+	{
+		lcd_write_character(theString[i]);
+		i++;
+		_delay_us(80);
+	}
+}
+     562:	0f 90       	pop	r0
+     564:	0f 90       	pop	r0
+     566:	df 91       	pop	r29
+     568:	cf 91       	pop	r28
+     56a:	1f 91       	pop	r17
+     56c:	0f 91       	pop	r16
+     56e:	08 95       	ret
+
+00000570 <lcd_write_instruction>:
+}
+/**
+ * @param theInstruction Instrução a ser enviada para o LCD.
+ */
+void lcd_write_instruction(uint8_t theInstruction)
+{
+     570:	cf 93       	push	r28
+     572:	c8 2f       	mov	r28, r24
+	lcd_RS_port &= ~(1<<lcd_RS_bit);				//Seleciona o Instruction Register.
+     574:	e2 e0       	ldi	r30, 0x02	; 2
+     576:	f1 e0       	ldi	r31, 0x01	; 1
+     578:	90 81       	ld	r25, Z
+     57a:	9f 7d       	andi	r25, 0xDF	; 223
+     57c:	90 83       	st	Z, r25
+	lcd_E_port &= ~(1<<lcd_E_bit);					//Coloca Enable em nível baixo.
+     57e:	90 81       	ld	r25, Z
+     580:	9f 7b       	andi	r25, 0xBF	; 191
+     582:	90 83       	st	Z, r25
+	lcd_write(theInstruction);						//Escreve a parte alta (4 bits) da instrução.
+     584:	7e df       	rcall	.-260    	; 0x482 <lcd_write>
+	lcd_write(theInstruction << 4);					//Escreve a parte baixa (4 bits) da instrução.
+     586:	8c 2f       	mov	r24, r28
+     588:	82 95       	swap	r24
+     58a:	80 7f       	andi	r24, 0xF0	; 240
+     58c:	7a df       	rcall	.-268    	; 0x482 <lcd_write>
+}
+     58e:	cf 91       	pop	r28
+     590:	08 95       	ret
+
+00000592 <lcd_init>:
+#include "LCDGenius.h"
+
+void lcd_init(void)
+{
+	/* Configuração dos pinos do processador que o LCD utiliza como saída. */
+	lcd_D7_ddr |= (1<<lcd_D7_bit);
+     592:	e1 e0       	ldi	r30, 0x01	; 1
+     594:	f1 e0       	ldi	r31, 0x01	; 1
+     596:	80 81       	ld	r24, Z
+     598:	80 61       	ori	r24, 0x10	; 16
+     59a:	80 83       	st	Z, r24
+	lcd_D6_ddr |= (1<<lcd_D6_bit);
+     59c:	80 81       	ld	r24, Z
+     59e:	88 60       	ori	r24, 0x08	; 8
+     5a0:	80 83       	st	Z, r24
+	lcd_D5_ddr |= (1<<lcd_D5_bit);
+     5a2:	6b 9a       	sbi	0x0d, 3	; 13
+	lcd_D4_ddr |= (1<<lcd_D4_bit);
+     5a4:	9d 9a       	sbi	0x13, 5	; 19
+	lcd_E_ddr |= (1<<lcd_E_bit);
+     5a6:	80 81       	ld	r24, Z
+     5a8:	80 64       	ori	r24, 0x40	; 64
+     5aa:	80 83       	st	Z, r24
+	lcd_RS_ddr |= (1<<lcd_RS_bit);
+     5ac:	80 81       	ld	r24, Z
+     5ae:	80 62       	ori	r24, 0x20	; 32
+     5b0:	80 83       	st	Z, r24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     5b2:	2f ef       	ldi	r18, 0xFF	; 255
+     5b4:	81 ee       	ldi	r24, 0xE1	; 225
+     5b6:	94 e0       	ldi	r25, 0x04	; 4
+     5b8:	21 50       	subi	r18, 0x01	; 1
+     5ba:	80 40       	sbci	r24, 0x00	; 0
+     5bc:	90 40       	sbci	r25, 0x00	; 0
+     5be:	e1 f7       	brne	.-8      	; 0x5b8 <lcd_init+0x26>
+     5c0:	00 c0       	rjmp	.+0      	; 0x5c2 <lcd_init+0x30>
+     5c2:	00 00       	nop
+
+	_delay_ms(100);									//Delay inicial de 100ms.
+
+	lcd_RS_port &= ~(1<<lcd_RS_bit);				//Seleciona o Instruction Register.
+     5c4:	e2 e0       	ldi	r30, 0x02	; 2
+     5c6:	f1 e0       	ldi	r31, 0x01	; 1
+     5c8:	80 81       	ld	r24, Z
+     5ca:	8f 7d       	andi	r24, 0xDF	; 223
+     5cc:	80 83       	st	Z, r24
+	lcd_E_port &= ~(1<<lcd_E_bit);                  //Coloca E em nível baixo.
+     5ce:	80 81       	ld	r24, Z
+     5d0:	8f 7b       	andi	r24, 0xBF	; 191
+     5d2:	80 83       	st	Z, r24
+
+	/* Início da sequência de resets do LCD. */
+	lcd_write(lcd_FunctionReset);
+     5d4:	80 e3       	ldi	r24, 0x30	; 48
+     5d6:	55 df       	rcall	.-342    	; 0x482 <lcd_write>
+     5d8:	8f e3       	ldi	r24, 0x3F	; 63
+     5da:	9c e9       	ldi	r25, 0x9C	; 156
+     5dc:	01 97       	sbiw	r24, 0x01	; 1
+     5de:	f1 f7       	brne	.-4      	; 0x5dc <lcd_init+0x4a>
+     5e0:	00 c0       	rjmp	.+0      	; 0x5e2 <lcd_init+0x50>
+     5e2:	00 00       	nop
+	_delay_ms(10);
+
+	lcd_write(lcd_FunctionReset);
+     5e4:	80 e3       	ldi	r24, 0x30	; 48
+     5e6:	4d df       	rcall	.-358    	; 0x482 <lcd_write>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     5e8:	8f e1       	ldi	r24, 0x1F	; 31
+     5ea:	93 e0       	ldi	r25, 0x03	; 3
+     5ec:	01 97       	sbiw	r24, 0x01	; 1
+     5ee:	f1 f7       	brne	.-4      	; 0x5ec <lcd_init+0x5a>
+     5f0:	00 c0       	rjmp	.+0      	; 0x5f2 <lcd_init+0x60>
+     5f2:	00 00       	nop
+	_delay_us(200);
+
+	lcd_write(lcd_FunctionReset);
+     5f4:	80 e3       	ldi	r24, 0x30	; 48
+     5f6:	45 df       	rcall	.-374    	; 0x482 <lcd_write>
+     5f8:	8f e1       	ldi	r24, 0x1F	; 31
+     5fa:	93 e0       	ldi	r25, 0x03	; 3
+     5fc:	01 97       	sbiw	r24, 0x01	; 1
+     5fe:	f1 f7       	brne	.-4      	; 0x5fc <lcd_init+0x6a>
+     600:	00 c0       	rjmp	.+0      	; 0x602 <lcd_init+0x70>
+     602:	00 00       	nop
+	_delay_us(200);
+	/* Fim da sequência de resets. */
+
+	lcd_write(lcd_FunctionSet4bit);					//Configura modo de 4 bits.
+     604:	88 e2       	ldi	r24, 0x28	; 40
+     606:	3d df       	rcall	.-390    	; 0x482 <lcd_write>
+     608:	8f e3       	ldi	r24, 0x3F	; 63
+     60a:	91 e0       	ldi	r25, 0x01	; 1
+     60c:	01 97       	sbiw	r24, 0x01	; 1
+     60e:	f1 f7       	brne	.-4      	; 0x60c <lcd_init+0x7a>
+     610:	00 c0       	rjmp	.+0      	; 0x612 <lcd_init+0x80>
+     612:	00 00       	nop
+	_delay_us(80);
+
+	lcd_write_instruction(lcd_FunctionSet4bit);		//Configura modo, linhas e fonte.
+     614:	88 e2       	ldi	r24, 0x28	; 40
+     616:	ac df       	rcall	.-168    	; 0x570 <lcd_write_instruction>
+     618:	8f e3       	ldi	r24, 0x3F	; 63
+     61a:	91 e0       	ldi	r25, 0x01	; 1
+     61c:	01 97       	sbiw	r24, 0x01	; 1
+     61e:	f1 f7       	brne	.-4      	; 0x61c <lcd_init+0x8a>
+     620:	00 c0       	rjmp	.+0      	; 0x622 <lcd_init+0x90>
+     622:	00 00       	nop
+	_delay_us(80);
+
+	lcd_write_instruction(lcd_DisplayOff);			//Desliga o display.
+     624:	88 e0       	ldi	r24, 0x08	; 8
+     626:	a4 df       	rcall	.-184    	; 0x570 <lcd_write_instruction>
+     628:	8f e3       	ldi	r24, 0x3F	; 63
+     62a:	91 e0       	ldi	r25, 0x01	; 1
+     62c:	01 97       	sbiw	r24, 0x01	; 1
+     62e:	f1 f7       	brne	.-4      	; 0x62c <lcd_init+0x9a>
+     630:	00 c0       	rjmp	.+0      	; 0x632 <lcd_init+0xa0>
+     632:	00 00       	nop
+	_delay_us(80);
+
+	lcd_write_instruction(lcd_Clear);				//Limpa a RAM do display.
+     634:	81 e0       	ldi	r24, 0x01	; 1
+     636:	9c df       	rcall	.-200    	; 0x570 <lcd_write_instruction>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     638:	8f e7       	ldi	r24, 0x7F	; 127
+     63a:	9e e3       	ldi	r25, 0x3E	; 62
+     63c:	01 97       	sbiw	r24, 0x01	; 1
+     63e:	f1 f7       	brne	.-4      	; 0x63c <lcd_init+0xaa>
+     640:	00 c0       	rjmp	.+0      	; 0x642 <lcd_init+0xb0>
+     642:	00 00       	nop
+	_delay_ms(4);
+
+	lcd_write_instruction(lcd_EntryMode);			//Configura o modo de deslocamento.
+     644:	86 e0       	ldi	r24, 0x06	; 6
+     646:	94 df       	rcall	.-216    	; 0x570 <lcd_write_instruction>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     648:	8f e3       	ldi	r24, 0x3F	; 63
+     64a:	91 e0       	ldi	r25, 0x01	; 1
+     64c:	01 97       	sbiw	r24, 0x01	; 1
+     64e:	f1 f7       	brne	.-4      	; 0x64c <lcd_init+0xba>
+     650:	00 c0       	rjmp	.+0      	; 0x652 <lcd_init+0xc0>
+     652:	00 00       	nop
+	_delay_us(80);
+	
+	lcd_write_instruction(lcd_DisplayOn);			//Liga o display.
+     654:	8c e0       	ldi	r24, 0x0C	; 12
+     656:	8c df       	rcall	.-232    	; 0x570 <lcd_write_instruction>
+     658:	8f e3       	ldi	r24, 0x3F	; 63
+     65a:	91 e0       	ldi	r25, 0x01	; 1
+     65c:	01 97       	sbiw	r24, 0x01	; 1
+     65e:	f1 f7       	brne	.-4      	; 0x65c <lcd_init+0xca>
+     660:	00 c0       	rjmp	.+0      	; 0x662 <lcd_init+0xd0>
+     662:	00 00       	nop
+     664:	08 95       	ret
+
+00000666 <YBlink>:
+#include <avr/io.h>
+#include "LEDsGenius.h"
+
+void YBlink()
+{
+	PORTA_LEDS |=(1<<LED_Y_PIN);	//Acende
+     666:	e8 e0       	ldi	r30, 0x08	; 8
+     668:	f1 e0       	ldi	r31, 0x01	; 1
+     66a:	80 81       	ld	r24, Z
+     66c:	80 68       	ori	r24, 0x80	; 128
+     66e:	80 83       	st	Z, r24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     670:	2f ef       	ldi	r18, 0xFF	; 255
+     672:	8d e2       	ldi	r24, 0x2D	; 45
+     674:	92 e2       	ldi	r25, 0x22	; 34
+     676:	21 50       	subi	r18, 0x01	; 1
+     678:	80 40       	sbci	r24, 0x00	; 0
+     67a:	90 40       	sbci	r25, 0x00	; 0
+     67c:	e1 f7       	brne	.-8      	; 0x676 <YBlink+0x10>
+     67e:	00 c0       	rjmp	.+0      	; 0x680 <YBlink+0x1a>
+     680:	00 00       	nop
+	_delay_ms(DELAY_BLINK);
+	PORTA_LEDS &=~(1<<LED_Y_PIN);	//Apaga
+     682:	80 81       	ld	r24, Z
+     684:	8f 77       	andi	r24, 0x7F	; 127
+     686:	80 83       	st	Z, r24
+     688:	08 95       	ret
+
+0000068a <BBlink>:
+}
+
+void BBlink()
+{
+	PORTA_LEDS |=(1<<LED_B_PIN);	//Acende
+     68a:	e8 e0       	ldi	r30, 0x08	; 8
+     68c:	f1 e0       	ldi	r31, 0x01	; 1
+     68e:	80 81       	ld	r24, Z
+     690:	80 64       	ori	r24, 0x40	; 64
+     692:	80 83       	st	Z, r24
+     694:	2f ef       	ldi	r18, 0xFF	; 255
+     696:	8d e2       	ldi	r24, 0x2D	; 45
+     698:	92 e2       	ldi	r25, 0x22	; 34
+     69a:	21 50       	subi	r18, 0x01	; 1
+     69c:	80 40       	sbci	r24, 0x00	; 0
+     69e:	90 40       	sbci	r25, 0x00	; 0
+     6a0:	e1 f7       	brne	.-8      	; 0x69a <BBlink+0x10>
+     6a2:	00 c0       	rjmp	.+0      	; 0x6a4 <BBlink+0x1a>
+     6a4:	00 00       	nop
+	_delay_ms(DELAY_BLINK);
+	PORTA_LEDS &=~(1<<LED_B_PIN);	//Apaga
+     6a6:	80 81       	ld	r24, Z
+     6a8:	8f 7b       	andi	r24, 0xBF	; 191
+     6aa:	80 83       	st	Z, r24
+     6ac:	08 95       	ret
+
+000006ae <GBlink>:
+}
+void GBlink()
+{
+	PORTA_LEDS |=(1<<LED_G_PIN);	//Acende
+     6ae:	e8 e0       	ldi	r30, 0x08	; 8
+     6b0:	f1 e0       	ldi	r31, 0x01	; 1
+     6b2:	80 81       	ld	r24, Z
+     6b4:	80 62       	ori	r24, 0x20	; 32
+     6b6:	80 83       	st	Z, r24
+     6b8:	2f ef       	ldi	r18, 0xFF	; 255
+     6ba:	8d e2       	ldi	r24, 0x2D	; 45
+     6bc:	92 e2       	ldi	r25, 0x22	; 34
+     6be:	21 50       	subi	r18, 0x01	; 1
+     6c0:	80 40       	sbci	r24, 0x00	; 0
+     6c2:	90 40       	sbci	r25, 0x00	; 0
+     6c4:	e1 f7       	brne	.-8      	; 0x6be <GBlink+0x10>
+     6c6:	00 c0       	rjmp	.+0      	; 0x6c8 <GBlink+0x1a>
+     6c8:	00 00       	nop
+	_delay_ms(DELAY_BLINK);
+	PORTA_LEDS &=~(1<<LED_G_PIN);	//Apaga
+     6ca:	80 81       	ld	r24, Z
+     6cc:	8f 7d       	andi	r24, 0xDF	; 223
+     6ce:	80 83       	st	Z, r24
+     6d0:	08 95       	ret
+
+000006d2 <RBlink>:
+}
+void RBlink()
+{
+	PORTA_LEDS |=(1<<LED_R_PIN);	//Acende
+     6d2:	e8 e0       	ldi	r30, 0x08	; 8
+     6d4:	f1 e0       	ldi	r31, 0x01	; 1
+     6d6:	80 81       	ld	r24, Z
+     6d8:	80 61       	ori	r24, 0x10	; 16
+     6da:	80 83       	st	Z, r24
+     6dc:	2f ef       	ldi	r18, 0xFF	; 255
+     6de:	8d e2       	ldi	r24, 0x2D	; 45
+     6e0:	92 e2       	ldi	r25, 0x22	; 34
+     6e2:	21 50       	subi	r18, 0x01	; 1
+     6e4:	80 40       	sbci	r24, 0x00	; 0
+     6e6:	90 40       	sbci	r25, 0x00	; 0
+     6e8:	e1 f7       	brne	.-8      	; 0x6e2 <RBlink+0x10>
+     6ea:	00 c0       	rjmp	.+0      	; 0x6ec <RBlink+0x1a>
+     6ec:	00 00       	nop
+	_delay_ms(DELAY_BLINK);
+	PORTA_LEDS &=~(1<<LED_R_PIN);	//Apaga
+     6ee:	80 81       	ld	r24, Z
+     6f0:	8f 7e       	andi	r24, 0xEF	; 239
+     6f2:	80 83       	st	Z, r24
+     6f4:	08 95       	ret
+
+000006f6 <LEDsInit>:
+}
+void LEDsInit()
+{
+	/* Configura como saída os pinos utilizados pelos LEDs. */
+	PORTA_LEDS_CONTROLE = (1<<LED_Y_PIN)|(1<<LED_B_PIN)|(1<<LED_G_PIN)|(1<<LED_R_PIN);
+     6f6:	80 ef       	ldi	r24, 0xF0	; 240
+     6f8:	80 93 07 01 	sts	0x0107, r24
+     6fc:	08 95       	ret
+
+000006fe <PiscaLeds>:
+}
+void PiscaLeds()
+{
+     6fe:	93 e0       	ldi	r25, 0x03	; 3
+	uint8_t i;
+	for(i = 0; i < QUANT_PISCA; i++){
+		/* Acende todos os LEDs. */
+		PORTA_LEDS |=(1<<LED_Y_PIN);
+     700:	e8 e0       	ldi	r30, 0x08	; 8
+     702:	f1 e0       	ldi	r31, 0x01	; 1
+     704:	80 81       	ld	r24, Z
+     706:	80 68       	ori	r24, 0x80	; 128
+     708:	80 83       	st	Z, r24
+		PORTA_LEDS |=(1<<LED_B_PIN);
+     70a:	80 81       	ld	r24, Z
+     70c:	80 64       	ori	r24, 0x40	; 64
+     70e:	80 83       	st	Z, r24
+		PORTA_LEDS |=(1<<LED_G_PIN);
+     710:	80 81       	ld	r24, Z
+     712:	80 62       	ori	r24, 0x20	; 32
+     714:	80 83       	st	Z, r24
+		PORTA_LEDS |=(1<<LED_R_PIN);
+     716:	80 81       	ld	r24, Z
+     718:	80 61       	ori	r24, 0x10	; 16
+     71a:	80 83       	st	Z, r24
+     71c:	2f ef       	ldi	r18, 0xFF	; 255
+     71e:	39 e6       	ldi	r19, 0x69	; 105
+     720:	88 e1       	ldi	r24, 0x18	; 24
+     722:	21 50       	subi	r18, 0x01	; 1
+     724:	30 40       	sbci	r19, 0x00	; 0
+     726:	80 40       	sbci	r24, 0x00	; 0
+     728:	e1 f7       	brne	.-8      	; 0x722 <PiscaLeds+0x24>
+     72a:	00 c0       	rjmp	.+0      	; 0x72c <PiscaLeds+0x2e>
+     72c:	00 00       	nop
+		_delay_ms(DELAY_PISCA);
+		/* Apaga todos os LEDs. */
+		PORTA_LEDS &=~(1<<LED_Y_PIN);
+     72e:	80 81       	ld	r24, Z
+     730:	8f 77       	andi	r24, 0x7F	; 127
+     732:	80 83       	st	Z, r24
+		PORTA_LEDS &=~(1<<LED_B_PIN);
+     734:	80 81       	ld	r24, Z
+     736:	8f 7b       	andi	r24, 0xBF	; 191
+     738:	80 83       	st	Z, r24
+		PORTA_LEDS &=~(1<<LED_G_PIN);
+     73a:	80 81       	ld	r24, Z
+     73c:	8f 7d       	andi	r24, 0xDF	; 223
+     73e:	80 83       	st	Z, r24
+		PORTA_LEDS &=~(1<<LED_R_PIN);
+     740:	80 81       	ld	r24, Z
+     742:	8f 7e       	andi	r24, 0xEF	; 239
+     744:	80 83       	st	Z, r24
+     746:	2f ef       	ldi	r18, 0xFF	; 255
+     748:	39 e6       	ldi	r19, 0x69	; 105
+     74a:	88 e1       	ldi	r24, 0x18	; 24
+     74c:	21 50       	subi	r18, 0x01	; 1
+     74e:	30 40       	sbci	r19, 0x00	; 0
+     750:	80 40       	sbci	r24, 0x00	; 0
+     752:	e1 f7       	brne	.-8      	; 0x74c <PiscaLeds+0x4e>
+     754:	00 c0       	rjmp	.+0      	; 0x756 <PiscaLeds+0x58>
+     756:	00 00       	nop
+     758:	91 50       	subi	r25, 0x01	; 1
+	PORTA_LEDS_CONTROLE = (1<<LED_Y_PIN)|(1<<LED_B_PIN)|(1<<LED_G_PIN)|(1<<LED_R_PIN);
+}
+void PiscaLeds()
+{
+	uint8_t i;
+	for(i = 0; i < QUANT_PISCA; i++){
+     75a:	a1 f6       	brne	.-88     	; 0x704 <PiscaLeds+0x6>
+		PORTA_LEDS &=~(1<<LED_B_PIN);
+		PORTA_LEDS &=~(1<<LED_G_PIN);
+		PORTA_LEDS &=~(1<<LED_R_PIN);
+		_delay_ms(DELAY_PISCA);
+	}
+     75c:	08 95       	ret
+
+0000075e <MenuInicial>:
+	sm.action[sGameOver] = GameOver;
+}
+
+
+void MenuInicial()
+{
+     75e:	0f 93       	push	r16
+     760:	1f 93       	push	r17
+     762:	cf 93       	push	r28
+     764:	df 93       	push	r29
+	uint16_t opcao;
+	ExibeMenuPrincipal();				//Mostra a tela do menu inicial.
+     766:	f7 dc       	rcall	.-1554   	; 0x156 <ExibeMenuPrincipal>
+	opcao = lerBotaoMenu();				//Tratamento do debounce inicial.
+     768:	4c d5       	rcall	.+2712   	; 0x1202 <lerBotaoMenu>
+     76a:	2f ef       	ldi	r18, 0xFF	; 255
+     76c:	39 e6       	ldi	r19, 0x69	; 105
+     76e:	48 e1       	ldi	r20, 0x18	; 24
+     770:	21 50       	subi	r18, 0x01	; 1
+     772:	30 40       	sbci	r19, 0x00	; 0
+     774:	40 40       	sbci	r20, 0x00	; 0
+     776:	e1 f7       	brne	.-8      	; 0x770 <MenuInicial+0x12>
+     778:	00 c0       	rjmp	.+0      	; 0x77a <MenuInicial+0x1c>
+     77a:	00 00       	nop
+	_delay_ms(500);						//
+	while(sm.state==sMenuInicial)		//Polling para os botões de menu.
+     77c:	c2 e0       	ldi	r28, 0x02	; 2
+     77e:	d3 e0       	ldi	r29, 0x03	; 3
+		{
+			sm.state = sInsereNome;		//Mudança de estado -> Insere Nome
+		}
+		else if(opcao==RIGHT)
+		{
+			sm.state = sRanking;		//Mudança de estado -> Ranking
+     780:	01 e0       	ldi	r16, 0x01	; 1
+	{
+		opcao = lerBotaoMenu();			//Leitura da porta analógica.
+		_delay_ms(150);					//Debounce.
+		if(opcao==LEFT)					
+		{
+			sm.state = sInsereNome;		//Mudança de estado -> Insere Nome
+     782:	12 e0       	ldi	r17, 0x02	; 2
+     784:	13 c0       	rjmp	.+38     	; 0x7ac <MenuInicial+0x4e>
+	ExibeMenuPrincipal();				//Mostra a tela do menu inicial.
+	opcao = lerBotaoMenu();				//Tratamento do debounce inicial.
+	_delay_ms(500);						//
+	while(sm.state==sMenuInicial)		//Polling para os botões de menu.
+	{
+		opcao = lerBotaoMenu();			//Leitura da porta analógica.
+     786:	3d d5       	rcall	.+2682   	; 0x1202 <lerBotaoMenu>
+     788:	2f ef       	ldi	r18, 0xFF	; 255
+     78a:	32 e5       	ldi	r19, 0x52	; 82
+     78c:	47 e0       	ldi	r20, 0x07	; 7
+     78e:	21 50       	subi	r18, 0x01	; 1
+     790:	30 40       	sbci	r19, 0x00	; 0
+     792:	40 40       	sbci	r20, 0x00	; 0
+     794:	e1 f7       	brne	.-8      	; 0x78e <MenuInicial+0x30>
+     796:	00 c0       	rjmp	.+0      	; 0x798 <MenuInicial+0x3a>
+     798:	00 00       	nop
+		_delay_ms(150);					//Debounce.
+		if(opcao==LEFT)					
+     79a:	8b 32       	cpi	r24, 0x2B	; 43
+     79c:	22 e0       	ldi	r18, 0x02	; 2
+     79e:	92 07       	cpc	r25, r18
+     7a0:	11 f4       	brne	.+4      	; 0x7a6 <MenuInicial+0x48>
+		{
+			sm.state = sInsereNome;		//Mudança de estado -> Insere Nome
+     7a2:	18 83       	st	Y, r17
+     7a4:	03 c0       	rjmp	.+6      	; 0x7ac <MenuInicial+0x4e>
+		}
+		else if(opcao==RIGHT)
+     7a6:	c2 97       	sbiw	r24, 0x32	; 50
+     7a8:	09 f4       	brne	.+2      	; 0x7ac <MenuInicial+0x4e>
+		{
+			sm.state = sRanking;		//Mudança de estado -> Ranking
+     7aa:	08 83       	st	Y, r16
+{
+	uint16_t opcao;
+	ExibeMenuPrincipal();				//Mostra a tela do menu inicial.
+	opcao = lerBotaoMenu();				//Tratamento do debounce inicial.
+	_delay_ms(500);						//
+	while(sm.state==sMenuInicial)		//Polling para os botões de menu.
+     7ac:	88 81       	ld	r24, Y
+     7ae:	88 23       	and	r24, r24
+     7b0:	51 f3       	breq	.-44     	; 0x786 <MenuInicial+0x28>
+		else if(opcao==RIGHT)
+		{
+			sm.state = sRanking;		//Mudança de estado -> Ranking
+		}
+	}		
+}
+     7b2:	df 91       	pop	r29
+     7b4:	cf 91       	pop	r28
+     7b6:	1f 91       	pop	r17
+     7b8:	0f 91       	pop	r16
+     7ba:	08 95       	ret
+
+000007bc <InsereNome>:
+		}
+	}
+}
+
+void InsereNome()
+{
+     7bc:	cf 92       	push	r12
+     7be:	df 92       	push	r13
+     7c0:	ef 92       	push	r14
+     7c2:	ff 92       	push	r15
+     7c4:	0f 93       	push	r16
+     7c6:	1f 93       	push	r17
+     7c8:	cf 93       	push	r28
+     7ca:	df 93       	push	r29
+	uint16_t opcao;
+	uint8_t indName = 0;
+	uint8_t letra = A;
+	bool primeiraMudanca = true;	
+	ExibeTelaName();							//Mostra a tela de inserção de nome.
+     7cc:	fe dd       	rcall	.-1028   	; 0x3ca <ExibeTelaName>
+	opcao = lerBotaoMenu();						//Debounce inicial da entrada analógica.
+     7ce:	19 d5       	rcall	.+2610   	; 0x1202 <lerBotaoMenu>
+     7d0:	2f ef       	ldi	r18, 0xFF	; 255
+     7d2:	39 e6       	ldi	r19, 0x69	; 105
+     7d4:	48 e1       	ldi	r20, 0x18	; 24
+     7d6:	21 50       	subi	r18, 0x01	; 1
+     7d8:	30 40       	sbci	r19, 0x00	; 0
+     7da:	40 40       	sbci	r20, 0x00	; 0
+     7dc:	e1 f7       	brne	.-8      	; 0x7d6 <InsereNome+0x1a>
+     7de:	00 c0       	rjmp	.+0      	; 0x7e0 <InsereNome+0x24>
+     7e0:	00 00       	nop
+void InsereNome()
+{
+	uint16_t opcao;
+	uint8_t indName = 0;
+	uint8_t letra = A;
+	bool primeiraMudanca = true;	
+     7e2:	ff 24       	eor	r15, r15
+     7e4:	f3 94       	inc	r15
+
+void InsereNome()
+{
+	uint16_t opcao;
+	uint8_t indName = 0;
+	uint8_t letra = A;
+     7e6:	c1 e4       	ldi	r28, 0x41	; 65
+}
+
+void InsereNome()
+{
+	uint16_t opcao;
+	uint8_t indName = 0;
+     7e8:	d0 e0       	ldi	r29, 0x00	; 0
+	uint8_t letra = A;
+	bool primeiraMudanca = true;	
+	ExibeTelaName();							//Mostra a tela de inserção de nome.
+	opcao = lerBotaoMenu();						//Debounce inicial da entrada analógica.
+	_delay_ms(500);								//
+	while(sm.state==sInsereNome)				//Polling para os botões de menu.
+     7ea:	02 e0       	ldi	r16, 0x02	; 2
+     7ec:	13 e0       	ldi	r17, 0x03	; 3
+				lcd_write_character(letra);
+				_delay_us(80);
+			}
+			else if(opcao==DOWN)				//Navega pelo alfabeto em direção descrescente.
+			{ 
+				if((letra==A) | (primeiraMudanca))
+     7ee:	ee 24       	eor	r14, r14
+     7f0:	e3 94       	inc	r14
+				{
+					letra=Z;
+					primeiraMudanca = false;
+     7f2:	d1 2c       	mov	r13, r1
+				_delay_us(80);
+				indName++;
+				primeiraMudanca = true;
+				if(indName==3){
+					_delay_ms(1000);
+					sm.state = sConfirmaJogo;	//Mudança de estado -> Confirma Jogo
+     7f4:	0f 2e       	mov	r0, r31
+     7f6:	f3 e0       	ldi	r31, 0x03	; 3
+     7f8:	cf 2e       	mov	r12, r31
+     7fa:	f0 2d       	mov	r31, r0
+     7fc:	88 c0       	rjmp	.+272    	; 0x90e <InsereNome+0x152>
+	ExibeTelaName();							//Mostra a tela de inserção de nome.
+	opcao = lerBotaoMenu();						//Debounce inicial da entrada analógica.
+	_delay_ms(500);								//
+	while(sm.state==sInsereNome)				//Polling para os botões de menu.
+	{
+		opcao = lerBotaoMenu();
+     7fe:	01 d5       	rcall	.+2562   	; 0x1202 <lerBotaoMenu>
+     800:	ef ef       	ldi	r30, 0xFF	; 255
+     802:	f2 e5       	ldi	r31, 0x52	; 82
+     804:	27 e0       	ldi	r18, 0x07	; 7
+     806:	e1 50       	subi	r30, 0x01	; 1
+     808:	f0 40       	sbci	r31, 0x00	; 0
+     80a:	20 40       	sbci	r18, 0x00	; 0
+     80c:	e1 f7       	brne	.-8      	; 0x806 <InsereNome+0x4a>
+     80e:	00 c0       	rjmp	.+0      	; 0x810 <InsereNome+0x54>
+     810:	00 00       	nop
+		_delay_ms(150);
+		if(opcao!=NONE)
+     812:	88 3e       	cpi	r24, 0xE8	; 232
+     814:	33 e0       	ldi	r19, 0x03	; 3
+     816:	93 07       	cpc	r25, r19
+     818:	09 f4       	brne	.+2      	; 0x81c <InsereNome+0x60>
+     81a:	79 c0       	rjmp	.+242    	; 0x90e <InsereNome+0x152>
+		{
+			if(opcao==RIGHT) 					//Confirmação da letra escolhida.
+     81c:	82 33       	cpi	r24, 0x32	; 50
+     81e:	91 05       	cpc	r25, r1
+     820:	51 f5       	brne	.+84     	; 0x876 <InsereNome+0xba>
+			{
+				if(primeiraMudanca)
+     822:	f1 10       	cpse	r15, r1
+					letra=A;
+     824:	c1 e4       	ldi	r28, 0x41	; 65
+				name[indName]=(char)letra;
+     826:	ed 2f       	mov	r30, r29
+     828:	f0 e0       	ldi	r31, 0x00	; 0
+     82a:	e1 5f       	subi	r30, 0xF1	; 241
+     82c:	fc 4f       	sbci	r31, 0xFC	; 252
+     82e:	c0 83       	st	Z, r28
+				lcd_write_instruction((lcd_SetCursor)|(lcd_LineTwo+PRIM_CARACT_NOME+indName));
+     830:	83 e4       	ldi	r24, 0x43	; 67
+     832:	8d 0f       	add	r24, r29
+     834:	80 68       	ori	r24, 0x80	; 128
+     836:	9c de       	rcall	.-712    	; 0x570 <lcd_write_instruction>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     838:	8f e3       	ldi	r24, 0x3F	; 63
+     83a:	91 e0       	ldi	r25, 0x01	; 1
+     83c:	01 97       	sbiw	r24, 0x01	; 1
+     83e:	f1 f7       	brne	.-4      	; 0x83c <InsereNome+0x80>
+     840:	00 c0       	rjmp	.+0      	; 0x842 <InsereNome+0x86>
+     842:	00 00       	nop
+				_delay_us(80);
+				lcd_write_character(letra);
+     844:	8c 2f       	mov	r24, r28
+     846:	51 de       	rcall	.-862    	; 0x4ea <lcd_write_character>
+     848:	ef e3       	ldi	r30, 0x3F	; 63
+     84a:	f1 e0       	ldi	r31, 0x01	; 1
+     84c:	31 97       	sbiw	r30, 0x01	; 1
+     84e:	f1 f7       	brne	.-4      	; 0x84c <InsereNome+0x90>
+     850:	00 c0       	rjmp	.+0      	; 0x852 <InsereNome+0x96>
+     852:	00 00       	nop
+				_delay_us(80);
+				indName++;
+     854:	df 5f       	subi	r29, 0xFF	; 255
+				primeiraMudanca = true;
+				if(indName==3){
+     856:	d3 30       	cpi	r29, 0x03	; 3
+     858:	09 f0       	breq	.+2      	; 0x85c <InsereNome+0xa0>
+     85a:	58 c0       	rjmp	.+176    	; 0x90c <InsereNome+0x150>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     85c:	ff ef       	ldi	r31, 0xFF	; 255
+     85e:	23 ed       	ldi	r18, 0xD3	; 211
+     860:	30 e3       	ldi	r19, 0x30	; 48
+     862:	f1 50       	subi	r31, 0x01	; 1
+     864:	20 40       	sbci	r18, 0x00	; 0
+     866:	30 40       	sbci	r19, 0x00	; 0
+     868:	e1 f7       	brne	.-8      	; 0x862 <InsereNome+0xa6>
+     86a:	00 c0       	rjmp	.+0      	; 0x86c <InsereNome+0xb0>
+     86c:	00 00       	nop
+					_delay_ms(1000);
+					sm.state = sConfirmaJogo;	//Mudança de estado -> Confirma Jogo
+     86e:	f8 01       	movw	r30, r16
+     870:	c0 82       	st	Z, r12
+				lcd_write_instruction((lcd_SetCursor)|(lcd_LineTwo+PRIM_CARACT_NOME+indName));
+				_delay_us(80);
+				lcd_write_character(letra);
+				_delay_us(80);
+				indName++;
+				primeiraMudanca = true;
+     872:	fe 2c       	mov	r15, r14
+     874:	4c c0       	rjmp	.+152    	; 0x90e <InsereNome+0x152>
+				if(indName==3){
+					_delay_ms(1000);
+					sm.state = sConfirmaJogo;	//Mudança de estado -> Confirma Jogo
+				}
+			}
+			else if(opcao==UP)					//Navega pelo alfabeto em direção crescente.
+     876:	83 3c       	cpi	r24, 0xC3	; 195
+     878:	91 05       	cpc	r25, r1
+     87a:	f9 f4       	brne	.+62     	; 0x8ba <InsereNome+0xfe>
+			{
+				if((letra==Z) | (primeiraMudanca))
+     87c:	8e 2d       	mov	r24, r14
+     87e:	ca 35       	cpi	r28, 0x5A	; 90
+     880:	09 f0       	breq	.+2      	; 0x884 <InsereNome+0xc8>
+     882:	8d 2d       	mov	r24, r13
+     884:	81 11       	cpse	r24, r1
+     886:	04 c0       	rjmp	.+8      	; 0x890 <InsereNome+0xd4>
+     888:	f1 10       	cpse	r15, r1
+     88a:	02 c0       	rjmp	.+4      	; 0x890 <InsereNome+0xd4>
+				{
+					letra=A;
+					primeiraMudanca = false;
+				}
+				else letra++;
+     88c:	cf 5f       	subi	r28, 0xFF	; 255
+     88e:	02 c0       	rjmp	.+4      	; 0x894 <InsereNome+0xd8>
+			else if(opcao==UP)					//Navega pelo alfabeto em direção crescente.
+			{
+				if((letra==Z) | (primeiraMudanca))
+				{
+					letra=A;
+					primeiraMudanca = false;
+     890:	fd 2c       	mov	r15, r13
+			}
+			else if(opcao==UP)					//Navega pelo alfabeto em direção crescente.
+			{
+				if((letra==Z) | (primeiraMudanca))
+				{
+					letra=A;
+     892:	c1 e4       	ldi	r28, 0x41	; 65
+					primeiraMudanca = false;
+				}
+				else letra++;
+				
+				lcd_write_instruction((lcd_SetCursor)|(lcd_LineTwo+PRIM_CARACT_NOME+indName));
+     894:	83 e4       	ldi	r24, 0x43	; 67
+     896:	8d 0f       	add	r24, r29
+     898:	80 68       	ori	r24, 0x80	; 128
+     89a:	6a de       	rcall	.-812    	; 0x570 <lcd_write_instruction>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     89c:	8f e3       	ldi	r24, 0x3F	; 63
+     89e:	91 e0       	ldi	r25, 0x01	; 1
+     8a0:	01 97       	sbiw	r24, 0x01	; 1
+     8a2:	f1 f7       	brne	.-4      	; 0x8a0 <InsereNome+0xe4>
+     8a4:	00 c0       	rjmp	.+0      	; 0x8a6 <InsereNome+0xea>
+     8a6:	00 00       	nop
+				_delay_us(80);
+				lcd_write_character(letra);
+     8a8:	8c 2f       	mov	r24, r28
+     8aa:	1f de       	rcall	.-962    	; 0x4ea <lcd_write_character>
+     8ac:	ef e3       	ldi	r30, 0x3F	; 63
+     8ae:	f1 e0       	ldi	r31, 0x01	; 1
+     8b0:	31 97       	sbiw	r30, 0x01	; 1
+     8b2:	f1 f7       	brne	.-4      	; 0x8b0 <InsereNome+0xf4>
+     8b4:	00 c0       	rjmp	.+0      	; 0x8b6 <InsereNome+0xfa>
+     8b6:	00 00       	nop
+     8b8:	2a c0       	rjmp	.+84     	; 0x90e <InsereNome+0x152>
+				_delay_us(80);
+			}
+			else if(opcao==DOWN)				//Navega pelo alfabeto em direção descrescente.
+     8ba:	8c 37       	cpi	r24, 0x7C	; 124
+     8bc:	f1 e0       	ldi	r31, 0x01	; 1
+     8be:	9f 07       	cpc	r25, r31
+     8c0:	f9 f4       	brne	.+62     	; 0x900 <InsereNome+0x144>
+			{ 
+				if((letra==A) | (primeiraMudanca))
+     8c2:	8e 2d       	mov	r24, r14
+     8c4:	c1 34       	cpi	r28, 0x41	; 65
+     8c6:	09 f0       	breq	.+2      	; 0x8ca <InsereNome+0x10e>
+     8c8:	8d 2d       	mov	r24, r13
+     8ca:	81 11       	cpse	r24, r1
+     8cc:	04 c0       	rjmp	.+8      	; 0x8d6 <InsereNome+0x11a>
+     8ce:	f1 10       	cpse	r15, r1
+     8d0:	02 c0       	rjmp	.+4      	; 0x8d6 <InsereNome+0x11a>
+				{
+					letra=Z;
+					primeiraMudanca = false;
+				}
+				else letra--;
+     8d2:	c1 50       	subi	r28, 0x01	; 1
+     8d4:	02 c0       	rjmp	.+4      	; 0x8da <InsereNome+0x11e>
+			else if(opcao==DOWN)				//Navega pelo alfabeto em direção descrescente.
+			{ 
+				if((letra==A) | (primeiraMudanca))
+				{
+					letra=Z;
+					primeiraMudanca = false;
+     8d6:	fd 2c       	mov	r15, r13
+			}
+			else if(opcao==DOWN)				//Navega pelo alfabeto em direção descrescente.
+			{ 
+				if((letra==A) | (primeiraMudanca))
+				{
+					letra=Z;
+     8d8:	ca e5       	ldi	r28, 0x5A	; 90
+					primeiraMudanca = false;
+				}
+				else letra--;
+				
+				lcd_write_instruction((lcd_SetCursor)|(lcd_LineTwo+PRIM_CARACT_NOME+indName));
+     8da:	83 e4       	ldi	r24, 0x43	; 67
+     8dc:	8d 0f       	add	r24, r29
+     8de:	80 68       	ori	r24, 0x80	; 128
+     8e0:	47 de       	rcall	.-882    	; 0x570 <lcd_write_instruction>
+     8e2:	8f e3       	ldi	r24, 0x3F	; 63
+     8e4:	91 e0       	ldi	r25, 0x01	; 1
+     8e6:	01 97       	sbiw	r24, 0x01	; 1
+     8e8:	f1 f7       	brne	.-4      	; 0x8e6 <InsereNome+0x12a>
+     8ea:	00 c0       	rjmp	.+0      	; 0x8ec <InsereNome+0x130>
+     8ec:	00 00       	nop
+				_delay_us(80);
+				lcd_write_character(letra);
+     8ee:	8c 2f       	mov	r24, r28
+     8f0:	fc dd       	rcall	.-1032   	; 0x4ea <lcd_write_character>
+     8f2:	ef e3       	ldi	r30, 0x3F	; 63
+     8f4:	f1 e0       	ldi	r31, 0x01	; 1
+     8f6:	31 97       	sbiw	r30, 0x01	; 1
+     8f8:	f1 f7       	brne	.-4      	; 0x8f6 <InsereNome+0x13a>
+     8fa:	00 c0       	rjmp	.+0      	; 0x8fc <InsereNome+0x140>
+     8fc:	00 00       	nop
+     8fe:	07 c0       	rjmp	.+14     	; 0x90e <InsereNome+0x152>
+				_delay_us(80);
+			}
+			else if(opcao==CANCEL)
+     900:	86 31       	cpi	r24, 0x16	; 22
+     902:	93 40       	sbci	r25, 0x03	; 3
+     904:	21 f4       	brne	.+8      	; 0x90e <InsereNome+0x152>
+			{
+				sm.state = sMenuInicial;		//Mudança de estado -> Menu Inicial
+     906:	f8 01       	movw	r30, r16
+     908:	10 82       	st	Z, r1
+     90a:	01 c0       	rjmp	.+2      	; 0x90e <InsereNome+0x152>
+				lcd_write_instruction((lcd_SetCursor)|(lcd_LineTwo+PRIM_CARACT_NOME+indName));
+				_delay_us(80);
+				lcd_write_character(letra);
+				_delay_us(80);
+				indName++;
+				primeiraMudanca = true;
+     90c:	fe 2c       	mov	r15, r14
+	uint8_t letra = A;
+	bool primeiraMudanca = true;	
+	ExibeTelaName();							//Mostra a tela de inserção de nome.
+	opcao = lerBotaoMenu();						//Debounce inicial da entrada analógica.
+	_delay_ms(500);								//
+	while(sm.state==sInsereNome)				//Polling para os botões de menu.
+     90e:	f8 01       	movw	r30, r16
+     910:	90 81       	ld	r25, Z
+     912:	92 30       	cpi	r25, 0x02	; 2
+     914:	09 f4       	brne	.+2      	; 0x918 <InsereNome+0x15c>
+     916:	73 cf       	rjmp	.-282    	; 0x7fe <InsereNome+0x42>
+			{
+				sm.state = sMenuInicial;		//Mudança de estado -> Menu Inicial
+			}
+		} 
+	}
+}
+     918:	df 91       	pop	r29
+     91a:	cf 91       	pop	r28
+     91c:	1f 91       	pop	r17
+     91e:	0f 91       	pop	r16
+     920:	ff 90       	pop	r15
+     922:	ef 90       	pop	r14
+     924:	df 90       	pop	r13
+     926:	cf 90       	pop	r12
+     928:	08 95       	ret
+
+0000092a <ConfirmaJogo>:
+
+void ConfirmaJogo()
+{
+     92a:	ef 92       	push	r14
+     92c:	ff 92       	push	r15
+     92e:	1f 93       	push	r17
+     930:	cf 93       	push	r28
+     932:	df 93       	push	r29
+	uint16_t opcao;
+	ExibeJogar();							//Mostra a tela para confirmação de jogo.
+     934:	44 dc       	rcall	.-1912   	; 0x1be <ExibeJogar>
+	opcao = lerBotaoMenu();					//Debounce inicial da entrada analógica.
+     936:	65 d4       	rcall	.+2250   	; 0x1202 <lerBotaoMenu>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     938:	2f ef       	ldi	r18, 0xFF	; 255
+     93a:	39 e6       	ldi	r19, 0x69	; 105
+     93c:	48 e1       	ldi	r20, 0x18	; 24
+     93e:	21 50       	subi	r18, 0x01	; 1
+     940:	30 40       	sbci	r19, 0x00	; 0
+     942:	40 40       	sbci	r20, 0x00	; 0
+     944:	e1 f7       	brne	.-8      	; 0x93e <ConfirmaJogo+0x14>
+     946:	00 c0       	rjmp	.+0      	; 0x948 <ConfirmaJogo+0x1e>
+     948:	00 00       	nop
+	_delay_ms(500);							//
+	sm.state = sConfirmaJogo;				
+     94a:	83 e0       	ldi	r24, 0x03	; 3
+     94c:	80 93 02 03 	sts	0x0302, r24
+		_delay_ms(150);
+		if(opcao==LEFT)
+		{
+			sm.state = sPlayGenius;			//Mudança de estado -> Play Genius
+		}
+		else if((opcao==RIGHT)|(opcao==CANCEL))
+     950:	c1 e0       	ldi	r28, 0x01	; 1
+     952:	d0 e0       	ldi	r29, 0x00	; 0
+		{
+			sm.state = sMenuInicial;		//Mudança de estado -> Menu Inicial
+		}
+		else
+		{
+			sm.state = sConfirmaJogo;
+     954:	0f 2e       	mov	r0, r31
+     956:	f2 e0       	ldi	r31, 0x02	; 2
+     958:	ef 2e       	mov	r14, r31
+     95a:	f3 e0       	ldi	r31, 0x03	; 3
+     95c:	ff 2e       	mov	r15, r31
+     95e:	f0 2d       	mov	r31, r0
+     960:	13 e0       	ldi	r17, 0x03	; 3
+	opcao = lerBotaoMenu();					//Debounce inicial da entrada analógica.
+	_delay_ms(500);							//
+	sm.state = sConfirmaJogo;				
+	while(sm.state==sConfirmaJogo)			//Polling para os botões de menu.
+	{
+		opcao = lerBotaoMenu();
+     962:	4f d4       	rcall	.+2206   	; 0x1202 <lerBotaoMenu>
+     964:	ef ef       	ldi	r30, 0xFF	; 255
+     966:	f2 e5       	ldi	r31, 0x52	; 82
+     968:	27 e0       	ldi	r18, 0x07	; 7
+     96a:	e1 50       	subi	r30, 0x01	; 1
+     96c:	f0 40       	sbci	r31, 0x00	; 0
+     96e:	20 40       	sbci	r18, 0x00	; 0
+     970:	e1 f7       	brne	.-8      	; 0x96a <ConfirmaJogo+0x40>
+     972:	00 c0       	rjmp	.+0      	; 0x974 <ConfirmaJogo+0x4a>
+     974:	00 00       	nop
+		_delay_ms(150);
+		if(opcao==LEFT)
+     976:	8b 32       	cpi	r24, 0x2B	; 43
+     978:	32 e0       	ldi	r19, 0x02	; 2
+     97a:	93 07       	cpc	r25, r19
+     97c:	21 f4       	brne	.+8      	; 0x986 <ConfirmaJogo+0x5c>
+		{
+			sm.state = sPlayGenius;			//Mudança de estado -> Play Genius
+     97e:	84 e0       	ldi	r24, 0x04	; 4
+     980:	80 93 02 03 	sts	0x0302, r24
+     984:	14 c0       	rjmp	.+40     	; 0x9ae <ConfirmaJogo+0x84>
+		}
+		else if((opcao==RIGHT)|(opcao==CANCEL))
+     986:	2c 2f       	mov	r18, r28
+     988:	86 31       	cpi	r24, 0x16	; 22
+     98a:	43 e0       	ldi	r20, 0x03	; 3
+     98c:	94 07       	cpc	r25, r20
+     98e:	09 f0       	breq	.+2      	; 0x992 <ConfirmaJogo+0x68>
+     990:	2d 2f       	mov	r18, r29
+     992:	21 11       	cpse	r18, r1
+     994:	06 c0       	rjmp	.+12     	; 0x9a2 <ConfirmaJogo+0x78>
+     996:	2c 2f       	mov	r18, r28
+     998:	c2 97       	sbiw	r24, 0x32	; 50
+     99a:	09 f0       	breq	.+2      	; 0x99e <ConfirmaJogo+0x74>
+     99c:	2d 2f       	mov	r18, r29
+     99e:	22 23       	and	r18, r18
+     9a0:	19 f0       	breq	.+6      	; 0x9a8 <ConfirmaJogo+0x7e>
+		{
+			sm.state = sMenuInicial;		//Mudança de estado -> Menu Inicial
+     9a2:	10 92 02 03 	sts	0x0302, r1
+     9a6:	03 c0       	rjmp	.+6      	; 0x9ae <ConfirmaJogo+0x84>
+		}
+		else
+		{
+			sm.state = sConfirmaJogo;
+     9a8:	f7 01       	movw	r30, r14
+     9aa:	10 83       	st	Z, r17
+     9ac:	da cf       	rjmp	.-76     	; 0x962 <ConfirmaJogo+0x38>
+		}
+	}	
+}
+     9ae:	df 91       	pop	r29
+     9b0:	cf 91       	pop	r28
+     9b2:	1f 91       	pop	r17
+     9b4:	ff 90       	pop	r15
+     9b6:	ef 90       	pop	r14
+     9b8:	08 95       	ret
+
+000009ba <GameOver>:
+		}
+	}
+}
+
+void GameOver()
+{
+     9ba:	cf 92       	push	r12
+     9bc:	df 92       	push	r13
+     9be:	ef 92       	push	r14
+     9c0:	ff 92       	push	r15
+     9c2:	0f 93       	push	r16
+     9c4:	1f 93       	push	r17
+     9c6:	cf 93       	push	r28
+     9c8:	df 93       	push	r29
+     9ca:	cd b7       	in	r28, 0x3d	; 61
+     9cc:	de b7       	in	r29, 0x3e	; 62
+     9ce:	a8 97       	sbiw	r28, 0x28	; 40
+     9d0:	0f b6       	in	r0, 0x3f	; 63
+     9d2:	f8 94       	cli
+     9d4:	de bf       	out	0x3e, r29	; 62
+     9d6:	0f be       	out	0x3f, r0	; 63
+     9d8:	cd bf       	out	0x3d, r28	; 61
+	uint8_t i,j=POSICOES_RANKING, endLinha;
+	pos posicoes[POSICOES_RANKING];	
+	ExibeGameOver(score);										//Mostra na tela o score do jogador.
+     9da:	80 91 9d 02 	lds	r24, 0x029D
+     9de:	23 dc       	rcall	.-1978   	; 0x226 <ExibeGameOver>
+	PiscaLeds();												//Pisca todos os LEDs juntos.
+     9e0:	8e de       	rcall	.-740    	; 0x6fe <PiscaLeds>
+     9e2:	00 e0       	ldi	r16, 0x00	; 0
+     9e4:	10 e0       	ldi	r17, 0x00	; 0
+     9e6:	61 e0       	ldi	r22, 0x01	; 1
+     9e8:	70 e0       	ldi	r23, 0x00	; 0
+     9ea:	6c 0f       	add	r22, r28
+     9ec:	7d 1f       	adc	r23, r29
+     9ee:	60 0f       	add	r22, r16
+     9f0:	71 1f       	adc	r23, r17
+	for(i=0;i<POSICOES_RANKING;i++)								//Lê da memória todas as posições do ranking.
+	{
+		endLinha = i*TAM_LINHA;
+		ReadLine((END_INICIAL+endLinha),&posicoes[i]);
+     9f2:	c8 01       	movw	r24, r16
+     9f4:	d4 d3       	rcall	.+1960   	; 0x119e <ReadLine>
+     9f6:	0c 5f       	subi	r16, 0xFC	; 252
+     9f8:	1f 4f       	sbci	r17, 0xFF	; 255
+{
+	uint8_t i,j=POSICOES_RANKING, endLinha;
+	pos posicoes[POSICOES_RANKING];	
+	ExibeGameOver(score);										//Mostra na tela o score do jogador.
+	PiscaLeds();												//Pisca todos os LEDs juntos.
+	for(i=0;i<POSICOES_RANKING;i++)								//Lê da memória todas as posições do ranking.
+     9fa:	08 32       	cpi	r16, 0x28	; 40
+     9fc:	11 05       	cpc	r17, r1
+     9fe:	99 f7       	brne	.-26     	; 0x9e6 <GameOver+0x2c>
+		endLinha = i*TAM_LINHA;
+		ReadLine((END_INICIAL+endLinha),&posicoes[i]);
+	}
+	for(i=0;i<POSICOES_RANKING;i++)								//Loop que procura uma posição para a inserir o novo score
+	{
+		if(score>=posicoes[i].pScore)							//Caso para o encontro de uma.
+     a00:	50 91 9d 02 	lds	r21, 0x029D
+     a04:	8e 01       	movw	r16, r28
+     a06:	0c 5f       	subi	r16, 0xFC	; 252
+     a08:	1f 4f       	sbci	r17, 0xFF	; 255
+     a0a:	f8 01       	movw	r30, r16
+     a0c:	80 e0       	ldi	r24, 0x00	; 0
+     a0e:	90 e0       	ldi	r25, 0x00	; 0
+     a10:	48 2f       	mov	r20, r24
+     a12:	9c 01       	movw	r18, r24
+     a14:	60 81       	ld	r22, Z
+     a16:	56 17       	cp	r21, r22
+     a18:	80 f1       	brcs	.+96     	; 0xa7a <GameOver+0xc0>
+		{
+			j=POSICOES_RANKING-1;
+			while(i<j)											//Loop que desloca as outras posições para baixo.
+     a1a:	89 30       	cpi	r24, 0x09	; 9
+     a1c:	b8 f4       	brcc	.+46     	; 0xa4c <GameOver+0x92>
+     a1e:	fe 01       	movw	r30, r28
+     a20:	b8 96       	adiw	r30, 0x28	; 40
+     a22:	89 e0       	ldi	r24, 0x09	; 9
+     a24:	df 01       	movw	r26, r30
+     a26:	17 97       	sbiw	r26, 0x07	; 7
+			{
+				posicoes[j].pName[0] = posicoes[j-1].pName[0];
+     a28:	9c 91       	ld	r25, X
+     a2a:	14 96       	adiw	r26, 0x04	; 4
+     a2c:	9c 93       	st	X, r25
+     a2e:	13 97       	sbiw	r26, 0x03	; 3
+				posicoes[j].pName[1] = posicoes[j-1].pName[1];
+     a30:	9c 91       	ld	r25, X
+     a32:	14 96       	adiw	r26, 0x04	; 4
+     a34:	9c 93       	st	X, r25
+     a36:	13 97       	sbiw	r26, 0x03	; 3
+				posicoes[j].pName[2] = posicoes[j-1].pName[2];
+     a38:	9c 91       	ld	r25, X
+     a3a:	14 96       	adiw	r26, 0x04	; 4
+     a3c:	9c 93       	st	X, r25
+     a3e:	13 97       	sbiw	r26, 0x03	; 3
+				posicoes[j].pScore = posicoes[j-1].pScore;
+     a40:	9c 91       	ld	r25, X
+     a42:	90 83       	st	Z, r25
+				j--;
+     a44:	81 50       	subi	r24, 0x01	; 1
+     a46:	fd 01       	movw	r30, r26
+	for(i=0;i<POSICOES_RANKING;i++)								//Loop que procura uma posição para a inserir o novo score
+	{
+		if(score>=posicoes[i].pScore)							//Caso para o encontro de uma.
+		{
+			j=POSICOES_RANKING-1;
+			while(i<j)											//Loop que desloca as outras posições para baixo.
+     a48:	84 13       	cpse	r24, r20
+     a4a:	ec cf       	rjmp	.-40     	; 0xa24 <GameOver+0x6a>
+				posicoes[j].pName[1] = posicoes[j-1].pName[1];
+				posicoes[j].pName[2] = posicoes[j-1].pName[2];
+				posicoes[j].pScore = posicoes[j-1].pScore;
+				j--;
+			}			
+			posicoes[i].pName[0] = name[0];						//Guarda o nome e o score na posição encontrada.
+     a4c:	22 0f       	add	r18, r18
+     a4e:	33 1f       	adc	r19, r19
+     a50:	22 0f       	add	r18, r18
+     a52:	33 1f       	adc	r19, r19
+     a54:	e1 e0       	ldi	r30, 0x01	; 1
+     a56:	f0 e0       	ldi	r31, 0x00	; 0
+     a58:	ec 0f       	add	r30, r28
+     a5a:	fd 1f       	adc	r31, r29
+     a5c:	e2 0f       	add	r30, r18
+     a5e:	f3 1f       	adc	r31, r19
+     a60:	af e0       	ldi	r26, 0x0F	; 15
+     a62:	b3 e0       	ldi	r27, 0x03	; 3
+     a64:	8c 91       	ld	r24, X
+     a66:	80 83       	st	Z, r24
+			posicoes[i].pName[1] = name[1];						//
+     a68:	11 96       	adiw	r26, 0x01	; 1
+     a6a:	8c 91       	ld	r24, X
+     a6c:	11 97       	sbiw	r26, 0x01	; 1
+     a6e:	81 83       	std	Z+1, r24	; 0x01
+			posicoes[i].pName[2] = name[2];						//
+     a70:	12 96       	adiw	r26, 0x02	; 2
+     a72:	8c 91       	ld	r24, X
+     a74:	82 83       	std	Z+2, r24	; 0x02
+			posicoes[i].pScore = score;							//
+     a76:	53 83       	std	Z+3, r21	; 0x03
+     a78:	05 c0       	rjmp	.+10     	; 0xa84 <GameOver+0xca>
+     a7a:	01 96       	adiw	r24, 0x01	; 1
+     a7c:	34 96       	adiw	r30, 0x04	; 4
+	for(i=0;i<POSICOES_RANKING;i++)								//Lê da memória todas as posições do ranking.
+	{
+		endLinha = i*TAM_LINHA;
+		ReadLine((END_INICIAL+endLinha),&posicoes[i]);
+	}
+	for(i=0;i<POSICOES_RANKING;i++)								//Loop que procura uma posição para a inserir o novo score
+     a7e:	8a 30       	cpi	r24, 0x0A	; 10
+     a80:	91 05       	cpc	r25, r1
+     a82:	31 f6       	brne	.-116    	; 0xa10 <GameOver+0x56>
+     a84:	6e 01       	movw	r12, r28
+     a86:	2c e2       	ldi	r18, 0x2C	; 44
+     a88:	c2 0e       	add	r12, r18
+     a8a:	d1 1c       	adc	r13, r1
+     a8c:	ce 01       	movw	r24, r28
+     a8e:	80 95       	com	r24
+     a90:	90 95       	com	r25
+     a92:	fc 01       	movw	r30, r24
+     a94:	33 97       	sbiw	r30, 0x03	; 3
+     a96:	7f 01       	movw	r14, r30
+     a98:	b8 01       	movw	r22, r16
+     a9a:	63 50       	subi	r22, 0x03	; 3
+     a9c:	71 09       	sbc	r23, r1
+		}
+	}	
+	for(i=0;i<POSICOES_RANKING;i++)								//Escreve novamente na memória todas as posições
+	{															//do ranking.
+		endLinha = i*TAM_LINHA;
+		WriteLine(END_INICIAL+endLinha,posicoes[i].pName,posicoes[i].pScore);
+     a9e:	f8 01       	movw	r30, r16
+     aa0:	40 81       	ld	r20, Z
+     aa2:	c7 01       	movw	r24, r14
+     aa4:	80 0f       	add	r24, r16
+     aa6:	91 1f       	adc	r25, r17
+     aa8:	5b d3       	rcall	.+1718   	; 0x1160 <WriteLine>
+     aaa:	0c 5f       	subi	r16, 0xFC	; 252
+     aac:	1f 4f       	sbci	r17, 0xFF	; 255
+			posicoes[i].pName[2] = name[2];						//
+			posicoes[i].pScore = score;							//
+			i = POSICOES_RANKING;								//Necessário para quebrar o loop.
+		}
+	}	
+	for(i=0;i<POSICOES_RANKING;i++)								//Escreve novamente na memória todas as posições
+     aae:	0c 15       	cp	r16, r12
+     ab0:	1d 05       	cpc	r17, r13
+     ab2:	91 f7       	brne	.-28     	; 0xa98 <GameOver+0xde>
+     ab4:	ff ef       	ldi	r31, 0xFF	; 255
+     ab6:	23 ed       	ldi	r18, 0xD3	; 211
+     ab8:	30 e3       	ldi	r19, 0x30	; 48
+     aba:	f1 50       	subi	r31, 0x01	; 1
+     abc:	20 40       	sbci	r18, 0x00	; 0
+     abe:	30 40       	sbci	r19, 0x00	; 0
+     ac0:	e1 f7       	brne	.-8      	; 0xaba <GameOver+0x100>
+     ac2:	00 c0       	rjmp	.+0      	; 0xac4 <GameOver+0x10a>
+     ac4:	00 00       	nop
+	{															//do ranking.
+		endLinha = i*TAM_LINHA;
+		WriteLine(END_INICIAL+endLinha,posicoes[i].pName,posicoes[i].pScore);
+	}
+	_delay_ms(1000);											//Tempo para que o jogador visualize seu score.
+	sm.state = sMenuInicial;									//Mudança de estado -> Menu Inicial
+     ac6:	10 92 02 03 	sts	0x0302, r1
+}
+     aca:	a8 96       	adiw	r28, 0x28	; 40
+     acc:	0f b6       	in	r0, 0x3f	; 63
+     ace:	f8 94       	cli
+     ad0:	de bf       	out	0x3e, r29	; 62
+     ad2:	0f be       	out	0x3f, r0	; 63
+     ad4:	cd bf       	out	0x3d, r28	; 61
+     ad6:	df 91       	pop	r29
+     ad8:	cf 91       	pop	r28
+     ada:	1f 91       	pop	r17
+     adc:	0f 91       	pop	r16
+     ade:	ff 90       	pop	r15
+     ae0:	ef 90       	pop	r14
+     ae2:	df 90       	pop	r13
+     ae4:	cf 90       	pop	r12
+     ae6:	08 95       	ret
+
+00000ae8 <IniciaGenius>:
+	return 0;
+}
+
+
+void IniciaGenius()
+{
+     ae8:	0f 93       	push	r16
+     aea:	1f 93       	push	r17
+     aec:	cf 93       	push	r28
+     aee:	df 93       	push	r29
+     af0:	00 d0       	rcall	.+0      	; 0xaf2 <IniciaGenius+0xa>
+     af2:	cd b7       	in	r28, 0x3d	; 61
+     af4:	de b7       	in	r29, 0x3e	; 62
+	
+	uint16_t i, endLinha;
+	uint8_t nomeNulo[3] = {'X','X','X'};	//Valor "nulo" para todos os nomes.
+     af6:	88 e5       	ldi	r24, 0x58	; 88
+     af8:	89 83       	std	Y+1, r24	; 0x01
+     afa:	8a 83       	std	Y+2, r24	; 0x02
+     afc:	8b 83       	std	Y+3, r24	; 0x03
+	
+	/* Configuração do display LCD. */	
+	lcd_init();
+     afe:	49 dd       	rcall	.-1390   	; 0x592 <lcd_init>
+	
+	/* Configuração do timer utilizado para gerar um número aleatório. */	
+	TimerInit();
+     b00:	77 d3       	rcall	.+1774   	; 0x11f0 <TimerInit>
+	
+	/* Configuração do conversor A/D utilizado nos botões de menu. */	
+	ADCInit();
+     b02:	66 d3       	rcall	.+1740   	; 0x11d0 <ADCInit>
+	
+	/* Configuração das interrupções ligadas aos botões de jogo. */	
+	GameButtonsInit();
+     b04:	10 db       	rcall	.-2528   	; 0x126 <GameButtonsInit>
+	
+	/* Configuração das portas que acionam os leds. */
+	LEDsInit();
+     b06:	f7 dd       	rcall	.-1042   	; 0x6f6 <LEDsInit>
+     b08:	00 e0       	ldi	r16, 0x00	; 0
+     b0a:	10 e0       	ldi	r17, 0x00	; 0
+	
+	/* Escreve ranking nulo na memória. */
+	for(i=0;i<POSICOES_RANKING;i++)
+	{
+		endLinha = i*TAM_LINHA;
+		WriteLine(END_INICIAL+endLinha,nomeNulo,0);
+     b0c:	40 e0       	ldi	r20, 0x00	; 0
+     b0e:	be 01       	movw	r22, r28
+     b10:	6f 5f       	subi	r22, 0xFF	; 255
+     b12:	7f 4f       	sbci	r23, 0xFF	; 255
+     b14:	c8 01       	movw	r24, r16
+     b16:	24 d3       	rcall	.+1608   	; 0x1160 <WriteLine>
+     b18:	0c 5f       	subi	r16, 0xFC	; 252
+     b1a:	1f 4f       	sbci	r17, 0xFF	; 255
+	
+	/* Configuração das portas que acionam os leds. */
+	LEDsInit();
+	
+	/* Escreve ranking nulo na memória. */
+	for(i=0;i<POSICOES_RANKING;i++)
+     b1c:	08 32       	cpi	r16, 0x28	; 40
+     b1e:	11 05       	cpc	r17, r1
+     b20:	a9 f7       	brne	.-22     	; 0xb0c <IniciaGenius+0x24>
+	{
+		endLinha = i*TAM_LINHA;
+		WriteLine(END_INICIAL+endLinha,nomeNulo,0);
+	}
+}
+     b22:	0f 90       	pop	r0
+     b24:	0f 90       	pop	r0
+     b26:	0f 90       	pop	r0
+     b28:	df 91       	pop	r29
+     b2a:	cf 91       	pop	r28
+     b2c:	1f 91       	pop	r17
+     b2e:	0f 91       	pop	r16
+     b30:	08 95       	ret
+
+00000b32 <InitStateMachine>:
+
+void InitStateMachine()
+{
+	sm.state = sMenuInicial;
+     b32:	e2 e0       	ldi	r30, 0x02	; 2
+     b34:	f3 e0       	ldi	r31, 0x03	; 3
+     b36:	10 82       	st	Z, r1
+	sm.action[sMenuInicial] = MenuInicial;
+     b38:	8f ea       	ldi	r24, 0xAF	; 175
+     b3a:	93 e0       	ldi	r25, 0x03	; 3
+     b3c:	92 83       	std	Z+2, r25	; 0x02
+     b3e:	81 83       	std	Z+1, r24	; 0x01
+	sm.action[sRanking] = Ranking;
+     b40:	8c e6       	ldi	r24, 0x6C	; 108
+     b42:	96 e0       	ldi	r25, 0x06	; 6
+     b44:	94 83       	std	Z+4, r25	; 0x04
+     b46:	83 83       	std	Z+3, r24	; 0x03
+	sm.action[sInsereNome] = InsereNome;
+     b48:	8e ed       	ldi	r24, 0xDE	; 222
+     b4a:	93 e0       	ldi	r25, 0x03	; 3
+     b4c:	96 83       	std	Z+6, r25	; 0x06
+     b4e:	85 83       	std	Z+5, r24	; 0x05
+	sm.action[sConfirmaJogo] = ConfirmaJogo;
+     b50:	85 e9       	ldi	r24, 0x95	; 149
+     b52:	94 e0       	ldi	r25, 0x04	; 4
+     b54:	90 87       	std	Z+8, r25	; 0x08
+     b56:	87 83       	std	Z+7, r24	; 0x07
+	sm.action[sPlayGenius] = PlayGenius;
+     b58:	8f e8       	ldi	r24, 0x8F	; 143
+     b5a:	97 e0       	ldi	r25, 0x07	; 7
+     b5c:	92 87       	std	Z+10, r25	; 0x0a
+     b5e:	81 87       	std	Z+9, r24	; 0x09
+	sm.action[sGameOver] = GameOver;
+     b60:	8d ed       	ldi	r24, 0xDD	; 221
+     b62:	94 e0       	ldi	r25, 0x04	; 4
+     b64:	94 87       	std	Z+12, r25	; 0x0c
+     b66:	83 87       	std	Z+11, r24	; 0x0b
+     b68:	08 95       	ret
+
+00000b6a <main>:
+/** 
+	@brief Função principal.
+*/
+int main(void)
+{
+	IniciaGenius();				// Configura os periféricos.
+     b6a:	be df       	rcall	.-132    	; 0xae8 <IniciaGenius>
+	InitStateMachine();			// Inicializa a máquina de estados.
+     b6c:	e2 df       	rcall	.-60     	; 0xb32 <InitStateMachine>
+	while(1)
+	{		
+		sm.action[sm.state]();	// Roda a máquina de estados 		
+     b6e:	c2 e0       	ldi	r28, 0x02	; 2
+     b70:	d3 e0       	ldi	r29, 0x03	; 3
+     b72:	e8 81       	ld	r30, Y
+     b74:	f0 e0       	ldi	r31, 0x00	; 0
+     b76:	ee 0f       	add	r30, r30
+     b78:	ff 1f       	adc	r31, r31
+     b7a:	ee 5f       	subi	r30, 0xFE	; 254
+     b7c:	fc 4f       	sbci	r31, 0xFC	; 252
+     b7e:	01 80       	ldd	r0, Z+1	; 0x01
+     b80:	f2 81       	ldd	r31, Z+2	; 0x02
+     b82:	e0 2d       	mov	r30, r0
+     b84:	19 95       	eicall
+	}
+     b86:	f5 cf       	rjmp	.-22     	; 0xb72 <main+0x8>
+
+00000b88 <PrintLinha>:
+
+
+
+/* Função auxiliar no estado Ranking */
+void PrintLinha(pos pPosicao, uint8_t ind)
+{
+     b88:	bf 92       	push	r11
+     b8a:	cf 92       	push	r12
+     b8c:	df 92       	push	r13
+     b8e:	ef 92       	push	r14
+     b90:	ff 92       	push	r15
+     b92:	0f 93       	push	r16
+     b94:	1f 93       	push	r17
+     b96:	cf 93       	push	r28
+     b98:	df 93       	push	r29
+     b9a:	d6 2e       	mov	r13, r22
+     b9c:	e7 2e       	mov	r14, r23
+     b9e:	f8 2e       	mov	r15, r24
+     ba0:	29 2f       	mov	r18, r25
+	uint8_t dig1Score = (pPosicao.pScore/100);								//Separa o algarismo de centena do score.
+     ba2:	39 e2       	ldi	r19, 0x29	; 41
+     ba4:	93 9f       	mul	r25, r19
+     ba6:	11 2d       	mov	r17, r1
+     ba8:	11 24       	eor	r1, r1
+     baa:	12 95       	swap	r17
+     bac:	1f 70       	andi	r17, 0x0F	; 15
+	uint8_t dig2Score = ((pPosicao.pScore-(dig1Score*100))/10);				//Separa o algarismo de dezena do score.
+     bae:	0c e9       	ldi	r16, 0x9C	; 156
+     bb0:	01 03       	mulsu	r16, r17
+     bb2:	c0 01       	movw	r24, r0
+     bb4:	11 24       	eor	r1, r1
+     bb6:	82 0f       	add	r24, r18
+     bb8:	91 1d       	adc	r25, r1
+     bba:	ea e0       	ldi	r30, 0x0A	; 10
+     bbc:	f0 e0       	ldi	r31, 0x00	; 0
+     bbe:	bf 01       	movw	r22, r30
+     bc0:	5c d3       	rcall	.+1720   	; 0x127a <__divmodhi4>
+     bc2:	c6 2e       	mov	r12, r22
+	uint8_t dig3Score = (pPosicao.pScore-(dig1Score*100)-(dig2Score*10));	//Separa o algarismo de unidade do score.
+	uint8_t dig1Pos = (ind/100);											//Separa o algarismo de centena do número de posição.
+     bc4:	43 9f       	mul	r20, r19
+     bc6:	31 2d       	mov	r19, r1
+     bc8:	11 24       	eor	r1, r1
+     bca:	32 95       	swap	r19
+     bcc:	3f 70       	andi	r19, 0x0F	; 15
+	uint8_t dig2Pos = ((ind-(dig1Pos*100))/10);								//Separa o algarismo de dezena do número de posição.
+     bce:	03 03       	mulsu	r16, r19
+     bd0:	c0 01       	movw	r24, r0
+     bd2:	11 24       	eor	r1, r1
+     bd4:	84 0f       	add	r24, r20
+     bd6:	91 1d       	adc	r25, r1
+     bd8:	bf 01       	movw	r22, r30
+     bda:	4f d3       	rcall	.+1694   	; 0x127a <__divmodhi4>
+     bdc:	b6 2e       	mov	r11, r22
+     bde:	c0 e3       	ldi	r28, 0x30	; 48
+     be0:	c2 0f       	add	r28, r18
+     be2:	10 9f       	mul	r17, r16
+     be4:	c0 0d       	add	r28, r0
+     be6:	11 24       	eor	r1, r1
+/* Função auxiliar no estado Ranking */
+void PrintLinha(pos pPosicao, uint8_t ind)
+{
+	uint8_t dig1Score = (pPosicao.pScore/100);								//Separa o algarismo de centena do score.
+	uint8_t dig2Score = ((pPosicao.pScore-(dig1Score*100))/10);				//Separa o algarismo de dezena do score.
+	uint8_t dig3Score = (pPosicao.pScore-(dig1Score*100)-(dig2Score*10));	//Separa o algarismo de unidade do score.
+     be8:	9c 2d       	mov	r25, r12
+     bea:	99 0f       	add	r25, r25
+     bec:	89 2f       	mov	r24, r25
+     bee:	88 0f       	add	r24, r24
+     bf0:	88 0f       	add	r24, r24
+     bf2:	89 0f       	add	r24, r25
+	uint8_t dig1Pos = (ind/100);											//Separa o algarismo de centena do número de posição.
+	uint8_t dig2Pos = ((ind-(dig1Pos*100))/10);								//Separa o algarismo de dezena do número de posição.
+	uint8_t dig3Pos = (ind-(dig1Pos*100)-(dig2Pos*10));						//Separa o algarismo de unidade do número de posição.
+	dig1Score+=48;															//O offset de um número em relação ao valor do seu 
+	dig2Score+=48;															//caractere em ASCII é 48.
+	dig3Score+=48;
+     bf4:	c8 1b       	sub	r28, r24
+     bf6:	d0 e3       	ldi	r29, 0x30	; 48
+     bf8:	d4 0f       	add	r29, r20
+     bfa:	30 9f       	mul	r19, r16
+     bfc:	d0 0d       	add	r29, r0
+     bfe:	11 24       	eor	r1, r1
+	uint8_t dig1Score = (pPosicao.pScore/100);								//Separa o algarismo de centena do score.
+	uint8_t dig2Score = ((pPosicao.pScore-(dig1Score*100))/10);				//Separa o algarismo de dezena do score.
+	uint8_t dig3Score = (pPosicao.pScore-(dig1Score*100)-(dig2Score*10));	//Separa o algarismo de unidade do score.
+	uint8_t dig1Pos = (ind/100);											//Separa o algarismo de centena do número de posição.
+	uint8_t dig2Pos = ((ind-(dig1Pos*100))/10);								//Separa o algarismo de dezena do número de posição.
+	uint8_t dig3Pos = (ind-(dig1Pos*100)-(dig2Pos*10));						//Separa o algarismo de unidade do número de posição.
+     c00:	86 2f       	mov	r24, r22
+     c02:	88 0f       	add	r24, r24
+     c04:	98 2f       	mov	r25, r24
+     c06:	99 0f       	add	r25, r25
+     c08:	99 0f       	add	r25, r25
+     c0a:	98 0f       	add	r25, r24
+	dig1Score+=48;															//O offset de um número em relação ao valor do seu 
+	dig2Score+=48;															//caractere em ASCII é 48.
+	dig3Score+=48;
+	dig2Pos+=48;
+	dig3Pos+=48;
+     c0c:	d9 1b       	sub	r29, r25
+	lcd_write_instruction(lcd_SetCursor|(lcd_LineTwo + 1));					//Mostra o número de posição na segunda
+     c0e:	81 ec       	ldi	r24, 0xC1	; 193
+     c10:	af dc       	rcall	.-1698   	; 0x570 <lcd_write_instruction>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     c12:	8f e3       	ldi	r24, 0x3F	; 63
+     c14:	91 e0       	ldi	r25, 0x01	; 1
+     c16:	01 97       	sbiw	r24, 0x01	; 1
+     c18:	f1 f7       	brne	.-4      	; 0xc16 <PrintLinha+0x8e>
+     c1a:	00 c0       	rjmp	.+0      	; 0xc1c <PrintLinha+0x94>
+     c1c:	00 00       	nop
+	_delay_us(80);															//linha do display utilizando dois algarismos.
+	lcd_write_character(dig2Pos);
+     c1e:	80 e3       	ldi	r24, 0x30	; 48
+     c20:	8b 0d       	add	r24, r11
+     c22:	63 dc       	rcall	.-1850   	; 0x4ea <lcd_write_character>
+     c24:	8f e3       	ldi	r24, 0x3F	; 63
+     c26:	91 e0       	ldi	r25, 0x01	; 1
+     c28:	01 97       	sbiw	r24, 0x01	; 1
+     c2a:	f1 f7       	brne	.-4      	; 0xc28 <PrintLinha+0xa0>
+     c2c:	00 c0       	rjmp	.+0      	; 0xc2e <PrintLinha+0xa6>
+     c2e:	00 00       	nop
+	_delay_us(80);
+	lcd_write_character(dig3Pos);
+     c30:	8d 2f       	mov	r24, r29
+     c32:	5b dc       	rcall	.-1866   	; 0x4ea <lcd_write_character>
+     c34:	8f e3       	ldi	r24, 0x3F	; 63
+     c36:	91 e0       	ldi	r25, 0x01	; 1
+     c38:	01 97       	sbiw	r24, 0x01	; 1
+     c3a:	f1 f7       	brne	.-4      	; 0xc38 <PrintLinha+0xb0>
+     c3c:	00 c0       	rjmp	.+0      	; 0xc3e <PrintLinha+0xb6>
+     c3e:	00 00       	nop
+	_delay_us(80);
+	lcd_write_instruction(lcd_SetCursor|(lcd_LineTwo + 6));					//Mostra os três caracteres do nome.
+     c40:	86 ec       	ldi	r24, 0xC6	; 198
+     c42:	96 dc       	rcall	.-1748   	; 0x570 <lcd_write_instruction>
+     c44:	8f e3       	ldi	r24, 0x3F	; 63
+     c46:	91 e0       	ldi	r25, 0x01	; 1
+     c48:	01 97       	sbiw	r24, 0x01	; 1
+     c4a:	f1 f7       	brne	.-4      	; 0xc48 <PrintLinha+0xc0>
+     c4c:	00 c0       	rjmp	.+0      	; 0xc4e <PrintLinha+0xc6>
+     c4e:	00 00       	nop
+	_delay_us(80);
+	lcd_write_character(pPosicao.pName[0]);
+     c50:	8d 2d       	mov	r24, r13
+     c52:	4b dc       	rcall	.-1898   	; 0x4ea <lcd_write_character>
+     c54:	8f e3       	ldi	r24, 0x3F	; 63
+     c56:	91 e0       	ldi	r25, 0x01	; 1
+     c58:	01 97       	sbiw	r24, 0x01	; 1
+     c5a:	f1 f7       	brne	.-4      	; 0xc58 <PrintLinha+0xd0>
+     c5c:	00 c0       	rjmp	.+0      	; 0xc5e <PrintLinha+0xd6>
+     c5e:	00 00       	nop
+	_delay_us(80);
+	lcd_write_character(pPosicao.pName[1]);
+     c60:	8e 2d       	mov	r24, r14
+     c62:	43 dc       	rcall	.-1914   	; 0x4ea <lcd_write_character>
+     c64:	8f e3       	ldi	r24, 0x3F	; 63
+     c66:	91 e0       	ldi	r25, 0x01	; 1
+     c68:	01 97       	sbiw	r24, 0x01	; 1
+     c6a:	f1 f7       	brne	.-4      	; 0xc68 <PrintLinha+0xe0>
+     c6c:	00 c0       	rjmp	.+0      	; 0xc6e <PrintLinha+0xe6>
+     c6e:	00 00       	nop
+	_delay_us(80);
+	lcd_write_character(pPosicao.pName[2]);
+     c70:	8f 2d       	mov	r24, r15
+     c72:	3b dc       	rcall	.-1930   	; 0x4ea <lcd_write_character>
+     c74:	8f e3       	ldi	r24, 0x3F	; 63
+     c76:	91 e0       	ldi	r25, 0x01	; 1
+     c78:	01 97       	sbiw	r24, 0x01	; 1
+     c7a:	f1 f7       	brne	.-4      	; 0xc78 <PrintLinha+0xf0>
+     c7c:	00 c0       	rjmp	.+0      	; 0xc7e <PrintLinha+0xf6>
+     c7e:	00 00       	nop
+	_delay_us(80);
+	lcd_write_instruction(lcd_SetCursor|(lcd_LineTwo + 11));				//Mostra o score com 3 algarismo.
+     c80:	8b ec       	ldi	r24, 0xCB	; 203
+     c82:	76 dc       	rcall	.-1812   	; 0x570 <lcd_write_instruction>
+     c84:	8f e3       	ldi	r24, 0x3F	; 63
+     c86:	91 e0       	ldi	r25, 0x01	; 1
+     c88:	01 97       	sbiw	r24, 0x01	; 1
+     c8a:	f1 f7       	brne	.-4      	; 0xc88 <PrintLinha+0x100>
+     c8c:	00 c0       	rjmp	.+0      	; 0xc8e <PrintLinha+0x106>
+     c8e:	00 00       	nop
+	_delay_us(80);
+	lcd_write_character(dig1Score);
+     c90:	80 e3       	ldi	r24, 0x30	; 48
+     c92:	81 0f       	add	r24, r17
+     c94:	2a dc       	rcall	.-1964   	; 0x4ea <lcd_write_character>
+     c96:	8f e3       	ldi	r24, 0x3F	; 63
+     c98:	91 e0       	ldi	r25, 0x01	; 1
+     c9a:	01 97       	sbiw	r24, 0x01	; 1
+     c9c:	f1 f7       	brne	.-4      	; 0xc9a <PrintLinha+0x112>
+     c9e:	00 c0       	rjmp	.+0      	; 0xca0 <PrintLinha+0x118>
+     ca0:	00 00       	nop
+	_delay_us(80);
+	lcd_write_character(dig2Score);
+     ca2:	80 e3       	ldi	r24, 0x30	; 48
+     ca4:	8c 0d       	add	r24, r12
+     ca6:	21 dc       	rcall	.-1982   	; 0x4ea <lcd_write_character>
+     ca8:	8f e3       	ldi	r24, 0x3F	; 63
+     caa:	91 e0       	ldi	r25, 0x01	; 1
+     cac:	01 97       	sbiw	r24, 0x01	; 1
+     cae:	f1 f7       	brne	.-4      	; 0xcac <PrintLinha+0x124>
+     cb0:	00 c0       	rjmp	.+0      	; 0xcb2 <PrintLinha+0x12a>
+     cb2:	00 00       	nop
+	_delay_us(80);
+	lcd_write_character(dig3Score);
+     cb4:	8c 2f       	mov	r24, r28
+     cb6:	19 dc       	rcall	.-1998   	; 0x4ea <lcd_write_character>
+     cb8:	8f e3       	ldi	r24, 0x3F	; 63
+     cba:	91 e0       	ldi	r25, 0x01	; 1
+     cbc:	01 97       	sbiw	r24, 0x01	; 1
+     cbe:	f1 f7       	brne	.-4      	; 0xcbc <PrintLinha+0x134>
+     cc0:	00 c0       	rjmp	.+0      	; 0xcc2 <PrintLinha+0x13a>
+     cc2:	00 00       	nop
+	_delay_us(80);
+}
+     cc4:	df 91       	pop	r29
+     cc6:	cf 91       	pop	r28
+     cc8:	1f 91       	pop	r17
+     cca:	0f 91       	pop	r16
+     ccc:	ff 90       	pop	r15
+     cce:	ef 90       	pop	r14
+     cd0:	df 90       	pop	r13
+     cd2:	cf 90       	pop	r12
+     cd4:	bf 90       	pop	r11
+     cd6:	08 95       	ret
+
+00000cd8 <Ranking>:
+		}
+	}		
+}
+
+void Ranking()
+{
+     cd8:	af 92       	push	r10
+     cda:	bf 92       	push	r11
+     cdc:	cf 92       	push	r12
+     cde:	df 92       	push	r13
+     ce0:	ef 92       	push	r14
+     ce2:	ff 92       	push	r15
+     ce4:	0f 93       	push	r16
+     ce6:	1f 93       	push	r17
+     ce8:	cf 93       	push	r28
+     cea:	df 93       	push	r29
+     cec:	cd b7       	in	r28, 0x3d	; 61
+     cee:	de b7       	in	r29, 0x3e	; 62
+     cf0:	a8 97       	sbiw	r28, 0x28	; 40
+     cf2:	0f b6       	in	r0, 0x3f	; 63
+     cf4:	f8 94       	cli
+     cf6:	de bf       	out	0x3e, r29	; 62
+     cf8:	0f be       	out	0x3f, r0	; 63
+     cfa:	cd bf       	out	0x3d, r28	; 61
+	uint8_t i, endLinha;
+	uint16_t opcao;
+	pos posicoes[POSICOES_RANKING];				//Vetor que manipula as posições.
+	ExibeTelaRanking();							//Mostra a tela inicial do ranking.
+     cfc:	a2 db       	rcall	.-2236   	; 0x442 <ExibeTelaRanking>
+     cfe:	00 e0       	ldi	r16, 0x00	; 0
+     d00:	10 e0       	ldi	r17, 0x00	; 0
+     d02:	61 e0       	ldi	r22, 0x01	; 1
+     d04:	70 e0       	ldi	r23, 0x00	; 0
+     d06:	6c 0f       	add	r22, r28
+     d08:	7d 1f       	adc	r23, r29
+     d0a:	60 0f       	add	r22, r16
+     d0c:	71 1f       	adc	r23, r17
+	for(i=0;i<POSICOES_RANKING;i++)				//Laço que lê todas posições 
+	{											//do ranking da memória.
+		endLinha = i*TAM_LINHA;
+		ReadLine((END_INICIAL+endLinha),&posicoes[i]);
+     d0e:	c8 01       	movw	r24, r16
+     d10:	46 d2       	rcall	.+1164   	; 0x119e <ReadLine>
+     d12:	25 e3       	ldi	r18, 0x35	; 53
+     d14:	2a 95       	dec	r18
+     d16:	f1 f7       	brne	.-4      	; 0xd14 <Ranking+0x3c>
+     d18:	00 00       	nop
+     d1a:	0c 5f       	subi	r16, 0xFC	; 252
+     d1c:	1f 4f       	sbci	r17, 0xFF	; 255
+{
+	uint8_t i, endLinha;
+	uint16_t opcao;
+	pos posicoes[POSICOES_RANKING];				//Vetor que manipula as posições.
+	ExibeTelaRanking();							//Mostra a tela inicial do ranking.
+	for(i=0;i<POSICOES_RANKING;i++)				//Laço que lê todas posições 
+     d1e:	08 32       	cpi	r16, 0x28	; 40
+     d20:	11 05       	cpc	r17, r1
+     d22:	79 f7       	brne	.-34     	; 0xd02 <Ranking+0x2a>
+		endLinha = i*TAM_LINHA;
+		ReadLine((END_INICIAL+endLinha),&posicoes[i]);
+		_delay_us(10);
+	}
+	i = 0;
+	PrintLinha(posicoes[i],i+1);				//Exibe a primeira posição no display.
+     d24:	69 81       	ldd	r22, Y+1	; 0x01
+     d26:	7a 81       	ldd	r23, Y+2	; 0x02
+     d28:	8b 81       	ldd	r24, Y+3	; 0x03
+     d2a:	9c 81       	ldd	r25, Y+4	; 0x04
+     d2c:	41 e0       	ldi	r20, 0x01	; 1
+     d2e:	2c df       	rcall	.-424    	; 0xb88 <PrintLinha>
+	opcao = lerBotaoMenu();						//Debounce inicial da entrada analógica.
+     d30:	68 d2       	rcall	.+1232   	; 0x1202 <lerBotaoMenu>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     d32:	8f ef       	ldi	r24, 0xFF	; 255
+     d34:	99 e6       	ldi	r25, 0x69	; 105
+     d36:	e8 e1       	ldi	r30, 0x18	; 24
+     d38:	81 50       	subi	r24, 0x01	; 1
+     d3a:	90 40       	sbci	r25, 0x00	; 0
+     d3c:	e0 40       	sbci	r30, 0x00	; 0
+     d3e:	e1 f7       	brne	.-8      	; 0xd38 <Ranking+0x60>
+     d40:	00 c0       	rjmp	.+0      	; 0xd42 <Ranking+0x6a>
+     d42:	00 00       	nop
+	{											//do ranking da memória.
+		endLinha = i*TAM_LINHA;
+		ReadLine((END_INICIAL+endLinha),&posicoes[i]);
+		_delay_us(10);
+	}
+	i = 0;
+     d44:	10 e0       	ldi	r17, 0x00	; 0
+	PrintLinha(posicoes[i],i+1);				//Exibe a primeira posição no display.
+	opcao = lerBotaoMenu();						//Debounce inicial da entrada analógica.
+	_delay_ms(500);								//
+	while(sm.state==sRanking)					//Polling para os botões de menu.
+     d46:	0f 2e       	mov	r0, r31
+     d48:	f2 e0       	ldi	r31, 0x02	; 2
+     d4a:	cf 2e       	mov	r12, r31
+     d4c:	f3 e0       	ldi	r31, 0x03	; 3
+     d4e:	df 2e       	mov	r13, r31
+     d50:	f0 2d       	mov	r31, r0
+	{
+		opcao = lerBotaoMenu();
+		_delay_ms(150);
+		if((opcao==UP) & (i>0))					//Exibe posição acima.
+     d52:	01 e0       	ldi	r16, 0x01	; 1
+     d54:	b1 2c       	mov	r11, r1
+     d56:	57 c0       	rjmp	.+174    	; 0xe06 <Ranking+0x12e>
+	PrintLinha(posicoes[i],i+1);				//Exibe a primeira posição no display.
+	opcao = lerBotaoMenu();						//Debounce inicial da entrada analógica.
+	_delay_ms(500);								//
+	while(sm.state==sRanking)					//Polling para os botões de menu.
+	{
+		opcao = lerBotaoMenu();
+     d58:	54 d2       	rcall	.+1192   	; 0x1202 <lerBotaoMenu>
+     d5a:	7c 01       	movw	r14, r24
+     d5c:	ff ef       	ldi	r31, 0xFF	; 255
+     d5e:	22 e5       	ldi	r18, 0x52	; 82
+     d60:	87 e0       	ldi	r24, 0x07	; 7
+     d62:	f1 50       	subi	r31, 0x01	; 1
+     d64:	20 40       	sbci	r18, 0x00	; 0
+     d66:	80 40       	sbci	r24, 0x00	; 0
+     d68:	e1 f7       	brne	.-8      	; 0xd62 <Ranking+0x8a>
+     d6a:	00 c0       	rjmp	.+0      	; 0xd6c <Ranking+0x94>
+     d6c:	00 00       	nop
+		_delay_ms(150);
+		if((opcao==UP) & (i>0))					//Exibe posição acima.
+     d6e:	80 2f       	mov	r24, r16
+     d70:	93 ec       	ldi	r25, 0xC3	; 195
+     d72:	e9 16       	cp	r14, r25
+     d74:	f1 04       	cpc	r15, r1
+     d76:	09 f0       	breq	.+2      	; 0xd7a <Ranking+0xa2>
+     d78:	8b 2d       	mov	r24, r11
+     d7a:	88 23       	and	r24, r24
+     d7c:	c9 f0       	breq	.+50     	; 0xdb0 <Ranking+0xd8>
+     d7e:	80 2f       	mov	r24, r16
+     d80:	11 11       	cpse	r17, r1
+     d82:	01 c0       	rjmp	.+2      	; 0xd86 <Ranking+0xae>
+     d84:	8b 2d       	mov	r24, r11
+     d86:	88 23       	and	r24, r24
+     d88:	99 f0       	breq	.+38     	; 0xdb0 <Ranking+0xd8>
+		{
+			i--;
+     d8a:	aa 24       	eor	r10, r10
+     d8c:	aa 94       	dec	r10
+     d8e:	a1 0e       	add	r10, r17
+			PrintLinha(posicoes[i],i+1);
+     d90:	e1 e0       	ldi	r30, 0x01	; 1
+     d92:	f0 e0       	ldi	r31, 0x00	; 0
+     d94:	ec 0f       	add	r30, r28
+     d96:	fd 1f       	adc	r31, r29
+     d98:	24 e0       	ldi	r18, 0x04	; 4
+     d9a:	a2 9e       	mul	r10, r18
+     d9c:	e0 0d       	add	r30, r0
+     d9e:	f1 1d       	adc	r31, r1
+     da0:	11 24       	eor	r1, r1
+     da2:	60 81       	ld	r22, Z
+     da4:	71 81       	ldd	r23, Z+1	; 0x01
+     da6:	82 81       	ldd	r24, Z+2	; 0x02
+     da8:	93 81       	ldd	r25, Z+3	; 0x03
+     daa:	41 2f       	mov	r20, r17
+     dac:	ed de       	rcall	.-550    	; 0xb88 <PrintLinha>
+	{
+		opcao = lerBotaoMenu();
+		_delay_ms(150);
+		if((opcao==UP) & (i>0))					//Exibe posição acima.
+		{
+			i--;
+     dae:	1a 2d       	mov	r17, r10
+			PrintLinha(posicoes[i],i+1);
+		}
+		if((opcao==DOWN) & (i<POSICOES_RANKING-1))
+     db0:	80 2f       	mov	r24, r16
+     db2:	19 30       	cpi	r17, 0x09	; 9
+     db4:	08 f0       	brcs	.+2      	; 0xdb8 <Ranking+0xe0>
+     db6:	8b 2d       	mov	r24, r11
+     db8:	88 23       	and	r24, r24
+     dba:	f1 f0       	breq	.+60     	; 0xdf8 <Ranking+0x120>
+     dbc:	80 2f       	mov	r24, r16
+     dbe:	9c e7       	ldi	r25, 0x7C	; 124
+     dc0:	e9 16       	cp	r14, r25
+     dc2:	91 e0       	ldi	r25, 0x01	; 1
+     dc4:	f9 06       	cpc	r15, r25
+     dc6:	09 f0       	breq	.+2      	; 0xdca <Ranking+0xf2>
+     dc8:	8b 2d       	mov	r24, r11
+     dca:	88 23       	and	r24, r24
+     dcc:	a9 f0       	breq	.+42     	; 0xdf8 <Ranking+0x120>
+		{
+			i++;
+     dce:	ff 24       	eor	r15, r15
+     dd0:	f3 94       	inc	r15
+     dd2:	f1 0e       	add	r15, r17
+			PrintLinha(posicoes[i],i+1);		//Exibe posição abaixo.			
+     dd4:	42 e0       	ldi	r20, 0x02	; 2
+     dd6:	41 0f       	add	r20, r17
+     dd8:	e1 e0       	ldi	r30, 0x01	; 1
+     dda:	f0 e0       	ldi	r31, 0x00	; 0
+     ddc:	ec 0f       	add	r30, r28
+     dde:	fd 1f       	adc	r31, r29
+     de0:	24 e0       	ldi	r18, 0x04	; 4
+     de2:	f2 9e       	mul	r15, r18
+     de4:	e0 0d       	add	r30, r0
+     de6:	f1 1d       	adc	r31, r1
+     de8:	11 24       	eor	r1, r1
+     dea:	60 81       	ld	r22, Z
+     dec:	71 81       	ldd	r23, Z+1	; 0x01
+     dee:	82 81       	ldd	r24, Z+2	; 0x02
+     df0:	93 81       	ldd	r25, Z+3	; 0x03
+     df2:	ca de       	rcall	.-620    	; 0xb88 <PrintLinha>
+			i--;
+			PrintLinha(posicoes[i],i+1);
+		}
+		if((opcao==DOWN) & (i<POSICOES_RANKING-1))
+		{
+			i++;
+     df4:	1f 2d       	mov	r17, r15
+     df6:	07 c0       	rjmp	.+14     	; 0xe06 <Ranking+0x12e>
+			PrintLinha(posicoes[i],i+1);		//Exibe posição abaixo.			
+		}
+		else if(opcao==CANCEL)
+     df8:	86 e1       	ldi	r24, 0x16	; 22
+     dfa:	e8 16       	cp	r14, r24
+     dfc:	83 e0       	ldi	r24, 0x03	; 3
+     dfe:	f8 06       	cpc	r15, r24
+     e00:	11 f4       	brne	.+4      	; 0xe06 <Ranking+0x12e>
+		{
+			sm.state = sMenuInicial;			//Mudança de estado -> Menu Inicial
+     e02:	f6 01       	movw	r30, r12
+     e04:	10 82       	st	Z, r1
+	}
+	i = 0;
+	PrintLinha(posicoes[i],i+1);				//Exibe a primeira posição no display.
+	opcao = lerBotaoMenu();						//Debounce inicial da entrada analógica.
+	_delay_ms(500);								//
+	while(sm.state==sRanking)					//Polling para os botões de menu.
+     e06:	f6 01       	movw	r30, r12
+     e08:	80 81       	ld	r24, Z
+     e0a:	81 30       	cpi	r24, 0x01	; 1
+     e0c:	09 f4       	brne	.+2      	; 0xe10 <Ranking+0x138>
+     e0e:	a4 cf       	rjmp	.-184    	; 0xd58 <Ranking+0x80>
+		else if(opcao==CANCEL)
+		{
+			sm.state = sMenuInicial;			//Mudança de estado -> Menu Inicial
+		}
+	}
+}
+     e10:	a8 96       	adiw	r28, 0x28	; 40
+     e12:	0f b6       	in	r0, 0x3f	; 63
+     e14:	f8 94       	cli
+     e16:	de bf       	out	0x3e, r29	; 62
+     e18:	0f be       	out	0x3f, r0	; 63
+     e1a:	cd bf       	out	0x3d, r28	; 61
+     e1c:	df 91       	pop	r29
+     e1e:	cf 91       	pop	r28
+     e20:	1f 91       	pop	r17
+     e22:	0f 91       	pop	r16
+     e24:	ff 90       	pop	r15
+     e26:	ef 90       	pop	r14
+     e28:	df 90       	pop	r13
+     e2a:	cf 90       	pop	r12
+     e2c:	bf 90       	pop	r11
+     e2e:	af 90       	pop	r10
+     e30:	08 95       	ret
+
+00000e32 <InsereElemento>:
+/* Função auxiliar no estado Play Genius */
+/**
+ * @return Flag que sinaliza se a sequencia foi preenchida com sucesso ou não.
+*/
+bool InsereElemento()
+{
+     e32:	1f 93       	push	r17
+     e34:	cf 93       	push	r28
+     e36:	df 93       	push	r29
+	uint8_t novo = ((TIMER_RAND+rand()+(rand()%MAX_SEQ))%4)+1;	//Captura do valor do timer e geração do valor de luz.
+     e38:	16 b5       	in	r17, 0x26	; 38
+     e3a:	8d d2       	rcall	.+1306   	; 0x1356 <rand>
+     e3c:	ec 01       	movw	r28, r24
+     e3e:	8b d2       	rcall	.+1302   	; 0x1356 <rand>
+	if(score >= MAX_SEQ)										//Caso para a sequencia completamente preenchida.
+     e40:	20 91 9d 02 	lds	r18, 0x029D
+     e44:	24 36       	cpi	r18, 0x64	; 100
+     e46:	d0 f4       	brcc	.+52     	; 0xe7c <InsereElemento+0x4a>
+		return false;											
+	sequencia[score] = novo;									//Insere o novo elemento na sequência.
+     e48:	e2 2f       	mov	r30, r18
+     e4a:	f0 e0       	ldi	r31, 0x00	; 0
+     e4c:	e2 56       	subi	r30, 0x62	; 98
+     e4e:	fd 4f       	sbci	r31, 0xFD	; 253
+/**
+ * @return Flag que sinaliza se a sequencia foi preenchida com sucesso ou não.
+*/
+bool InsereElemento()
+{
+	uint8_t novo = ((TIMER_RAND+rand()+(rand()%MAX_SEQ))%4)+1;	//Captura do valor do timer e geração do valor de luz.
+     e50:	c1 0f       	add	r28, r17
+     e52:	d1 1d       	adc	r29, r1
+     e54:	64 e6       	ldi	r22, 0x64	; 100
+     e56:	70 e0       	ldi	r23, 0x00	; 0
+     e58:	10 d2       	rcall	.+1056   	; 0x127a <__divmodhi4>
+     e5a:	8c 0f       	add	r24, r28
+     e5c:	9d 1f       	adc	r25, r29
+     e5e:	83 70       	andi	r24, 0x03	; 3
+     e60:	90 78       	andi	r25, 0x80	; 128
+     e62:	99 23       	and	r25, r25
+     e64:	24 f4       	brge	.+8      	; 0xe6e <InsereElemento+0x3c>
+     e66:	01 97       	sbiw	r24, 0x01	; 1
+     e68:	8c 6f       	ori	r24, 0xFC	; 252
+     e6a:	9f 6f       	ori	r25, 0xFF	; 255
+     e6c:	01 96       	adiw	r24, 0x01	; 1
+     e6e:	8f 5f       	subi	r24, 0xFF	; 255
+	if(score >= MAX_SEQ)										//Caso para a sequencia completamente preenchida.
+		return false;											
+	sequencia[score] = novo;									//Insere o novo elemento na sequência.
+     e70:	80 83       	st	Z, r24
+	score++;													//Incrementa o score.
+     e72:	2f 5f       	subi	r18, 0xFF	; 255
+     e74:	20 93 9d 02 	sts	0x029D, r18
+	return true;	
+     e78:	81 e0       	ldi	r24, 0x01	; 1
+     e7a:	01 c0       	rjmp	.+2      	; 0xe7e <InsereElemento+0x4c>
+*/
+bool InsereElemento()
+{
+	uint8_t novo = ((TIMER_RAND+rand()+(rand()%MAX_SEQ))%4)+1;	//Captura do valor do timer e geração do valor de luz.
+	if(score >= MAX_SEQ)										//Caso para a sequencia completamente preenchida.
+		return false;											
+     e7c:	80 e0       	ldi	r24, 0x00	; 0
+	sequencia[score] = novo;									//Insere o novo elemento na sequência.
+	score++;													//Incrementa o score.
+	return true;	
+}
+     e7e:	df 91       	pop	r29
+     e80:	cf 91       	pop	r28
+     e82:	1f 91       	pop	r17
+     e84:	08 95       	ret
+
+00000e86 <MostraSequencia>:
+
+/* Função auxiliar no estado Play Genius */
+void MostraSequencia()
+{
+     e86:	cf 93       	push	r28
+	uint8_t i;
+	for(i=0;i<score;i++)			//Loop que faz as luzes da sequência piscarem
+     e88:	80 91 9d 02 	lds	r24, 0x029D
+     e8c:	88 23       	and	r24, r24
+     e8e:	09 f4       	brne	.+2      	; 0xe92 <MostraSequencia+0xc>
+     e90:	44 c0       	rjmp	.+136    	; 0xf1a <MostraSequencia+0x94>
+     e92:	c0 e0       	ldi	r28, 0x00	; 0
+	{								//uma de cada vez.
+		switch(sequencia[i])
+     e94:	ec 2f       	mov	r30, r28
+     e96:	f0 e0       	ldi	r31, 0x00	; 0
+     e98:	e2 56       	subi	r30, 0x62	; 98
+     e9a:	fd 4f       	sbci	r31, 0xFD	; 253
+     e9c:	80 81       	ld	r24, Z
+     e9e:	82 30       	cpi	r24, 0x02	; 2
+     ea0:	a1 f0       	breq	.+40     	; 0xeca <MostraSequencia+0x44>
+     ea2:	18 f4       	brcc	.+6      	; 0xeaa <MostraSequencia+0x24>
+     ea4:	81 30       	cpi	r24, 0x01	; 1
+     ea6:	31 f0       	breq	.+12     	; 0xeb4 <MostraSequencia+0x2e>
+     ea8:	31 c0       	rjmp	.+98     	; 0xf0c <MostraSequencia+0x86>
+     eaa:	83 30       	cpi	r24, 0x03	; 3
+     eac:	c9 f0       	breq	.+50     	; 0xee0 <MostraSequencia+0x5a>
+     eae:	84 30       	cpi	r24, 0x04	; 4
+     eb0:	11 f1       	breq	.+68     	; 0xef6 <MostraSequencia+0x70>
+     eb2:	2c c0       	rjmp	.+88     	; 0xf0c <MostraSequencia+0x86>
+     eb4:	2f ef       	ldi	r18, 0xFF	; 255
+     eb6:	8f e0       	ldi	r24, 0x0F	; 15
+     eb8:	97 e2       	ldi	r25, 0x27	; 39
+     eba:	21 50       	subi	r18, 0x01	; 1
+     ebc:	80 40       	sbci	r24, 0x00	; 0
+     ebe:	90 40       	sbci	r25, 0x00	; 0
+     ec0:	e1 f7       	brne	.-8      	; 0xeba <MostraSequencia+0x34>
+     ec2:	00 c0       	rjmp	.+0      	; 0xec4 <MostraSequencia+0x3e>
+     ec4:	00 00       	nop
+		{
+			case Y_NUM:
+				_delay_ms(800);
+				YBlink();				
+     ec6:	cf db       	rcall	.-2146   	; 0x666 <YBlink>
+				break;
+     ec8:	22 c0       	rjmp	.+68     	; 0xf0e <MostraSequencia+0x88>
+     eca:	2f ef       	ldi	r18, 0xFF	; 255
+     ecc:	8f e0       	ldi	r24, 0x0F	; 15
+     ece:	97 e2       	ldi	r25, 0x27	; 39
+     ed0:	21 50       	subi	r18, 0x01	; 1
+     ed2:	80 40       	sbci	r24, 0x00	; 0
+     ed4:	90 40       	sbci	r25, 0x00	; 0
+     ed6:	e1 f7       	brne	.-8      	; 0xed0 <MostraSequencia+0x4a>
+     ed8:	00 c0       	rjmp	.+0      	; 0xeda <MostraSequencia+0x54>
+     eda:	00 00       	nop
+			case B_NUM:
+				_delay_ms(800);
+				BBlink();				
+     edc:	d6 db       	rcall	.-2132   	; 0x68a <BBlink>
+				break;
+     ede:	17 c0       	rjmp	.+46     	; 0xf0e <MostraSequencia+0x88>
+     ee0:	2f ef       	ldi	r18, 0xFF	; 255
+     ee2:	8f e0       	ldi	r24, 0x0F	; 15
+     ee4:	97 e2       	ldi	r25, 0x27	; 39
+     ee6:	21 50       	subi	r18, 0x01	; 1
+     ee8:	80 40       	sbci	r24, 0x00	; 0
+     eea:	90 40       	sbci	r25, 0x00	; 0
+     eec:	e1 f7       	brne	.-8      	; 0xee6 <MostraSequencia+0x60>
+     eee:	00 c0       	rjmp	.+0      	; 0xef0 <MostraSequencia+0x6a>
+     ef0:	00 00       	nop
+			case G_NUM:
+				_delay_ms(800);
+				GBlink();
+     ef2:	dd db       	rcall	.-2118   	; 0x6ae <GBlink>
+				break;
+     ef4:	0c c0       	rjmp	.+24     	; 0xf0e <MostraSequencia+0x88>
+     ef6:	2f ef       	ldi	r18, 0xFF	; 255
+     ef8:	8f e0       	ldi	r24, 0x0F	; 15
+     efa:	97 e2       	ldi	r25, 0x27	; 39
+     efc:	21 50       	subi	r18, 0x01	; 1
+     efe:	80 40       	sbci	r24, 0x00	; 0
+     f00:	90 40       	sbci	r25, 0x00	; 0
+     f02:	e1 f7       	brne	.-8      	; 0xefc <MostraSequencia+0x76>
+     f04:	00 c0       	rjmp	.+0      	; 0xf06 <MostraSequencia+0x80>
+     f06:	00 00       	nop
+			case R_NUM:
+				_delay_ms(800);
+				RBlink();
+     f08:	e4 db       	rcall	.-2104   	; 0x6d2 <RBlink>
+				break;
+     f0a:	01 c0       	rjmp	.+2      	; 0xf0e <MostraSequencia+0x88>
+			default:
+				PiscaLeds();
+     f0c:	f8 db       	rcall	.-2064   	; 0x6fe <PiscaLeds>
+
+/* Função auxiliar no estado Play Genius */
+void MostraSequencia()
+{
+	uint8_t i;
+	for(i=0;i<score;i++)			//Loop que faz as luzes da sequência piscarem
+     f0e:	cf 5f       	subi	r28, 0xFF	; 255
+     f10:	80 91 9d 02 	lds	r24, 0x029D
+     f14:	c8 17       	cp	r28, r24
+     f16:	08 f4       	brcc	.+2      	; 0xf1a <MostraSequencia+0x94>
+     f18:	bd cf       	rjmp	.-134    	; 0xe94 <MostraSequencia+0xe>
+			default:
+				PiscaLeds();
+				break;		
+		}
+	}
+}
+     f1a:	cf 91       	pop	r28
+     f1c:	08 95       	ret
+
+00000f1e <PlayGenius>:
+		}
+	}	
+}
+
+void PlayGenius()
+{
+     f1e:	1f 93       	push	r17
+     f20:	cf 93       	push	r28
+     f22:	df 93       	push	r29
+	bool sucesso;
+	ExibeGenius();							//Mostra a tela de preparação para o jogo.
+     f24:	df d9       	rcall	.-3138   	; 0x2e4 <ExibeGenius>
+	score = 0;								//Zera o score.
+     f26:	10 92 9d 02 	sts	0x029D, r1
+	botaoPressionado = false;				//Desabilita a flag dos botões de jogo.
+     f2a:	10 92 9a 02 	sts	0x029A, r1
+	InsereElemento();						//Insere o primeiro elemento da sequencia.
+     f2e:	81 df       	rcall	.-254    	; 0xe32 <InsereElemento>
+	MostraSequencia();						//Mostra a primeira luz para o jogador.
+     f30:	aa df       	rcall	.-172    	; 0xe86 <MostraSequencia>
+	sei();									//Botões ativos.
+     f32:	78 94       	sei
+	while(sm.state==sPlayGenius)									//Polling para os botões de jogo.
+     f34:	c2 e0       	ldi	r28, 0x02	; 2
+     f36:	d3 e0       	ldi	r29, 0x03	; 3
+					botaoPressionado = false;						//Desabilita a flag dos botões de jogo.
+					sei();											//Botões ativos.
+				}
+				else												//Caso para erro do jogador.
+				{
+					sm.state = sGameOver;							//Mudança de estado -> Game Over
+     f38:	15 e0       	ldi	r17, 0x05	; 5
+	score = 0;								//Zera o score.
+	botaoPressionado = false;				//Desabilita a flag dos botões de jogo.
+	InsereElemento();						//Insere o primeiro elemento da sequencia.
+	MostraSequencia();						//Mostra a primeira luz para o jogador.
+	sei();									//Botões ativos.
+	while(sm.state==sPlayGenius)									//Polling para os botões de jogo.
+     f3a:	3e c0       	rjmp	.+124    	; 0xfb8 <PlayGenius+0x9a>
+     f3c:	2f ef       	ldi	r18, 0xFF	; 255
+     f3e:	81 ee       	ldi	r24, 0xE1	; 225
+     f40:	94 e0       	ldi	r25, 0x04	; 4
+     f42:	21 50       	subi	r18, 0x01	; 1
+     f44:	80 40       	sbci	r24, 0x00	; 0
+     f46:	90 40       	sbci	r25, 0x00	; 0
+     f48:	e1 f7       	brne	.-8      	; 0xf42 <PlayGenius+0x24>
+     f4a:	00 c0       	rjmp	.+0      	; 0xf4c <PlayGenius+0x2e>
+     f4c:	00 00       	nop
+	{
+		_delay_ms(100);												//Debounce.
+		if(botaoPressionado)										//Detecção da interrupção.
+     f4e:	80 91 9a 02 	lds	r24, 0x029A
+     f52:	88 23       	and	r24, r24
+     f54:	89 f1       	breq	.+98     	; 0xfb8 <PlayGenius+0x9a>
+		{
+			cli();													//Desabilita os botões.
+     f56:	f8 94       	cli
+				if(numBotaoPressionado==sequencia[indexSequencia])	//Caso de acerto do jogador.
+     f58:	80 91 9c 02 	lds	r24, 0x029C
+     f5c:	28 2f       	mov	r18, r24
+     f5e:	30 e0       	ldi	r19, 0x00	; 0
+     f60:	f9 01       	movw	r30, r18
+     f62:	e2 56       	subi	r30, 0x62	; 98
+     f64:	fd 4f       	sbci	r31, 0xFD	; 253
+     f66:	40 81       	ld	r20, Z
+     f68:	90 91 9b 02 	lds	r25, 0x029B
+     f6c:	49 13       	cpse	r20, r25
+     f6e:	1c c0       	rjmp	.+56     	; 0xfa8 <PlayGenius+0x8a>
+				{
+					if(indexSequencia==(score-1))					//Caso para entrada do último elemento da sequencia.
+     f70:	40 91 9d 02 	lds	r20, 0x029D
+     f74:	50 e0       	ldi	r21, 0x00	; 0
+     f76:	41 50       	subi	r20, 0x01	; 1
+     f78:	51 09       	sbc	r21, r1
+     f7a:	24 17       	cp	r18, r20
+     f7c:	35 07       	cpc	r19, r21
+     f7e:	69 f4       	brne	.+26     	; 0xf9a <PlayGenius+0x7c>
+					{
+						sucesso = InsereElemento();
+     f80:	58 df       	rcall	.-336    	; 0xe32 <InsereElemento>
+						if(!sucesso)								//Caso para o jogador atingir o máximo de pontos.
+     f82:	81 11       	cpse	r24, r1
+     f84:	06 c0       	rjmp	.+12     	; 0xf92 <PlayGenius+0x74>
+						{
+							sm.state = sGameOver;					//Mudança de estado -> Game Over
+     f86:	18 83       	st	Y, r17
+							score--;
+     f88:	80 91 9d 02 	lds	r24, 0x029D
+     f8c:	81 50       	subi	r24, 0x01	; 1
+     f8e:	80 93 9d 02 	sts	0x029D, r24
+						}
+						MostraSequencia();							//Exibe novamente a sequencia de luzes.
+     f92:	79 df       	rcall	.-270    	; 0xe86 <MostraSequencia>
+						indexSequencia = 0;							//Reinicia o indexador de verificação da sequência.
+     f94:	10 92 9c 02 	sts	0x029C, r1
+     f98:	03 c0       	rjmp	.+6      	; 0xfa0 <PlayGenius+0x82>
+					}
+					else											//Caso para a entrada de um elemento inicial ou de meio
+					{												//da sequência.
+						indexSequencia++;
+     f9a:	8f 5f       	subi	r24, 0xFF	; 255
+     f9c:	80 93 9c 02 	sts	0x029C, r24
+					}
+					botaoPressionado = false;						//Desabilita a flag dos botões de jogo.
+     fa0:	10 92 9a 02 	sts	0x029A, r1
+					sei();											//Botões ativos.
+     fa4:	78 94       	sei
+     fa6:	08 c0       	rjmp	.+16     	; 0xfb8 <PlayGenius+0x9a>
+				}
+				else												//Caso para erro do jogador.
+				{
+					sm.state = sGameOver;							//Mudança de estado -> Game Over
+     fa8:	18 83       	st	Y, r17
+					indexSequencia = 0;								
+     faa:	10 92 9c 02 	sts	0x029C, r1
+					score--;
+     fae:	80 91 9d 02 	lds	r24, 0x029D
+     fb2:	81 50       	subi	r24, 0x01	; 1
+     fb4:	80 93 9d 02 	sts	0x029D, r24
+	score = 0;								//Zera o score.
+	botaoPressionado = false;				//Desabilita a flag dos botões de jogo.
+	InsereElemento();						//Insere o primeiro elemento da sequencia.
+	MostraSequencia();						//Mostra a primeira luz para o jogador.
+	sei();									//Botões ativos.
+	while(sm.state==sPlayGenius)									//Polling para os botões de jogo.
+     fb8:	88 81       	ld	r24, Y
+     fba:	84 30       	cpi	r24, 0x04	; 4
+     fbc:	09 f4       	brne	.+2      	; 0xfc0 <PlayGenius+0xa2>
+     fbe:	be cf       	rjmp	.-132    	; 0xf3c <PlayGenius+0x1e>
+					indexSequencia = 0;								
+					score--;
+				}
+		}
+	}
+}
+     fc0:	df 91       	pop	r29
+     fc2:	cf 91       	pop	r28
+     fc4:	1f 91       	pop	r17
+     fc6:	08 95       	ret
+
+00000fc8 <__vector_1>:
+
+/**
+	@brief Função do vetor de interrupções para o botão amarelo.
+*/
+ISR (BOTAO_Y_FUNCT)
+{
+     fc8:	1f 92       	push	r1
+     fca:	0f 92       	push	r0
+     fcc:	0f b6       	in	r0, 0x3f	; 63
+     fce:	0f 92       	push	r0
+     fd0:	11 24       	eor	r1, r1
+     fd2:	0b b6       	in	r0, 0x3b	; 59
+     fd4:	0f 92       	push	r0
+     fd6:	2f 93       	push	r18
+     fd8:	3f 93       	push	r19
+     fda:	4f 93       	push	r20
+     fdc:	5f 93       	push	r21
+     fde:	6f 93       	push	r22
+     fe0:	7f 93       	push	r23
+     fe2:	8f 93       	push	r24
+     fe4:	9f 93       	push	r25
+     fe6:	af 93       	push	r26
+     fe8:	bf 93       	push	r27
+     fea:	ef 93       	push	r30
+     fec:	ff 93       	push	r31
+	botaoPressionado = true;		//Ativação da flag.
+     fee:	81 e0       	ldi	r24, 0x01	; 1
+     ff0:	80 93 9a 02 	sts	0x029A, r24
+	numBotaoPressionado = Y_NUM;	//Indica que o botão pressionado foi o amarelo.
+     ff4:	80 93 9b 02 	sts	0x029B, r24
+	YBlink();						//Pisca o LED amarelo.
+     ff8:	36 db       	rcall	.-2452   	; 0x666 <YBlink>
+}
+     ffa:	ff 91       	pop	r31
+     ffc:	ef 91       	pop	r30
+     ffe:	bf 91       	pop	r27
+    1000:	af 91       	pop	r26
+    1002:	9f 91       	pop	r25
+    1004:	8f 91       	pop	r24
+    1006:	7f 91       	pop	r23
+    1008:	6f 91       	pop	r22
+    100a:	5f 91       	pop	r21
+    100c:	4f 91       	pop	r20
+    100e:	3f 91       	pop	r19
+    1010:	2f 91       	pop	r18
+    1012:	0f 90       	pop	r0
+    1014:	0b be       	out	0x3b, r0	; 59
+    1016:	0f 90       	pop	r0
+    1018:	0f be       	out	0x3f, r0	; 63
+    101a:	0f 90       	pop	r0
+    101c:	1f 90       	pop	r1
+    101e:	18 95       	reti
+
+00001020 <__vector_2>:
+/**
+	@brief Função do vetor de interrupções para o botão azul.
+*/
+ISR (BOTAO_B_FUNCT)
+{
+    1020:	1f 92       	push	r1
+    1022:	0f 92       	push	r0
+    1024:	0f b6       	in	r0, 0x3f	; 63
+    1026:	0f 92       	push	r0
+    1028:	11 24       	eor	r1, r1
+    102a:	0b b6       	in	r0, 0x3b	; 59
+    102c:	0f 92       	push	r0
+    102e:	2f 93       	push	r18
+    1030:	3f 93       	push	r19
+    1032:	4f 93       	push	r20
+    1034:	5f 93       	push	r21
+    1036:	6f 93       	push	r22
+    1038:	7f 93       	push	r23
+    103a:	8f 93       	push	r24
+    103c:	9f 93       	push	r25
+    103e:	af 93       	push	r26
+    1040:	bf 93       	push	r27
+    1042:	ef 93       	push	r30
+    1044:	ff 93       	push	r31
+	botaoPressionado = true;		//Ativação da flag.
+    1046:	81 e0       	ldi	r24, 0x01	; 1
+    1048:	80 93 9a 02 	sts	0x029A, r24
+	numBotaoPressionado = B_NUM;	//Indica que o botão pressionado foi o azul.
+    104c:	82 e0       	ldi	r24, 0x02	; 2
+    104e:	80 93 9b 02 	sts	0x029B, r24
+	BBlink();						//Pisca o LED azul.
+    1052:	1b db       	rcall	.-2506   	; 0x68a <BBlink>
+}
+    1054:	ff 91       	pop	r31
+    1056:	ef 91       	pop	r30
+    1058:	bf 91       	pop	r27
+    105a:	af 91       	pop	r26
+    105c:	9f 91       	pop	r25
+    105e:	8f 91       	pop	r24
+    1060:	7f 91       	pop	r23
+    1062:	6f 91       	pop	r22
+    1064:	5f 91       	pop	r21
+    1066:	4f 91       	pop	r20
+    1068:	3f 91       	pop	r19
+    106a:	2f 91       	pop	r18
+    106c:	0f 90       	pop	r0
+    106e:	0b be       	out	0x3b, r0	; 59
+    1070:	0f 90       	pop	r0
+    1072:	0f be       	out	0x3f, r0	; 63
+    1074:	0f 90       	pop	r0
+    1076:	1f 90       	pop	r1
+    1078:	18 95       	reti
+
+0000107a <__vector_3>:
+/**
+	@brief Função do vetor de interrupções para o botão verde.
+*/
+ISR (BOTAO_G_FUNCT)
+{
+    107a:	1f 92       	push	r1
+    107c:	0f 92       	push	r0
+    107e:	0f b6       	in	r0, 0x3f	; 63
+    1080:	0f 92       	push	r0
+    1082:	11 24       	eor	r1, r1
+    1084:	0b b6       	in	r0, 0x3b	; 59
+    1086:	0f 92       	push	r0
+    1088:	2f 93       	push	r18
+    108a:	3f 93       	push	r19
+    108c:	4f 93       	push	r20
+    108e:	5f 93       	push	r21
+    1090:	6f 93       	push	r22
+    1092:	7f 93       	push	r23
+    1094:	8f 93       	push	r24
+    1096:	9f 93       	push	r25
+    1098:	af 93       	push	r26
+    109a:	bf 93       	push	r27
+    109c:	ef 93       	push	r30
+    109e:	ff 93       	push	r31
+	botaoPressionado = true;		//Ativação da flag.
+    10a0:	81 e0       	ldi	r24, 0x01	; 1
+    10a2:	80 93 9a 02 	sts	0x029A, r24
+	numBotaoPressionado = G_NUM;	//Indica que o botão pressionado foi o verde.
+    10a6:	83 e0       	ldi	r24, 0x03	; 3
+    10a8:	80 93 9b 02 	sts	0x029B, r24
+	GBlink();						//Pisca o LED verde.
+    10ac:	00 db       	rcall	.-2560   	; 0x6ae <GBlink>
+}
+    10ae:	ff 91       	pop	r31
+    10b0:	ef 91       	pop	r30
+    10b2:	bf 91       	pop	r27
+    10b4:	af 91       	pop	r26
+    10b6:	9f 91       	pop	r25
+    10b8:	8f 91       	pop	r24
+    10ba:	7f 91       	pop	r23
+    10bc:	6f 91       	pop	r22
+    10be:	5f 91       	pop	r21
+    10c0:	4f 91       	pop	r20
+    10c2:	3f 91       	pop	r19
+    10c4:	2f 91       	pop	r18
+    10c6:	0f 90       	pop	r0
+    10c8:	0b be       	out	0x3b, r0	; 59
+    10ca:	0f 90       	pop	r0
+    10cc:	0f be       	out	0x3f, r0	; 63
+    10ce:	0f 90       	pop	r0
+    10d0:	1f 90       	pop	r1
+    10d2:	18 95       	reti
+
+000010d4 <__vector_4>:
+/**
+	@brief Função do vetor de interrupções para o botão vermelho.
+*/
+ISR (BOTAO_R_FUNCT)
+{
+    10d4:	1f 92       	push	r1
+    10d6:	0f 92       	push	r0
+    10d8:	0f b6       	in	r0, 0x3f	; 63
+    10da:	0f 92       	push	r0
+    10dc:	11 24       	eor	r1, r1
+    10de:	0b b6       	in	r0, 0x3b	; 59
+    10e0:	0f 92       	push	r0
+    10e2:	2f 93       	push	r18
+    10e4:	3f 93       	push	r19
+    10e6:	4f 93       	push	r20
+    10e8:	5f 93       	push	r21
+    10ea:	6f 93       	push	r22
+    10ec:	7f 93       	push	r23
+    10ee:	8f 93       	push	r24
+    10f0:	9f 93       	push	r25
+    10f2:	af 93       	push	r26
+    10f4:	bf 93       	push	r27
+    10f6:	ef 93       	push	r30
+    10f8:	ff 93       	push	r31
+	botaoPressionado = true;		//Ativação da flag.
+    10fa:	81 e0       	ldi	r24, 0x01	; 1
+    10fc:	80 93 9a 02 	sts	0x029A, r24
+	numBotaoPressionado = R_NUM;	//Indica que o botão pressionado foi o vermelho.
+    1100:	84 e0       	ldi	r24, 0x04	; 4
+    1102:	80 93 9b 02 	sts	0x029B, r24
+	RBlink();						//Pisca o LED vermelho.
+    1106:	e5 da       	rcall	.-2614   	; 0x6d2 <RBlink>
+}
+    1108:	ff 91       	pop	r31
+    110a:	ef 91       	pop	r30
+    110c:	bf 91       	pop	r27
+    110e:	af 91       	pop	r26
+    1110:	9f 91       	pop	r25
+    1112:	8f 91       	pop	r24
+    1114:	7f 91       	pop	r23
+    1116:	6f 91       	pop	r22
+    1118:	5f 91       	pop	r21
+    111a:	4f 91       	pop	r20
+    111c:	3f 91       	pop	r19
+    111e:	2f 91       	pop	r18
+    1120:	0f 90       	pop	r0
+    1122:	0b be       	out	0x3b, r0	; 59
+    1124:	0f 90       	pop	r0
+    1126:	0f be       	out	0x3f, r0	; 63
+    1128:	0f 90       	pop	r0
+    112a:	1f 90       	pop	r1
+    112c:	18 95       	reti
+
+0000112e <__vector_23>:
+/**
+	@brief Função do vetor de interrupções para o timer de overflow.
+*/
+ISR (TIMER_RAND_FUNCT)
+{
+    112e:	1f 92       	push	r1
+    1130:	0f 92       	push	r0
+    1132:	0f b6       	in	r0, 0x3f	; 63
+    1134:	0f 92       	push	r0
+    1136:	11 24       	eor	r1, r1
+	return;
+}
+    1138:	0f 90       	pop	r0
+    113a:	0f be       	out	0x3f, r0	; 63
+    113c:	0f 90       	pop	r0
+    113e:	1f 90       	pop	r1
+    1140:	18 95       	reti
+
+00001142 <EEPROM_write>:
+ * @param uiAddress Endereço de 2 bytes da memória EEPROM onde será escrito o dado.
+ * @param ucData Dado de um byte que será escrito no endereço indicado.
+ */
+void EEPROM_write(unsigned int uiAddress, unsigned char ucData)
+{
+	while(EECR & (1<<EEPE));	//Aguarda término de escrita anterior.
+    1142:	f9 99       	sbic	0x1f, 1	; 31
+    1144:	fe cf       	rjmp	.-4      	; 0x1142 <EEPROM_write>
+	EEAR = uiAddress;			//Configura o registrador de endereço.
+    1146:	92 bd       	out	0x22, r25	; 34
+    1148:	81 bd       	out	0x21, r24	; 33
+	EEDR = ucData;				//Configura o registrador de dado.
+    114a:	60 bd       	out	0x20, r22	; 32
+	EECR |= (1<<EEMPE);			//Habilita possibilidade de escrita na memória.
+    114c:	fa 9a       	sbi	0x1f, 2	; 31
+	EECR |= (1<<EEPE);			//Habilita a escrita na memória.
+    114e:	f9 9a       	sbi	0x1f, 1	; 31
+    1150:	08 95       	ret
+
+00001152 <EEPROM_read>:
+ * @param uiAddress Endereço de 2 bytes da memória EEPROM de onde será lido um dado de um byte.
+ * @return Conteúdo de um byte do endereço passado para a função.
+ */
+uint8_t EEPROM_read(unsigned int uiAddress)
+{
+	while(EECR & (1<<EEPE))	;	//Aguarda término de escrita anterior.
+    1152:	f9 99       	sbic	0x1f, 1	; 31
+    1154:	fe cf       	rjmp	.-4      	; 0x1152 <EEPROM_read>
+	EEAR = uiAddress;			//Configura o registrador de endereço.
+    1156:	92 bd       	out	0x22, r25	; 34
+    1158:	81 bd       	out	0x21, r24	; 33
+	EECR |= (1<<EERE);			//Habilita leitura.
+    115a:	f8 9a       	sbi	0x1f, 0	; 31
+	return EEDR;				//Retorna o valor lido.
+    115c:	80 b5       	in	r24, 0x20	; 32
+}
+    115e:	08 95       	ret
+
+00001160 <WriteLine>:
+ * @param wAddress Endereço de 2 bytes da memória EEPROM onde iniciará a escrita da linha.
+ * @param wName[3] Nome de 3 caracteres a ser escrito na linha.
+ * @param wScore Score a ser escrito na memória logo após o nome.
+ */
+void WriteLine(uint16_t wAddress, uint8_t wName[3], uint8_t wScore)
+{
+    1160:	ff 92       	push	r15
+    1162:	0f 93       	push	r16
+    1164:	1f 93       	push	r17
+    1166:	cf 93       	push	r28
+    1168:	df 93       	push	r29
+    116a:	ec 01       	movw	r28, r24
+    116c:	8b 01       	movw	r16, r22
+    116e:	f4 2e       	mov	r15, r20
+	EEPROM_write(wAddress, wName[0]);	//Escreve primeiro caractere.
+    1170:	fb 01       	movw	r30, r22
+    1172:	60 81       	ld	r22, Z
+    1174:	e6 df       	rcall	.-52     	; 0x1142 <EEPROM_write>
+	EEPROM_write(wAddress+1, wName[1]);	//Escreve o segundo caractere na próxima posição.
+    1176:	f8 01       	movw	r30, r16
+    1178:	61 81       	ldd	r22, Z+1	; 0x01
+    117a:	ce 01       	movw	r24, r28
+    117c:	01 96       	adiw	r24, 0x01	; 1
+    117e:	e1 df       	rcall	.-62     	; 0x1142 <EEPROM_write>
+	EEPROM_write(wAddress+2, wName[2]);	//Escreve o terceiro caractere na posição seguinte.
+    1180:	f8 01       	movw	r30, r16
+    1182:	62 81       	ldd	r22, Z+2	; 0x02
+    1184:	ce 01       	movw	r24, r28
+    1186:	02 96       	adiw	r24, 0x02	; 2
+    1188:	dc df       	rcall	.-72     	; 0x1142 <EEPROM_write>
+	EEPROM_write(wAddress+3, wScore);	//Escreve o score na última posição da linha.
+    118a:	6f 2d       	mov	r22, r15
+    118c:	ce 01       	movw	r24, r28
+    118e:	03 96       	adiw	r24, 0x03	; 3
+    1190:	d8 df       	rcall	.-80     	; 0x1142 <EEPROM_write>
+}
+    1192:	df 91       	pop	r29
+    1194:	cf 91       	pop	r28
+    1196:	1f 91       	pop	r17
+    1198:	0f 91       	pop	r16
+    119a:	ff 90       	pop	r15
+    119c:	08 95       	ret
+
+0000119e <ReadLine>:
+/**
+ * @param wAddress Endereço de 2 bytes da memória EEPROM onde iniciará a leitura da linha.
+ * @param rLine Endereço da memória de dados do processador onde deverá ser guardada a linha lida.
+ */
+void ReadLine(uint16_t rAddress, uint8_t* rLine)
+{
+    119e:	0f 93       	push	r16
+    11a0:	1f 93       	push	r17
+    11a2:	cf 93       	push	r28
+    11a4:	df 93       	push	r29
+    11a6:	8c 01       	movw	r16, r24
+    11a8:	eb 01       	movw	r28, r22
+	rLine[0] = EEPROM_read(rAddress);	//Leitura do primeiro caractere do nome.
+    11aa:	d3 df       	rcall	.-90     	; 0x1152 <EEPROM_read>
+    11ac:	88 83       	st	Y, r24
+	rLine[1] = EEPROM_read(rAddress+1);	//Leitura do segundo caractere do nome.
+    11ae:	c8 01       	movw	r24, r16
+    11b0:	01 96       	adiw	r24, 0x01	; 1
+    11b2:	cf df       	rcall	.-98     	; 0x1152 <EEPROM_read>
+    11b4:	89 83       	std	Y+1, r24	; 0x01
+	rLine[2] = EEPROM_read(rAddress+2);	//Leitura do terceiro caractere do nome.
+    11b6:	c8 01       	movw	r24, r16
+    11b8:	02 96       	adiw	r24, 0x02	; 2
+    11ba:	cb df       	rcall	.-106    	; 0x1152 <EEPROM_read>
+    11bc:	8a 83       	std	Y+2, r24	; 0x02
+	rLine[3] = EEPROM_read(rAddress+3);	//Leitura do score.
+    11be:	c8 01       	movw	r24, r16
+    11c0:	03 96       	adiw	r24, 0x03	; 3
+    11c2:	c7 df       	rcall	.-114    	; 0x1152 <EEPROM_read>
+    11c4:	8b 83       	std	Y+3, r24	; 0x03
+    11c6:	df 91       	pop	r29
+    11c8:	cf 91       	pop	r28
+    11ca:	1f 91       	pop	r17
+    11cc:	0f 91       	pop	r16
+    11ce:	08 95       	ret
+
+000011d0 <ADCInit>:
+
+#include <avr/io.h>
+#include "TimerAndADCGenius.h"
+
+void ADCInit(){
+	ADMUX = 0x0F;							//Usa o canal em 0V.
+    11d0:	ec e7       	ldi	r30, 0x7C	; 124
+    11d2:	f0 e0       	ldi	r31, 0x00	; 0
+    11d4:	8f e0       	ldi	r24, 0x0F	; 15
+    11d6:	80 83       	st	Z, r24
+	ADMUX |= (1 << REFS0);					//Usa AVcc como referencia.
+    11d8:	80 81       	ld	r24, Z
+    11da:	80 64       	ori	r24, 0x40	; 64
+    11dc:	80 83       	st	Z, r24
+	ADMUX &= ~(1 << ADLAR);					//Resolução de 10 bits, com alinhamento à direita.
+    11de:	80 81       	ld	r24, Z
+    11e0:	8f 7d       	andi	r24, 0xDF	; 223
+    11e2:	80 83       	st	Z, r24
+	ADCSRA |= (1 << ADPS1) | (1 << ADPS0);	//Ajusta clock do ADC para 125 kHz (1MHz com prescala de 8).
+    11e4:	ea e7       	ldi	r30, 0x7A	; 122
+    11e6:	f0 e0       	ldi	r31, 0x00	; 0
+    11e8:	80 81       	ld	r24, Z
+    11ea:	83 60       	ori	r24, 0x03	; 3
+    11ec:	80 83       	st	Z, r24
+    11ee:	08 95       	ret
+
+000011f0 <TimerInit>:
+}
+void TimerInit(){
+	/* Configuração dos três registradores com seus respectivos comandos. */
+	TIMER_RAND_CTRL_A = NORMAL_MODE_OPERATION; 
+    11f0:	14 bc       	out	0x24, r1	; 36
+	TIMER_RAND_CTRL_B = NO_PREESCALER;
+    11f2:	81 e0       	ldi	r24, 0x01	; 1
+    11f4:	85 bd       	out	0x25, r24	; 37
+	TIMER_RAND_MASK |= OVF_INT_ENABLE;
+    11f6:	ee e6       	ldi	r30, 0x6E	; 110
+    11f8:	f0 e0       	ldi	r31, 0x00	; 0
+    11fa:	80 81       	ld	r24, Z
+    11fc:	81 60       	ori	r24, 0x01	; 1
+    11fe:	80 83       	st	Z, r24
+    1200:	08 95       	ret
+
+00001202 <lerBotaoMenu>:
+
+uint16_t lerBotaoMenu()
+{
+	uint8_t canal = 0;
+	uint16_t ADC_res;
+	ADMUX |= (canal & 0x0F);			//Define o canal.
+    1202:	ac e7       	ldi	r26, 0x7C	; 124
+    1204:	b0 e0       	ldi	r27, 0x00	; 0
+    1206:	8c 91       	ld	r24, X
+    1208:	8c 93       	st	X, r24
+	ADCSRA |= (1 << ADEN);				//Habilita o ADC.
+    120a:	ea e7       	ldi	r30, 0x7A	; 122
+    120c:	f0 e0       	ldi	r31, 0x00	; 0
+    120e:	80 81       	ld	r24, Z
+    1210:	80 68       	ori	r24, 0x80	; 128
+    1212:	80 83       	st	Z, r24
+	ADCSRA |= (1 << ADSC);				//Inicia conversao do ADC
+    1214:	80 81       	ld	r24, Z
+    1216:	80 64       	ori	r24, 0x40	; 64
+    1218:	80 83       	st	Z, r24
+	while(ADCSRA && (1 << ADSC)==1);	//Aguarda fim da conversao.
+    121a:	80 81       	ld	r24, Z
+	ADC_res = ADCL;
+    121c:	20 91 78 00 	lds	r18, 0x0078
+	ADC_res = (ADCH << 8) + ADC_res;	//Leitura do resultado.
+    1220:	80 91 79 00 	lds	r24, 0x0079
+    1224:	90 e0       	ldi	r25, 0x00	; 0
+    1226:	98 2f       	mov	r25, r24
+    1228:	88 27       	eor	r24, r24
+    122a:	82 0f       	add	r24, r18
+    122c:	91 1d       	adc	r25, r1
+	ADMUX &= ~0x0F;						//Retorna para o canal 0V.
+    122e:	2c 91       	ld	r18, X
+    1230:	20 7f       	andi	r18, 0xF0	; 240
+    1232:	2c 93       	st	X, r18
+	
+	/*	A comparação precisa aqui precisa seguir 
+		uma ordem crescente para que nenhum botão
+		sombreado por outro.						*/
+	
+	if(ADC_res<RIGHT)					//Valor da porta menor que o limite superior de RIGHT.
+    1234:	82 33       	cpi	r24, 0x32	; 50
+    1236:	91 05       	cpc	r25, r1
+    1238:	88 f0       	brcs	.+34     	; 0x125c <lerBotaoMenu+0x5a>
+		return RIGHT;
+	if(ADC_res<UP)						//Valor da porta menor que o limite superior de UP.
+    123a:	83 3c       	cpi	r24, 0xC3	; 195
+    123c:	91 05       	cpc	r25, r1
+    123e:	88 f0       	brcs	.+34     	; 0x1262 <lerBotaoMenu+0x60>
+		return UP;
+	if(ADC_res<DOWN)					//Valor da porta menor que o limite superior de DOWN.
+    1240:	8c 37       	cpi	r24, 0x7C	; 124
+    1242:	21 e0       	ldi	r18, 0x01	; 1
+    1244:	92 07       	cpc	r25, r18
+    1246:	80 f0       	brcs	.+32     	; 0x1268 <lerBotaoMenu+0x66>
+		return DOWN;
+	if(ADC_res<LEFT)					//Valor da porta menor que o limite superior de LEFT.
+    1248:	8b 32       	cpi	r24, 0x2B	; 43
+    124a:	22 e0       	ldi	r18, 0x02	; 2
+    124c:	92 07       	cpc	r25, r18
+    124e:	78 f0       	brcs	.+30     	; 0x126e <lerBotaoMenu+0x6c>
+		return LEFT;
+	if(ADC_res<CANCEL)					//Valor da porta menor que o limite superior de CANCEL.
+    1250:	86 31       	cpi	r24, 0x16	; 22
+    1252:	93 40       	sbci	r25, 0x03	; 3
+    1254:	78 f0       	brcs	.+30     	; 0x1274 <lerBotaoMenu+0x72>
+		return CANCEL;
+	if(ADC_res>=CANCEL)					//Valor da porta maior que qualquer outro valor testado.
+		return NONE;
+    1256:	88 ee       	ldi	r24, 0xE8	; 232
+    1258:	93 e0       	ldi	r25, 0x03	; 3
+    125a:	08 95       	ret
+	/*	A comparação precisa aqui precisa seguir 
+		uma ordem crescente para que nenhum botão
+		sombreado por outro.						*/
+	
+	if(ADC_res<RIGHT)					//Valor da porta menor que o limite superior de RIGHT.
+		return RIGHT;
+    125c:	82 e3       	ldi	r24, 0x32	; 50
+    125e:	90 e0       	ldi	r25, 0x00	; 0
+    1260:	08 95       	ret
+	if(ADC_res<UP)						//Valor da porta menor que o limite superior de UP.
+		return UP;
+    1262:	83 ec       	ldi	r24, 0xC3	; 195
+    1264:	90 e0       	ldi	r25, 0x00	; 0
+    1266:	08 95       	ret
+	if(ADC_res<DOWN)					//Valor da porta menor que o limite superior de DOWN.
+		return DOWN;
+    1268:	8c e7       	ldi	r24, 0x7C	; 124
+    126a:	91 e0       	ldi	r25, 0x01	; 1
+    126c:	08 95       	ret
+	if(ADC_res<LEFT)					//Valor da porta menor que o limite superior de LEFT.
+		return LEFT;
+    126e:	8b e2       	ldi	r24, 0x2B	; 43
+    1270:	92 e0       	ldi	r25, 0x02	; 2
+    1272:	08 95       	ret
+	if(ADC_res<CANCEL)					//Valor da porta menor que o limite superior de CANCEL.
+		return CANCEL;
+    1274:	86 e1       	ldi	r24, 0x16	; 22
+    1276:	93 e0       	ldi	r25, 0x03	; 3
+	if(ADC_res>=CANCEL)					//Valor da porta maior que qualquer outro valor testado.
+		return NONE;
+	
+	return 0;
+    1278:	08 95       	ret
+
+0000127a <__divmodhi4>:
+    127a:	97 fb       	bst	r25, 7
+    127c:	07 2e       	mov	r0, r23
+    127e:	16 f4       	brtc	.+4      	; 0x1284 <__divmodhi4+0xa>
+    1280:	00 94       	com	r0
+    1282:	06 d0       	rcall	.+12     	; 0x1290 <__divmodhi4_neg1>
+    1284:	77 fd       	sbrc	r23, 7
+    1286:	08 d0       	rcall	.+16     	; 0x1298 <__divmodhi4_neg2>
+    1288:	0b d0       	rcall	.+22     	; 0x12a0 <__udivmodhi4>
+    128a:	07 fc       	sbrc	r0, 7
+    128c:	05 d0       	rcall	.+10     	; 0x1298 <__divmodhi4_neg2>
+    128e:	3e f4       	brtc	.+14     	; 0x129e <__divmodhi4_exit>
+
+00001290 <__divmodhi4_neg1>:
+    1290:	90 95       	com	r25
+    1292:	81 95       	neg	r24
+    1294:	9f 4f       	sbci	r25, 0xFF	; 255
+    1296:	08 95       	ret
+
+00001298 <__divmodhi4_neg2>:
+    1298:	70 95       	com	r23
+    129a:	61 95       	neg	r22
+    129c:	7f 4f       	sbci	r23, 0xFF	; 255
+
+0000129e <__divmodhi4_exit>:
+    129e:	08 95       	ret
+
+000012a0 <__udivmodhi4>:
+    12a0:	aa 1b       	sub	r26, r26
+    12a2:	bb 1b       	sub	r27, r27
+    12a4:	51 e1       	ldi	r21, 0x11	; 17
+    12a6:	07 c0       	rjmp	.+14     	; 0x12b6 <__udivmodhi4_ep>
+
+000012a8 <__udivmodhi4_loop>:
+    12a8:	aa 1f       	adc	r26, r26
+    12aa:	bb 1f       	adc	r27, r27
+    12ac:	a6 17       	cp	r26, r22
+    12ae:	b7 07       	cpc	r27, r23
+    12b0:	10 f0       	brcs	.+4      	; 0x12b6 <__udivmodhi4_ep>
+    12b2:	a6 1b       	sub	r26, r22
+    12b4:	b7 0b       	sbc	r27, r23
+
+000012b6 <__udivmodhi4_ep>:
+    12b6:	88 1f       	adc	r24, r24
+    12b8:	99 1f       	adc	r25, r25
+    12ba:	5a 95       	dec	r21
+    12bc:	a9 f7       	brne	.-22     	; 0x12a8 <__udivmodhi4_loop>
+    12be:	80 95       	com	r24
+    12c0:	90 95       	com	r25
+    12c2:	bc 01       	movw	r22, r24
+    12c4:	cd 01       	movw	r24, r26
+    12c6:	08 95       	ret
+
+000012c8 <do_rand>:
+    12c8:	8f 92       	push	r8
+    12ca:	9f 92       	push	r9
+    12cc:	af 92       	push	r10
+    12ce:	bf 92       	push	r11
+    12d0:	cf 92       	push	r12
+    12d2:	df 92       	push	r13
+    12d4:	ef 92       	push	r14
+    12d6:	ff 92       	push	r15
+    12d8:	cf 93       	push	r28
+    12da:	df 93       	push	r29
+    12dc:	ec 01       	movw	r28, r24
+    12de:	68 81       	ld	r22, Y
+    12e0:	79 81       	ldd	r23, Y+1	; 0x01
+    12e2:	8a 81       	ldd	r24, Y+2	; 0x02
+    12e4:	9b 81       	ldd	r25, Y+3	; 0x03
+    12e6:	61 15       	cp	r22, r1
+    12e8:	71 05       	cpc	r23, r1
+    12ea:	81 05       	cpc	r24, r1
+    12ec:	91 05       	cpc	r25, r1
+    12ee:	21 f4       	brne	.+8      	; 0x12f8 <do_rand+0x30>
+    12f0:	64 e2       	ldi	r22, 0x24	; 36
+    12f2:	79 ed       	ldi	r23, 0xD9	; 217
+    12f4:	8b e5       	ldi	r24, 0x5B	; 91
+    12f6:	97 e0       	ldi	r25, 0x07	; 7
+    12f8:	2d e1       	ldi	r18, 0x1D	; 29
+    12fa:	33 ef       	ldi	r19, 0xF3	; 243
+    12fc:	41 e0       	ldi	r20, 0x01	; 1
+    12fe:	50 e0       	ldi	r21, 0x00	; 0
+    1300:	38 d0       	rcall	.+112    	; 0x1372 <__divmodsi4>
+    1302:	49 01       	movw	r8, r18
+    1304:	5a 01       	movw	r10, r20
+    1306:	9b 01       	movw	r18, r22
+    1308:	ac 01       	movw	r20, r24
+    130a:	a7 ea       	ldi	r26, 0xA7	; 167
+    130c:	b1 e4       	ldi	r27, 0x41	; 65
+    130e:	4d d0       	rcall	.+154    	; 0x13aa <__muluhisi3>
+    1310:	6b 01       	movw	r12, r22
+    1312:	7c 01       	movw	r14, r24
+    1314:	ac ee       	ldi	r26, 0xEC	; 236
+    1316:	b4 ef       	ldi	r27, 0xF4	; 244
+    1318:	a5 01       	movw	r20, r10
+    131a:	94 01       	movw	r18, r8
+    131c:	52 d0       	rcall	.+164    	; 0x13c2 <__mulohisi3>
+    131e:	dc 01       	movw	r26, r24
+    1320:	cb 01       	movw	r24, r22
+    1322:	8c 0d       	add	r24, r12
+    1324:	9d 1d       	adc	r25, r13
+    1326:	ae 1d       	adc	r26, r14
+    1328:	bf 1d       	adc	r27, r15
+    132a:	b7 ff       	sbrs	r27, 7
+    132c:	03 c0       	rjmp	.+6      	; 0x1334 <do_rand+0x6c>
+    132e:	01 97       	sbiw	r24, 0x01	; 1
+    1330:	a1 09       	sbc	r26, r1
+    1332:	b0 48       	sbci	r27, 0x80	; 128
+    1334:	88 83       	st	Y, r24
+    1336:	99 83       	std	Y+1, r25	; 0x01
+    1338:	aa 83       	std	Y+2, r26	; 0x02
+    133a:	bb 83       	std	Y+3, r27	; 0x03
+    133c:	9f 77       	andi	r25, 0x7F	; 127
+    133e:	df 91       	pop	r29
+    1340:	cf 91       	pop	r28
+    1342:	ff 90       	pop	r15
+    1344:	ef 90       	pop	r14
+    1346:	df 90       	pop	r13
+    1348:	cf 90       	pop	r12
+    134a:	bf 90       	pop	r11
+    134c:	af 90       	pop	r10
+    134e:	9f 90       	pop	r9
+    1350:	8f 90       	pop	r8
+    1352:	08 95       	ret
+
+00001354 <rand_r>:
+    1354:	b9 cf       	rjmp	.-142    	; 0x12c8 <do_rand>
+
+00001356 <rand>:
+    1356:	80 e0       	ldi	r24, 0x00	; 0
+    1358:	92 e0       	ldi	r25, 0x02	; 2
+    135a:	b6 cf       	rjmp	.-148    	; 0x12c8 <do_rand>
+
+0000135c <srand>:
+    135c:	a0 e0       	ldi	r26, 0x00	; 0
+    135e:	b0 e0       	ldi	r27, 0x00	; 0
+    1360:	80 93 00 02 	sts	0x0200, r24
+    1364:	90 93 01 02 	sts	0x0201, r25
+    1368:	a0 93 02 02 	sts	0x0202, r26
+    136c:	b0 93 03 02 	sts	0x0203, r27
+    1370:	08 95       	ret
+
+00001372 <__divmodsi4>:
+    1372:	05 2e       	mov	r0, r21
+    1374:	97 fb       	bst	r25, 7
+    1376:	16 f4       	brtc	.+4      	; 0x137c <__divmodsi4+0xa>
+    1378:	00 94       	com	r0
+    137a:	0f d0       	rcall	.+30     	; 0x139a <__negsi2>
+    137c:	57 fd       	sbrc	r21, 7
+    137e:	05 d0       	rcall	.+10     	; 0x138a <__divmodsi4_neg2>
+    1380:	24 d0       	rcall	.+72     	; 0x13ca <__udivmodsi4>
+    1382:	07 fc       	sbrc	r0, 7
+    1384:	02 d0       	rcall	.+4      	; 0x138a <__divmodsi4_neg2>
+    1386:	46 f4       	brtc	.+16     	; 0x1398 <__divmodsi4_exit>
+    1388:	08 c0       	rjmp	.+16     	; 0x139a <__negsi2>
+
+0000138a <__divmodsi4_neg2>:
+    138a:	50 95       	com	r21
+    138c:	40 95       	com	r20
+    138e:	30 95       	com	r19
+    1390:	21 95       	neg	r18
+    1392:	3f 4f       	sbci	r19, 0xFF	; 255
+    1394:	4f 4f       	sbci	r20, 0xFF	; 255
+    1396:	5f 4f       	sbci	r21, 0xFF	; 255
+
+00001398 <__divmodsi4_exit>:
+    1398:	08 95       	ret
+
+0000139a <__negsi2>:
+    139a:	90 95       	com	r25
+    139c:	80 95       	com	r24
+    139e:	70 95       	com	r23
+    13a0:	61 95       	neg	r22
+    13a2:	7f 4f       	sbci	r23, 0xFF	; 255
+    13a4:	8f 4f       	sbci	r24, 0xFF	; 255
+    13a6:	9f 4f       	sbci	r25, 0xFF	; 255
+    13a8:	08 95       	ret
+
+000013aa <__muluhisi3>:
+    13aa:	31 d0       	rcall	.+98     	; 0x140e <__umulhisi3>
+    13ac:	a5 9f       	mul	r26, r21
+    13ae:	90 0d       	add	r25, r0
+    13b0:	b4 9f       	mul	r27, r20
+    13b2:	90 0d       	add	r25, r0
+    13b4:	a4 9f       	mul	r26, r20
+    13b6:	80 0d       	add	r24, r0
+    13b8:	91 1d       	adc	r25, r1
+    13ba:	11 24       	eor	r1, r1
+    13bc:	08 95       	ret
+
+000013be <__mulshisi3>:
+    13be:	b7 ff       	sbrs	r27, 7
+    13c0:	f4 cf       	rjmp	.-24     	; 0x13aa <__muluhisi3>
+
+000013c2 <__mulohisi3>:
+    13c2:	f3 df       	rcall	.-26     	; 0x13aa <__muluhisi3>
+    13c4:	82 1b       	sub	r24, r18
+    13c6:	93 0b       	sbc	r25, r19
+    13c8:	08 95       	ret
+
+000013ca <__udivmodsi4>:
+    13ca:	a1 e2       	ldi	r26, 0x21	; 33
+    13cc:	1a 2e       	mov	r1, r26
+    13ce:	aa 1b       	sub	r26, r26
+    13d0:	bb 1b       	sub	r27, r27
+    13d2:	fd 01       	movw	r30, r26
+    13d4:	0d c0       	rjmp	.+26     	; 0x13f0 <__udivmodsi4_ep>
+
+000013d6 <__udivmodsi4_loop>:
+    13d6:	aa 1f       	adc	r26, r26
+    13d8:	bb 1f       	adc	r27, r27
+    13da:	ee 1f       	adc	r30, r30
+    13dc:	ff 1f       	adc	r31, r31
+    13de:	a2 17       	cp	r26, r18
+    13e0:	b3 07       	cpc	r27, r19
+    13e2:	e4 07       	cpc	r30, r20
+    13e4:	f5 07       	cpc	r31, r21
+    13e6:	20 f0       	brcs	.+8      	; 0x13f0 <__udivmodsi4_ep>
+    13e8:	a2 1b       	sub	r26, r18
+    13ea:	b3 0b       	sbc	r27, r19
+    13ec:	e4 0b       	sbc	r30, r20
+    13ee:	f5 0b       	sbc	r31, r21
+
+000013f0 <__udivmodsi4_ep>:
+    13f0:	66 1f       	adc	r22, r22
+    13f2:	77 1f       	adc	r23, r23
+    13f4:	88 1f       	adc	r24, r24
+    13f6:	99 1f       	adc	r25, r25
+    13f8:	1a 94       	dec	r1
+    13fa:	69 f7       	brne	.-38     	; 0x13d6 <__udivmodsi4_loop>
+    13fc:	60 95       	com	r22
+    13fe:	70 95       	com	r23
+    1400:	80 95       	com	r24
+    1402:	90 95       	com	r25
+    1404:	9b 01       	movw	r18, r22
+    1406:	ac 01       	movw	r20, r24
+    1408:	bd 01       	movw	r22, r26
+    140a:	cf 01       	movw	r24, r30
+    140c:	08 95       	ret
+
+0000140e <__umulhisi3>:
+    140e:	a2 9f       	mul	r26, r18
+    1410:	b0 01       	movw	r22, r0
+    1412:	b3 9f       	mul	r27, r19
+    1414:	c0 01       	movw	r24, r0
+    1416:	a3 9f       	mul	r26, r19
+    1418:	70 0d       	add	r23, r0
+    141a:	81 1d       	adc	r24, r1
+    141c:	11 24       	eor	r1, r1
+    141e:	91 1d       	adc	r25, r1
+    1420:	b2 9f       	mul	r27, r18
+    1422:	70 0d       	add	r23, r0
+    1424:	81 1d       	adc	r24, r1
+    1426:	11 24       	eor	r1, r1
+    1428:	91 1d       	adc	r25, r1
+    142a:	08 95       	ret
+
+0000142c <_exit>:
+    142c:	f8 94       	cli
+
+0000142e <__stop_program>:
+    142e:	ff cf       	rjmp	.-2      	; 0x142e <__stop_program>
